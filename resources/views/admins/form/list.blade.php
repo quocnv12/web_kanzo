@@ -10,7 +10,7 @@
         <li><a href="#" class="active">Tables</a> </li>
     </ul>
     <div class="page-title">
-        <h3>Advance - <span class="semi-bold">Tables</spa n>
+        <h3>Advance - <span class="semi-bold">Tables</span>
         </h3>
     </div>
 </div>
