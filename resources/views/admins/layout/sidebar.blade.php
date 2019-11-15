@@ -17,24 +17,15 @@
         <!-- BEGIN SIDEBAR MENU -->
         <p></p>
         <ul>
-            <li class="start  open active "> <a href="index.html"><i class="material-icons">home</i> <span
-                        class="title">FORM</span> <span class="selected"></span> <span class="arrow  open "></span>
+            <li class="start  open @yield('form') "> <a href="admin/form"><i class="material-icons">home</i> <span
+                        class="title">Demo</span> <span class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
-                    <li> <a href="dashboard_v1.html"> Dashboard v1 </a> </li>
-                    <li class=""> <a href="index.html "> Dashboard v2 <span
-                                class=" label label-info pull-right m-r-30">NEW</span></a></li>
+                    <li> <a href="admin/form"> Danh sach</a> </li>
+                    <li class=""> <a href="admin/form/add"> Thêm </a></li>
                 </ul>
             </li>
-            <li class="start  open active "> <a href="index.html"><i class="material-icons">home</i> <span
-                        class="title">Dashboard</span> <span class="selected"></span> <span class="arrow  open "></span>
-                </a>
-                <ul class="sub-menu">
-                    <li> <a href="dashboard_v1.html"> Dashboard v1 </a> </li>
-                    <li class=""> <a href="index.html "> Dashboard v2 <span
-                                class=" label label-info pull-right m-r-30">NEW</span></a></li>
-                </ul>
-            </li>
+           
 
             <li>
                 <a href="widgets.html"> <i class="material-icons">panorama_horizontal</i> <span
