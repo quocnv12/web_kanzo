@@ -22,15 +22,15 @@ class IntroduceController extends Controller
     		'title' => 'required|unique:introduce,title',
     		'content' => 'required',
     	],[
-    		'title.required' => 'Tiêu đề là trường bắt buộc!'
-    		'title.unique' => 'Tiêu đề đã tồn tại!'
-    		'content.required' => 'Nội dung là trường bắt buộc!'
+    		'title.required' => 'Tiêu đề là trường bắt buộc!',
+    		'title.unique' => 'Tiêu đề đã tồn tại!',
+    		'content.required' => 'Nội dung là trường bắt buộc!',
     	]);
     	$new = new introduce;
     	$new->title = $req->title;
     	$new->slug = str_slug($req->title);
     	$new->content = $req->content;
-    	$new->type = $req->1;  //1:giới thiệu - 2:chính sách
+    	$new->type = 1;  //1:giới thiệu - 2:chính sách
     	$new->active = $req->active;
     	$new->save();
 
