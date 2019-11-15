@@ -1,9 +1,6 @@
 @extends('admins.layout.master')
-
-@section('title')
-Danh Sách Người Dùng
-@endsection
-
+@section('title','Danh sách')
+@section('introduce','active')
 @section('content')
 <div class="row-fluid">
     <div class="span12">

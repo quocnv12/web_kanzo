@@ -13,6 +13,9 @@
 
 // route fontend viết vào đấy
 
+Route::get('/', function () {
+    return view('admins.index');
+});
 
 
 
@@ -27,6 +30,10 @@ Route::group(['prefix' => 'admin','namespace' => 'admin'], function () {
     Route::get('form', function () {
         return view('admins.form.list');
     });
+    Route::get('form/add', function () {
+        return view('admins.form.add');
+    });
+
     
     //Gioi thieu
     Route::group(['prefix' => 'introduce'],function(){
