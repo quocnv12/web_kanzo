@@ -45,7 +45,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
     });
 
 
-    //----------Gioi thieu-----
+    //-----------------Gioi thieu
     Route::group(['prefix' => 'introduce'],function(){
     	Route::get('','IntroduceController@list')->name('introduce.list');
     	Route::get('add','IntroduceController@add')->name('introduce.add');
