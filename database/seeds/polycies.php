@@ -11,7 +11,7 @@ class polycies extends Seeder
      */
     public function run()
     {
-    	DB::table('polycies')->delete();
+        DB::table('polycies')->delete();
         DB::table('polycies')->insert([
         	[
 	        	'id'=>1,

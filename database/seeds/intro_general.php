@@ -26,6 +26,5 @@ class intro_general extends Seeder
 					Rất hân hạnh được cộng tác với các Chủ đầu tư và Quý khách hàng!',
 	        	'image'=>'1',
 	    ]);
-	        
     }
 }

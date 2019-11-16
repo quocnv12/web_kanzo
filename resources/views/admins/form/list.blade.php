@@ -18,7 +18,7 @@
     <div class="span12">
         <div class="grid simple ">
             <div class="grid-body ">
-                <table class="table table-striped" id="example2">
+                <table class="table table-striped" id="example">
                     <thead>
                         <tr>
                             <th>Rendering engine</th>

@@ -17,14 +17,10 @@
     <div class="span12">
         <div class="grid simple ">
             <div class="grid-body ">
-                <table class="table table-striped" id="example1">
+                <table class="table table-hover table-condensed" id="example1">
                     <thead>
                         <tr>
                             <th style="width:1%">STT
-                                <!-- <div class="checkbox check-default" style="margin-right:auto;margin-left:auto;">
-                                    <input type="checkbox" value="1" id="checkbox1">
-                                    <label for="checkbox1"></label>
-                                </div> -->
                             </th>
                             <th style="width:12%">Tiêu Đề</th>
                             <th style="width:38%" data-hide="phone,tablet">Nội dung</th>
