@@ -161,22 +161,10 @@
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="login.html"><i class="material-icons">power_settings_new</i>&nbsp;&nbsp;Log
+                                <a href="admin/logout"><i class="material-icons">power_settings_new</i>&nbsp;&nbsp;Log
                                     Out</a>
                             </li>
                         </ul>
-                    </li>
-           
-                    <li class="quicklinks">
-                        <div class="simple-chat-popup chat-menu-toggle hide">
-                            <div class="simple-chat-popup-arrow"></div>
-                            <div class="simple-chat-popup-inner">
-                                <div style="width:100px">
-                                    <div class="semi-bold">David Nester</div>
-                                    <div class="message">Hey you there </div>
-                                </div>
-                            </div>
-                        </div>
                     </li>
                 </ul>
             </div>

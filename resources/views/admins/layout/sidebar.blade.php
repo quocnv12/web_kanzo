@@ -254,13 +254,13 @@
             <p class="menu-title sm">Account <span class="pull-right"><a href="#" class="create-folder"></a></span></p>
             <ul class="folders">
                 <li>
-                    <a href="#">
+                    <a href="admin/account">
                         <div class="status-icon green"></div>
                         Danh sách tài khoản
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="admin/account/add">
                         <div class="status-icon red"></div>
                         Thêm tài khoản
                     </a>
