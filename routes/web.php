@@ -32,8 +32,8 @@ Route::post('login','admin\LoginController@PostLogin');
 
 
 Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin'], function () {
-    Route::get('','admin\IndexController@GetIndex');
-    Route::get('logout','admin\LoginController@GetLogout');
+    Route::get('','IndexController@GetIndex');
+    Route::get('logout','LoginController@GetLogout');
 
 
 
@@ -45,7 +45,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
     });
 
 
-                 //----------Gioi thieu-----
+    //----------Gioi thieu-----
     Route::group(['prefix' => 'introduce'],function(){
     	Route::get('','IntroduceController@list')->name('introduce.list');
     	Route::get('add','IntroduceController@add')->name('introduce.add');
@@ -71,6 +71,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}','IntrogeneralController@edit')->name('intro.edit');
         Route::post('edit/{id}','IntrogeneralController@post_edit')->name('intro.edit');
     });
+
     //-----------------Chinh sach
     Route::group(['prefix' => 'polycies'],function(){
         Route::get('','PolyciesController@list')->name('polycies.list');

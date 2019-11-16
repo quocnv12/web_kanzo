@@ -14,7 +14,7 @@
     <div class="span12">
         <div class="grid simple ">
             <div class="grid-body ">
-                <table class="table table-striped" id="example1">
+                <table class="table table-striped" id="example">
                     <thead>
                         <tr>
                             <th style="width:1%">STT
