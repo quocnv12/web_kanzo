@@ -1,6 +1,6 @@
 @extends('admins.layout.master')
 @section('title','Danh sách')
-@section('introduce','active')
+@section('polycies','active')
 @section('content')
 <div>
     <ul class="breadcrumb">
@@ -10,7 +10,7 @@
         <li><a href="#" class="active">Tables</a> </li>
     </ul>
     <div class="page-title">
-        <a href="{{route('introduce.add')}}"><button class="btn btn-primary">Thêm mới</button></a>
+        <a href="{{route('polycies.add')}}"><button class="btn btn-primary">Thêm mới</button></a>
     </div>
 </div>
 <div class="row-fluid">
@@ -33,7 +33,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($introduce as $row)
+                        @foreach($polycies as $row)
                         <tr class="odd gradeX">
                             <td class="center">{{$row->id}}</td>
                             <td>{{$row->title}}</td>
@@ -44,8 +44,8 @@
                                 @endif
                             </td>
                             <td>
-                                <a href="{{route('introduce.edit',['id'=>$row->id])}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
-                                <a href="{{route('introduce.del',['id'=>$row->id])}}" class="btn btn-xs btn-danger" onclick="return confirm('Xóa! bạn có muốn tiếp tục?')"><i class="fa fa-trash-o"></i></a>
+                                <a href="{{route('polycies.edit',['id'=>$row->id])}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
+                                <a href="{{route('polycies.del',['id'=>$row->id])}}" class="btn btn-xs btn-danger" onclick="return confirm('Xóa! bạn có muốn tiếp tục?')"><i class="fa fa-trash-o"></i></a>
                             </td>
                         </tr>
                         @endforeach

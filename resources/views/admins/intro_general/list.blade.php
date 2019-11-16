@@ -7,11 +7,8 @@
         <li>
             <p>YOU ARE HERE</p>
         </li>
-        <li><a href="#" class="active">Tables</a> </li>
+        <li><a href="#" class="active">Tóm tắt giới thiệu chung</a> </li>
     </ul>
-    <div class="page-title">
-        <a href="{{route('introduce.add')}}"><button class="btn btn-primary">Thêm mới</button></a>
-    </div>
 </div>
 <div class="row-fluid">
     <div class="span12">
@@ -38,14 +35,9 @@
                             <td class="center">{{$row->id}}</td>
                             <td>{{$row->title}}</td>
                             <td>{!! $row->content !!}</td>
-                            <td class="center">
-                                @if($row->active == 1)
-                                    Hiện @else Ẩn
-                                @endif
-                            </td>
+                            <td class="center">{{$row->image}}</td>
                             <td>
-                                <a href="{{route('introduce.edit',['id'=>$row->id])}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
-                                <a href="{{route('introduce.del',['id'=>$row->id])}}" class="btn btn-xs btn-danger" onclick="return confirm('Xóa! bạn có muốn tiếp tục?')"><i class="fa fa-trash-o"></i></a>
+                                <a href="{{route('intro.edit',['id'=>$row->id])}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
                         @endforeach

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class introduce extends Seeder
+class intro_general extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,9 +11,9 @@ class introduce extends Seeder
      */
     public function run()
     {
-        DB::table('introduce')->delete();
-        DB::table('introduce')->insert([
-	        [
+        DB::table('intro_general')->delete();
+        DB::table('intro_general')->insert([
+	       
 	        	'id'=>1,
 	        	'title'=>'Giới thiệu chung',
 	        	'slug'=>'gioi-thieu-chung',
@@ -24,23 +24,8 @@ class introduce extends Seeder
 					Công ty TNHH Bếp ga KANZO mong muốn và sẵn sàng trở thành đối tác của các Chủ đầu , các Nhà quản lý, Doanh nghiệp và cá nhân khác, phần đấu vì sự nghiệp Công nghiệp hóa, hiện đại hóa đất nước.
 
 					Rất hân hạnh được cộng tác với các Chủ đầu tư và Quý khách hàng!',
-	        	'active'=>'1',
-	        ],
-	        [
-	        	'id'=>2,
-	        	'title'=>'Phương châm',
-	        	'slug'=>'phuong-cham',
-	        	'content'=>'Với phương châm “Chất lượng tiên phong - Hợp tác phát triển”, CÔNG TY TNHH Bếp ga KANZO luôn mong muốn đem đến cho đối tác những sản phẩm có chất lượng cao nhất. Qua đó, chúng tôi hy vọng sẽ cùng song hành với các đối tác trên con đường phát triển doanh nghiệp ngày một lớn mạnh, bền vững.',
-	        	'active'=>'1',
-	        ],
-	        [
-	        	'id'=>3,
-	        	'title'=>'Tầm nhìn',
-	        	'slug'=>'tam-nhìn',
-	        	'content'=>'Với phương châm “Chất lượng tiên phong - Hợp tác phát triển”, CÔNG TY TNHH Bếp ga KANZO luôn mong muốn đem đến cho đối tác những sản phẩm có chất lượng cao nhất. Qua đó, chúng tôi hy vọng sẽ cùng song hành với các đối tác trên con đường phát triển doanh nghiệp ngày một lớn mạnh, bền vững.',
-	        	'active'=>'1',
-	        ],
+	        	'image'=>'1',
+	    ]);
 	        
-        ]);
     }
 }
