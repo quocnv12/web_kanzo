@@ -17,7 +17,7 @@
     <div class="span12">
         <div class="grid simple ">
             <div class="grid-body ">
-                <table class="table table-hover table-condensed" id="example1">
+                <table class="table table-hover table-condensed" id="example">
                     <thead>
                         <tr>
                             <th style="width:1%">STT
