@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIntroduceTable extends Migration
+class CreateIntroGeneralTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateIntroduceTable extends Migration
      */
     public function up()
     {
-        Schema::create('introduce', function (Blueprint $table) {
+        Schema::create('intro_general', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('slug');
             $table->text('content');
-            $table->tinyInteger('active')->default(1);
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateIntroduceTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('introduce');
+        Schema::dropIfExists('intro_general');
     }
 }

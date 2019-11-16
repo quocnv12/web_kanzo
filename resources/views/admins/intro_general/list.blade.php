@@ -7,20 +7,21 @@
         <li>
             <p>YOU ARE HERE</p>
         </li>
-        <li><a href="#" class="active">Tables</a> </li>
+        <li><a href="#" class="active">Tóm tắt giới thiệu chung</a> </li>
     </ul>
-    <div class="page-title">
-        <a href="{{route('introduce.add')}}"><button class="btn btn-primary">Thêm mới</button></a>
-    </div>
 </div>
 <div class="row-fluid">
     <div class="span12">
         <div class="grid simple ">
             <div class="grid-body ">
-                <table class="table table-hover table-condensed" id="example1">
+                <table class="table table-striped" id="example1">
                     <thead>
                         <tr>
                             <th style="width:1%">STT
+                                <!-- <div class="checkbox check-default" style="margin-right:auto;margin-left:auto;">
+                                    <input type="checkbox" value="1" id="checkbox1">
+                                    <label for="checkbox1"></label>
+                                </div> -->
                             </th>
                             <th style="width:12%">Tiêu Đề</th>
                             <th style="width:38%" data-hide="phone,tablet">Nội dung</th>
@@ -34,14 +35,9 @@
                             <td class="center">{{$row->id}}</td>
                             <td>{{$row->title}}</td>
                             <td>{!! $row->content !!}</td>
-                            <td class="center">
-                                @if($row->active == 1)
-                                    Hiện @else Ẩn
-                                @endif
-                            </td>
+                            <td class="center">{{$row->image}}</td>
                             <td>
-                                <a href="{{route('introduce.edit',['id'=>$row->id])}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
-                                <a href="{{route('introduce.del',['id'=>$row->id])}}" class="btn btn-xs btn-danger" onclick="return confirm('Xóa! bạn có muốn tiếp tục?')"><i class="fa fa-trash-o"></i></a>
+                                <a href="{{route('intro.edit',['id'=>$row->id])}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
                         @endforeach
