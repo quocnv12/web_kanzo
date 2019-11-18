@@ -17,6 +17,7 @@ class CreateContactsTable extends Migration
             $table->bigIncrements('id');
             $table->string('address');
             $table->string('phone');
+            $table->string('fax');
             $table->string('email');
             $table->string('fanpage');
             $table->timestamps();
@@ -30,6 +31,6 @@ class CreateContactsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contacts');
+        Schema::dropIfExists('contact');
     }
 }

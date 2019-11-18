@@ -30,7 +30,6 @@ class IntroduceController extends Controller
     	$new->title = $req->title;
     	$new->slug = str_slug($req->title);
     	$new->content = $req->introduce_content;
-    	// $new->type = 1;  //1:giới thiệu - 2:chính sách
     	$new->active = $req->active;
     	$new->save();
 
@@ -42,10 +41,11 @@ class IntroduceController extends Controller
     }
     public function post_edit(Request $req,$id){
         $this ->validate($req,[
-            'title' => 'required',
+            'title' => 'required|unique:introduce,title,'.$id,
             'introduce_content' => 'required',
         ],[
             'title.required' => 'Tiêu đề là trường bắt buộc!',
+            'title.unique' => 'Tiêu đề đã tồn tại!',
             'introduce_content.required' => 'Nội dung là trường bắt buộc!',
         ]);
         $new = introduce::find($id);

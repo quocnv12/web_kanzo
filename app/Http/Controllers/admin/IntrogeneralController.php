@@ -29,6 +29,12 @@ class IntrogeneralController extends Controller
         $up->title = $req->title;
         $up->slug = str_slug($req->title);
         $up->content = $req->intro_content;
+        if($req->hasFile('image')){
+            $file=$req->image;
+            $file_name=str_slug($req->image).'.'.$file->getClientOriginalExtension();
+            $file->move('images',$file_name);
+            $up->image=$file_name;
+        }
         $up->save();
         return redirect()->route('intro.list');
     }

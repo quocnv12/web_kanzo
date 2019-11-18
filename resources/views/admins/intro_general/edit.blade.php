@@ -28,15 +28,6 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Trạng thái </label>
-                            <div class="">
-                                <input id="checkbox1" type="radio" value="1" name="image" <?php echo $introduce->image == 1 ? 'checked':'';     ?>>
-                                Hiện
-                                <input id="checkbox2" type="radio" value="0" name="image" <?php echo $introduce->image == 0 ? 'checked':''; ?>>
-                                Ẩn
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <div class="form-group">
                                 <label class="form-label">Nội dung</label>
                                 <textarea name="intro_content" id="intro_content">{{$introduce->content}}</textarea>

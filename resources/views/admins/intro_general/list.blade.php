@@ -14,7 +14,7 @@
     <div class="span12">
         <div class="grid simple ">
             <div class="grid-body ">
-                <table class="table table-striped" id="example1">
+                <table class="table table-striped" id="example">
                     <thead>
                         <tr>
                             <th style="width:1%">STT
@@ -23,10 +23,10 @@
                                     <label for="checkbox1"></label>
                                 </div> -->
                             </th>
-                            <th style="width:12%">Tiêu Đề</th>
+                            <th style="width:10%">Tiêu Đề</th>
                             <th style="width:38%" data-hide="phone,tablet">Nội dung</th>
-                            <th style="width:2%">T.Thái</th>
-                            <th style="width:6%" data-hide="phone,tablet"></th>
+                            <th style="width:8%">Ảnh</th>
+                            <th style="width:2%" data-hide="phone,tablet"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,7 +35,8 @@
                             <td class="center">{{$row->id}}</td>
                             <td>{{$row->title}}</td>
                             <td>{!! $row->content !!}</td>
-                            <td class="center">{{$row->image}}</td>
+                            <td class="center">
+                                <img src="images/{{ $row->image }}" alt="" width="180px" height="100px"></td>
                             <td>
                                 <a href="{{route('intro.edit',['id'=>$row->id])}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
                             </td>
