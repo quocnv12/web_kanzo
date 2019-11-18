@@ -26,26 +26,31 @@
                 </ul>
             </li>
 
-            <li class="start  open  @yield('introduce') "> <a href=""><i class="material-icons">collections_bookmark</i> <span
+            <li class="start  open  @yield('introduce') "> <a href="{{route('introduce.list')}}"><i class="material-icons">import_contacts</i> <span
                         class="title">Giới thiệu</span> <span class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
                     <li> <a href="{{route('introduce.list')}}"> Danh sách </a> </li>
-                    <li> <a href="{{route('intro.list')}}"> Giới thiệu chung</a> </li>
+                    <li> <a href="{{route('intro.list')}}"> Giới thiệu về công ty</a> </li>
                     <li> <a href="{{route('introduce.add')}}"> Thêm giới thiệu </a> </li>
                     <!-- <li class=""> <a href="index.html "> Dashboard v2 <span
                                 class=" label label-info pull-right m-r-30">NEW</span></a></li> -->
                 </ul>
             </li>
 
-            <li class="start  open  @yield('polycies') "> <a href=""><i class="material-icons">library_books</i> <span
+            <li class="start  open  @yield('polycies') "> <a href="{{route('polycies.list')}}"><i class="material-icons">library_books</i> <span
                         class="title">Chính sách</span> <span class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
                     <li> <a href="{{route('polycies.list')}}"> Danh sách </a> </li>
                     <li> <a href="{{route('polycies.add')}}"> Thêm chính sách</a> </li>
-                    <!-- <li class=""> <a href="index.html "> Dashboard v2 <span
-                                class=" label label-info pull-right m-r-30">NEW</span></a></li> -->
+                </ul>
+            </li>
+            <li class="start  open  @yield('contact') "> <a href="{{route('contact.list')}}"><i class="material-icons">contacts</i> <span
+                        class="title">Liên hệ</span> <span class="selected"></span> <span class="arrow  open "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('contact.list')}}"> Thông tin liên hệ </a> </li>
                 </ul>
             </li>
            

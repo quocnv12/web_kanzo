@@ -82,6 +82,13 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('del/{id}','PolyciesController@del')->name('polycies.del');
     });
 
+    //-----------------Lien he
+    Route::group(['prefix' => 'contact'],function(){
+        Route::get('','ContactController@list')->name('contact.list');
+        Route::get('edit/{id}','ContactController@edit')->name('contact.edit');
+        Route::post('edit/{id}','ContactController@post_edit')->name('contact.edit');
+    });
+
 
 });
 
