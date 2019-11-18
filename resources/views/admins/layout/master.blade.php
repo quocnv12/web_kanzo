@@ -107,19 +107,23 @@
     <script src="admin-template/assets/ckeditor/ckeditor.js" type="text/javascript"></script>
 
 
+
             <script>
                 CKEDITOR.replace('content');
                 CKEDITOR.replace('introduce_content');
                 CKEDITOR.replace('intro_content');
                 CKEDITOR.replace('polycies_content');
                 CKEDITOR.replace('question_content');
+
                
             </script>
             
    
-      
-            <script>
+ @yield('script')
+<script>
+
                     function changeImg(input){
+
                            //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
                            if(input.files && input.files[0]){
                                var reader = new FileReader();
@@ -134,10 +138,10 @@
                        $(document).ready(function() {
                            $('#avatar').click(function(){
                                $('#img').click();
-                           });
-                       });
+                        });
+                    });
                
-            </script> 
+        </script> 
 </body>
 
 </html>

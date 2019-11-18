@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\admin;
+use App\Http\Requests\PasswordRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
+use App\models\account;
 
 class LoginController extends Controller
 {
@@ -46,5 +49,26 @@ class LoginController extends Controller
         Auth::logout();
         return redirect('login');
     }
+
+
+    //------------Đổi mật khẩu
+    function GetPassword()
+    {
+        return view('admins.account.resetpasword.password');
+    }
+    function PostPassword(PasswordRequest $request)
+    {
+        if (Hash::check($request->password_old, Auth::user()->password))
+        {
+          $user=account::find(Auth::user()->id);
+          $user->password=bcrypt($request->password);
+          $user->save();
+          return redirect()->back()->with('thongbao','Đổi mật khẩu thành công !');
+        }else {
+            return redirect()->back()->with('thongbao1','Mật khẩu cũ không chính xác !');
+        }
+    }
+
+
 
 }

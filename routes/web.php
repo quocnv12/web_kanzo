@@ -29,12 +29,19 @@ Route::get('/', function () {
 Route::get('login','admin\LoginController@GetLogin')->middleware('CheckLogout');
 Route::post('login','admin\LoginController@PostLogin');
 
-
+                //--lấy lại mật khẩu
+Route::get('lay-lai-mat-khau','Auth\ForgotPasswordController@GetResetPassword');
+Route::post('lay-lai-mat-khau','Auth\ForgotPasswordController@PostResetPassword');
+Route::get('thay-doi-mat-khau','Auth\ForgotPasswordController@ResetPassword')->name('link.reset.password');
+Route::post('thay-doi-mat-khau','Auth\ForgotPasswordController@PosetReset');
 
 Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin'], function () {
     Route::get('','IndexController@GetIndex');
     Route::get('logout','LoginController@GetLogout');
 
+            //------------Đổi mật khẩu
+    Route::get('password','LoginController@GetPassword');
+    Route::post('password','LoginController@PostPassword');
 
 
     Route::get('form', function () {
@@ -56,6 +63,34 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('banner','IntroduceController@banner')->name('introduce.banner');
         Route::get('banner-edit/{id}','IntroduceController@banner_edit')->name('introduce.banner_edit');
         Route::post('banner-edit/{id}','IntroduceController@post_banner_edit')->name('introduce.banner_edit');
+    });
+
+    //---------------San Pham
+    Route::group(['prefix' => 'product'], function(){
+        Route::get('list', 'ProductController@getListProduct')->name('product.list');
+        Route::get('add', 'ProductController@getAddProduct')->name('product.add');
+        Route::post('add', 'ProductController@postAddProduct')->name('product.add.post');
+        Route::get('edit/{id_product}', 'ProductController@getEditProduct')->name('product.edit');
+        Route::post('edit/{id_product}', 'ProductController@postEditProduct')->name('product.edit.post');
+        Route::get('delete/{id_product}', 'ProductController@getDeleteProduct')->name('product.delete');
+    });
+    Route::group(['prefix' => 'category'], function(){
+        Route::get('list', 'CategoryController@getListCategory')->name('category.list');
+        Route::get('add', 'CategoryController@getAddCategory')->name('category.add');
+        Route::post('add', 'CategoryController@postAddCategory')->name('category.add.post');
+        Route::get('edit/{id_category}', 'CategoryController@getEditCategory')->name('category.edit');
+        Route::post('edit/{id_category}', 'CategoryController@postEditCategory')->name('category.edit.post');
+        Route::get('delete/{id_category}', 'CategoryController@getDeleteCategory')->name('category.delete');
+    });
+
+    //-------------------Tin Tuc
+    Route::group(['prefix' => 'news'], function(){
+        Route::get('', 'NewsController@list')->name('news.list');
+        Route::get('add', 'NewsController@add')->name('news.add');
+        Route::post('add', 'NewsController@post_add')->name('news.add');
+        Route::get('edit/{id}', 'NewsController@edit')->name('news.edit');
+        Route::post('edit/{id}', 'NewsController@post_edit')->name('news.edit');
+        Route::get('delete/{id}', 'NewsController@del')->name('news.del');
     });
 
         // -------------tài khoản
@@ -109,7 +144,6 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::post('edit/{id}','QuestionController@post_edit')->name('question.edit');
         Route::get('del/{id}','QuestionController@del')->name('question.del');
     });
-
 
 
 

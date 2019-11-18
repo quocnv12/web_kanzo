@@ -3,14 +3,14 @@
     <div class="page-sidebar-wrapper scrollbar-dynamic" id="main-menu-wrapper">
         <div class="user-info-wrapper sm">
             <div class="profile-wrapper sm">
-                <img src="admin-template/assets/img/profiles/avatar.jpg" alt=""
-                    data-src="admin-template/assets/img/profiles/avatar.jpg"
-                    data-src-retina="admin-template/assets/img/profiles/avatar2x.jpg" width="69" height="69" />
+                <img src="images/{{ Auth::user()->image }}" alt=""
+                    data-src=""
+                    data-src-retina="" width="69" height="69" />
                 <div class="availability-bubble online"></div>
             </div>
             <div class="user-info sm">
-                <div class="username">Fred <span class="semi-bold">Smith</span></div>
-                <div class="status">Life goes on...</div>
+                <div class="username"><span class="semi-bold">{{ Auth::user()->name }}</span></div>
+                <div class="status">{{ Auth::user()->level }}</div>
             </div>
         </div>
         <!-- END MINI-PROFILE -->
@@ -71,8 +71,30 @@
                     <li> <a href="{{route('contact.list')}}"> Thông tin liên hệ </a> </li>
                 </ul>
             </li>
-           
-
+            <li>
+                <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
+                            class="title">Tin Tức</span> <span class=" arrow"></span> </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('news.add')}}"> Thêm Tin Tức </a> </li>
+                    <li> <a href="{{route('news.list')}}"> Danh sách Tin Tức </a> </li>
+                </ul>
+            </li>
+           <li>
+                <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
+                        class="title">Sản phẩm</span> <span class=" arrow"></span> </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('product.add')}}"> Thêm sản phẩm </a> </li>
+                    <li> <a href="{{route('product.list')}}"> Danh sách sản phẩm </a> </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
+                        class="title">Loại sản phẩm</span> <span class=" arrow"></span> </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('category.add')}}"> Thêm loại sản phẩm </a> </li>
+                    <li> <a href="{{route('category.list')}}"> Danh sách loại sản phẩm </a> </li>
+                </ul>
+            </li>
             <li>
                 <a href="widgets.html"> <i class="material-icons">panorama_horizontal</i> <span
                         class="title">Widgets</span> <span
