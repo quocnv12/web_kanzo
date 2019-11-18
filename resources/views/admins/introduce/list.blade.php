@@ -7,7 +7,7 @@
         <li>
             <p>YOU ARE HERE</p>
         </li>
-        <li><a href="#" class="active">Tables</a> </li>
+        <li><a href="#" class="active">Giới thiệu</a> </li>
     </ul>
     <div class="page-title">
         <a href="{{route('introduce.add')}}"><button class="btn btn-primary">Thêm mới</button></a>
@@ -20,8 +20,7 @@
                 <table class="table table-hover table-condensed" id="example">
                     <thead>
                         <tr>
-                            <th style="width:1%">STT
-                            </th>
+                            <th style="width:1%">STT</th>
                             <th style="width:12%">Tiêu Đề</th>
                             <th style="width:38%" data-hide="phone,tablet">Nội dung</th>
                             <th style="width:2%">T.Thái</th>
@@ -31,7 +30,7 @@
                     <tbody>
                         @foreach($introduce as $row)
                         <tr class="odd gradeX">
-                            <td class="center">{{$row->id}}</td>
+                            <td class="center">{{$loop->index+1}}</td>
                             <td>{{$row->title}}</td>
                             <td>{{ $row->content }}</td>
                             <td class="center">

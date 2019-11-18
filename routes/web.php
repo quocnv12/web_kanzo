@@ -88,6 +88,17 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}','ContactController@edit')->name('contact.edit');
         Route::post('edit/{id}','ContactController@post_edit')->name('contact.edit');
     });
+    //-----------------khach hang lien he
+    Route::group(['prefix' => 'sent_us'],function(){
+        Route::get('','SentusController@list')->name('sentus.list');
+        Route::get('processed','SentusController@list2')->name('sentus.list2');
+        Route::get('edit/{id}','SentusController@edit')->name('sentus.edit');
+        Route::get('add','SentusController@add')->name('sentus.add');
+        Route::post('add','SentusController@post_add')->name('sentus.add');
+        Route::get('del/{id}','SentusController@del')->name('sentus.del');
+    });
+
+
 
 
 });

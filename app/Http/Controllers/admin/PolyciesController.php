@@ -28,7 +28,6 @@ class PolyciesController extends Controller
     	$new->title = $req->title;
     	$new->slug = str_slug($req->title);
     	$new->content = $req->polycies_content;
-    	// $new->type = 1;  //1:giới thiệu - 2:chính sách
     	$new->active = $req->active;
     	$new->save();
 
