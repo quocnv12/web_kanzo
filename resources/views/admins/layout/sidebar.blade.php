@@ -46,6 +46,16 @@
                     <li> <a href="{{route('polycies.add')}}"> Thêm chính sách</a> </li>
                 </ul>
             </li>
+
+            <li class="start  open  @yield('sentus') "> <a href="{{route('sentus.list')}}"><i class="material-icons">shopping_cart</i> <span
+                        class="title">Đơn hàng</span> <span class="selected"></span> <span class="arrow  open "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('sentus.list')}}"> Đơn mới </a> </li>
+                    <li> <a href="{{route('sentus.list2')}}"> Đơn đã xử lý </a> </li>
+                </ul>
+            </li>
+
             <li class="start  open  @yield('contact') "> <a href="{{route('contact.list')}}"><i class="material-icons">contacts</i> <span
                         class="title">Liên hệ</span> <span class="selected"></span> <span class="arrow  open "></span>
                 </a>
