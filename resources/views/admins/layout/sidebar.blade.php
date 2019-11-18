@@ -63,6 +63,14 @@
                     <li> <a href="{{route('contact.list')}}"> Thông tin liên hệ </a> </li>
                 </ul>
             </li>
+            <li>
+                <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
+                            class="title">Tin Tức</span> <span class=" arrow"></span> </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('news.add')}}"> Thêm Tin Tức </a> </li>
+                    <li> <a href="{{route('news.list')}}"> Danh sách Tin Tức </a> </li>
+                </ul>
+            </li>
            <li>
                 <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
                         class="title">Sản phẩm</span> <span class=" arrow"></span> </a>

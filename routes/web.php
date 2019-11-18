@@ -62,6 +62,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
     	Route::get('del/{id}','IntroduceController@del')->name('introduce.del');
     });
 
+    //---------------San Pham
     Route::group(['prefix' => 'product'], function(){
         Route::get('list', 'ProductController@getListProduct')->name('product.list');
         Route::get('add', 'ProductController@getAddProduct')->name('product.add');
@@ -77,6 +78,16 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id_category}', 'CategoryController@getEditCategory')->name('category.edit');
         Route::post('edit/{id_category}', 'CategoryController@postEditCategory')->name('category.edit.post');
         Route::get('delete/{id_category}', 'CategoryController@getDeleteCategory')->name('category.delete');
+    });
+
+    //-------------------Tin Tuc
+    Route::group(['prefix' => 'news'], function(){
+        Route::get('', 'NewsController@list')->name('news.list');
+        Route::get('add', 'NewsController@add')->name('news.add');
+        Route::post('add', 'NewsController@post_add')->name('news.add');
+        Route::get('edit/{id}', 'NewsController@edit')->name('news.edit');
+        Route::post('edit/{id}', 'NewsController@post_edit')->name('news.edit');
+        Route::get('delete/{id}', 'NewsController@del')->name('news.del');
     });
 
         // -------------tài khoản
