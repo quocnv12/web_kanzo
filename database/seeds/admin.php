@@ -13,9 +13,9 @@ class admin extends Seeder
     {
         DB::table('users')->delete();
         DB::table('users')->insert([
-            ['id'=>1,'name'=>'Nguyễn văn A','email'=>'admin@gmail.com','password'=>bcrypt('123456'),'phone'=>'0909234190','level'=>'Quản trị viên','image'=>'nguyenthiennhan.jpg'],
-            ['id'=>2,'name'=>'Nguyễn văn B','email'=>'admin@gmail.com','password'=>bcrypt('123456'),'phone'=>'0909234190','level'=>'Biên tập viên','image'=>'nguyenthiennhan.jpg'],
-            ['id'=>3,'name'=>'Nguyễn văn C','email'=>'admin@gmail.com','password'=>bcrypt('123456'),'phone'=>'0909234190','level'=>'Cộng tác viên','image'=>'nguyenthiennhan.jpg'],
+            ['id'=>1,'name'=>'Nguyễn văn A','email'=>'admin@gmail.com','password'=>bcrypt('123456'),'phone'=>'0909234190','level'=>'Quản trị viên','image'=>'avatar_small.jpg'],
+            ['id'=>2,'name'=>'Nguyễn văn B','email'=>'editor@gmail.com','password'=>bcrypt('123456'),'phone'=>'0909234190','level'=>'Biên tập viên','image'=>'nguyenthiennhan.jpg'],
+            ['id'=>3,'name'=>'Nguyễn văn C','email'=>'user@gmail.com','password'=>bcrypt('123456'),'phone'=>'0909234190','level'=>'Cộng tác viên','image'=>'nguyenthiennhan.jpg'],
         ]);
     }
 }

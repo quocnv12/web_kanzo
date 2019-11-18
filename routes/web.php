@@ -29,12 +29,19 @@ Route::get('/', function () {
 Route::get('login','admin\LoginController@GetLogin')->middleware('CheckLogout');
 Route::post('login','admin\LoginController@PostLogin');
 
-
+                //--lấy lại mật khẩu
+Route::get('lay-lai-mat-khau','Auth\ForgotPasswordController@GetResetPassword');
+Route::post('lay-lai-mat-khau','Auth\ForgotPasswordController@PostResetPassword');
+Route::get('thay-doi-mat-khau','Auth\ForgotPasswordController@ResetPassword')->name('link.reset.password');
+Route::post('thay-doi-mat-khau','Auth\ForgotPasswordController@PosetReset');
 
 Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin'], function () {
-    Route::get('','admin\IndexController@GetIndex');
-    Route::get('logout','admin\LoginController@GetLogout');
+    Route::get('','IndexController@GetIndex');
+    Route::get('logout','LoginController@GetLogout');
 
+            //------------Đổi mật khẩu
+    Route::get('password','LoginController@GetPassword');
+    Route::post('password','LoginController@PostPassword');
 
 
     Route::get('form', function () {

@@ -105,38 +105,6 @@
     <script src="{{ asset('ckfinder/ckfinder.js') }}"></script>
     <script src="admin-template/assets/ckfinder/ckfinder.js" type="text/javascript"></script>
     <script src="admin-template/assets/ckeditor/ckeditor.js" type="text/javascript"></script>
-<<<<<<< HEAD
-    <script>
-        CKEDITOR.replace('content');
-        CKEDITOR.replace('content1');
-
-    </script>
-
-
-
-    <script>
-        function changeImg(input) {
-            //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                //Sự kiện file đã được load vào website
-                reader.onload = function (e) {
-                    //Thay đổi đường dẫn ảnh
-                    $('#avatar').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-        $(document).ready(function () {
-            $('#avatar').click(function () {
-                $('#img').click();
-            });
-        });
-
-
-        
-    </script>
-=======
             <script>
                 CKEDITOR.replace('content');
                 CKEDITOR.replace('introduce_content');
@@ -146,8 +114,9 @@
             </script>
             
    
-      
+      @yield('script')
             <script>
+
                     function changeImg(input){
                            //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
                            if(input.files && input.files[0]){
@@ -166,8 +135,8 @@
                            });
                        });
                
-                   </script> 
->>>>>>> a413b978730126d5071950c55d550ff9a7dec055
+                   </script>
+
 </body>
 
 </html>
