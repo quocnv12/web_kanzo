@@ -112,6 +112,7 @@
                 CKEDITOR.replace('introduce_content');
                 CKEDITOR.replace('intro_content');
                 CKEDITOR.replace('polycies_content');
+                CKEDITOR.replace('question_content');
                
             </script>
             

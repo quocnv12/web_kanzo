@@ -24,7 +24,7 @@
                             <label>Tiêu đề</label>
                             <input type="text" name="title" id="title" class="form-control" value="{{$introduce->title}}">
                             @if($errors->has('title'))
-                                {{$errors->first('title')}}
+                                <div class="alert alert-danger">{{$errors->first('title')}}</div>
                             @endif
                         </div>
                         <div class="form-group">
@@ -36,7 +36,7 @@
                                 Ẩn
                             </div>
                             @if($errors->has('active'))
-                                {{ $errors->first('active') }}
+                                <div class="alert alert-danger">{{$errors->first('active')}}</div>
                             @endif
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                                 <textarea name="introduce_content" id="introduce_content">{{$introduce->content}}</textarea>
                             </div>
                             @if($errors->has('introduce_content'))
-                                {{$errors->first('introduce_content')}}
+                                <div class="alert alert-danger">{{$errors->first('introduce_content')}}</div>
                             @endif
                         </div>
                     </div>

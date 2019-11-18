@@ -53,6 +53,9 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
     	Route::get('edit/{id}','IntroduceController@edit')->name('introduce.edit');
     	Route::post('edit/{id}','IntroduceController@post_edit')->name('introduce.edit');
     	Route::get('del/{id}','IntroduceController@del')->name('introduce.del');
+        Route::get('banner','IntroduceController@banner')->name('introduce.banner');
+        Route::get('banner-edit/{id}','IntroduceController@banner_edit')->name('introduce.banner_edit');
+        Route::post('banner-edit/{id}','IntroduceController@post_banner_edit')->name('introduce.banner_edit');
     });
 
         // -------------tài khoản
@@ -88,7 +91,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}','ContactController@edit')->name('contact.edit');
         Route::post('edit/{id}','ContactController@post_edit')->name('contact.edit');
     });
-    //-----------------khach hang lien he
+    //-----------------Khach hang lien he
     Route::group(['prefix' => 'sent_us'],function(){
         Route::get('','SentusController@list')->name('sentus.list');
         Route::get('processed','SentusController@list2')->name('sentus.list2');
@@ -96,6 +99,15 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('add','SentusController@add')->name('sentus.add');
         Route::post('add','SentusController@post_add')->name('sentus.add');
         Route::get('del/{id}','SentusController@del')->name('sentus.del');
+    });
+    //-----------------Cau hoi thuong gap
+    Route::group(['prefix' => 'question'],function(){
+        Route::get('','QuestionController@list')->name('question.list');
+        Route::get('add','QuestionController@add')->name('question.add');
+        Route::post('add','QuestionController@post_add')->name('question.add');
+        Route::get('edit/{id}','QuestionController@edit')->name('question.edit');
+        Route::post('edit/{id}','QuestionController@post_edit')->name('question.edit');
+        Route::get('del/{id}','QuestionController@del')->name('question.del');
     });
 
 
