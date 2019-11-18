@@ -3,14 +3,14 @@
     <div class="page-sidebar-wrapper scrollbar-dynamic" id="main-menu-wrapper">
         <div class="user-info-wrapper sm">
             <div class="profile-wrapper sm">
-                <img src="admin-template/assets/img/profiles/avatar.jpg" alt=""
-                    data-src="admin-template/assets/img/profiles/avatar.jpg"
-                    data-src-retina="admin-template/assets/img/profiles/avatar2x.jpg" width="69" height="69" />
+                <img src="images/{{ Auth::user()->image }}" alt=""
+                    data-src=""
+                    data-src-retina="" width="69" height="69" />
                 <div class="availability-bubble online"></div>
             </div>
             <div class="user-info sm">
-                <div class="username">Fred <span class="semi-bold">Smith</span></div>
-                <div class="status">Life goes on...</div>
+                <div class="username"><span class="semi-bold">{{ Auth::user()->name }}</span></div>
+                <div class="status">{{ Auth::user()->level }}</div>
             </div>
         </div>
         <!-- END MINI-PROFILE -->
@@ -26,13 +26,41 @@
                 </ul>
             </li>
 
-            <li class="start  open  @yield('introduce') "> <a href=""><i class="material-icons">home</i> <span
+            <li class="start  open  @yield('introduce') "> <a href="{{route('introduce.list')}}"><i class="material-icons">import_contacts</i> <span
                         class="title">Giới thiệu</span> <span class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
-                    <li> <a href="{{route('introduce.list')}}"> Giới thiệu </a> </li>
-                    <li class=""> <a href="index.html "> Dashboard v2 <span
-                                class=" label label-info pull-right m-r-30">NEW</span></a></li>
+                    <li> <a href="{{route('introduce.list')}}"> Danh sách </a> </li>
+                    <li> <a href="{{route('intro.list')}}"> Giới thiệu về công ty</a> </li>
+                    <li> <a href="{{route('introduce.add')}}"> Thêm giới thiệu </a> </li>
+                    <!-- <li class=""> <a href="index.html "> Dashboard v2 <span
+                                class=" label label-info pull-right m-r-30">NEW</span></a></li> -->
+                </ul>
+            </li>
+
+            <li class="start  open  @yield('polycies') "> <a href="{{route('polycies.list')}}"><i class="material-icons">library_books</i> <span
+                        class="title">Chính sách</span> <span class="selected"></span> <span class="arrow  open "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('polycies.list')}}"> Danh sách </a> </li>
+                    <li> <a href="{{route('polycies.add')}}"> Thêm chính sách</a> </li>
+                </ul>
+            </li>
+
+            <li class="start  open  @yield('sentus') "> <a href="{{route('sentus.list')}}"><i class="material-icons">shopping_cart</i> <span
+                        class="title">Đơn hàng</span> <span class="selected"></span> <span class="arrow  open "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('sentus.list')}}"> Đơn mới </a> </li>
+                    <li> <a href="{{route('sentus.list2')}}"> Đơn đã xử lý </a> </li>
+                </ul>
+            </li>
+
+            <li class="start  open  @yield('contact') "> <a href="{{route('contact.list')}}"><i class="material-icons">contacts</i> <span
+                        class="title">Liên hệ</span> <span class="selected"></span> <span class="arrow  open "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('contact.list')}}"> Thông tin liên hệ </a> </li>
                 </ul>
             </li>
            <li>
@@ -268,13 +296,13 @@
             <p class="menu-title sm">Account <span class="pull-right"><a href="#" class="create-folder"></a></span></p>
             <ul class="folders">
                 <li>
-                    <a href="#">
+                    <a href="admin/account">
                         <div class="status-icon green"></div>
                         Danh sách tài khoản
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="admin/account/add">
                         <div class="status-icon red"></div>
                         Thêm tài khoản
                     </a>

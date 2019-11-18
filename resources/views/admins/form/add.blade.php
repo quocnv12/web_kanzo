@@ -47,7 +47,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label>Ảnh sản phẩm</label>
-                        <input id="img" type="file" name="img" value="" class="form-control hidden"
+                        <input id="img" type="file" name="image" value="" class="form-control hidden"
                             onchange="changeImg(this)">
                         <img id="avatar" class="thumbnail" width="100%" height="350px" src="images/import-img.png">
                     </div>

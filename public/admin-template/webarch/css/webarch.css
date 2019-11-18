@@ -10203,3 +10203,7 @@ body.rtl .footer-widget {
     -webkit-backface-visibility: hidden;
   }
 }
+
+#ToolTables_example_0{
+ display: none !important;
+}

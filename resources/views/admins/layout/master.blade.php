@@ -11,14 +11,19 @@
     <base href="{{ asset('') }}">
     <!-- BEGIN PLUGIN CSS -->
     <link href="admin-template/assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="admin-template/assets/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="admin-template/assets/plugins/jquery-datatable/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
-    <link href="admin-template/assets/plugins/datatables-responsive/css/datatables.responsive.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="admin-template/assets/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css"
+        media="screen" />
+    <link href="admin-template/assets/plugins/jquery-datatable/css/jquery.dataTables.css" rel="stylesheet"
+        type="text/css" />
+    <link href="admin-template/assets/plugins/datatables-responsive/css/datatables.responsive.css" rel="stylesheet"
+        type="text/css" media="screen" />
     <!-- END PLUGIN CSS -->
     <!-- BEGIN PLUGIN CSS -->
-    <link href="admin-template/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="admin-template/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css"
+        media="screen" />
     <link href="admin-template/assets/plugins/bootstrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="admin-template/assets/plugins/bootstrapv3/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="admin-template/assets/plugins/bootstrapv3/css/bootstrap-theme.min.css" rel="stylesheet"
+        type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="admin-template/assets/plugins/animate.min.css" rel="stylesheet" type="text/css" />
     <link href="admin-template/assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" />
@@ -37,7 +42,7 @@
     <!-- BEGIN CONTAINER -->
     <div class="page-container row-fluid">
         <!-- BEGIN SIDEBAR -->
-       
+
         @include('admins.layout.sidebar')
 
         <!-- END SIDEBAR -->
@@ -56,11 +61,11 @@
                 <div class="page-title">
                 </div>
                 <!-- BEGIN DASHBOARD TILES -->
-                     @yield('content')
+                @yield('content')
             </div>
         </div>
         <!-- BEGIN CHAT -->
-        
+
         <!-- END CHAT -->
     </div>
     <!-- END CONTAINER -->
@@ -70,9 +75,12 @@
     <script src="admin-template/assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="admin-template/assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
     <script src="admin-template/assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
-    <script src="admin-template/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
-    <script src="admin-template/assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
-    <script src="admin-template/assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="admin-template/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript">
+    </script>
+    <script src="admin-template/assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript">
+    </script>
+    <script src="admin-template/assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript">
+    </script>
     <script src="admin-template/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
     <!-- END CORE JS DEPENDECENCIES-->
     <!-- BEGIN CORE TEMPLATE JS -->
@@ -81,28 +89,38 @@
     <!-- END CORE TEMPLATE JS -->
     <!-- BEGIN PAGE LEVEL PLUGINS -->
     <script src="admin-template/assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-    <script src="admin-template/assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-    <script src="admin-template/assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="admin-template/assets/plugins/datatables-responsive/js/datatables.responsive.js"></script>
+    <script src="admin-template/assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript">
+    </script>
+    <script src="admin-template/assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js"
+        type="text/javascript"></script>
+    <script type="text/javascript"
+        src="admin-template/assets/plugins/datatables-responsive/js/datatables.responsive.js"></script>
     <script type="text/javascript" src="admin-template/assets/plugins/datatables-responsive/js/lodash.min.js"></script>
     <!-- END PAGE LEVEL JS INIT -->
     <script src="admin-template/assets/js/datatables.js" type="text/javascript"></script>
 
 
 
-             {{-- ckfinder --}}
+    {{-- ckfinder --}}
     <script src="{{ asset('ckfinder/ckfinder.js') }}"></script>
     <script src="admin-template/assets/ckfinder/ckfinder.js" type="text/javascript"></script>
     <script src="admin-template/assets/ckeditor/ckeditor.js" type="text/javascript"></script>
-            <script>
-                CKEDITOR.replace('content');
+
+
+<script>
+    CKEDITOR.replace('content');
+    CKEDITOR.replace('introduce_content');
+    CKEDITOR.replace('intro_content');
+    CKEDITOR.replace('polycies_content');
                
-            </script>
+</script>
             
    
-      
-            <script>
+ @yield('script')
+<script>
+
                     function changeImg(input){
+
                            //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
                            if(input.files && input.files[0]){
                                var reader = new FileReader();

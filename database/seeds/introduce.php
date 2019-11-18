@@ -24,7 +24,6 @@ class introduce extends Seeder
 					Công ty TNHH Bếp ga KANZO mong muốn và sẵn sàng trở thành đối tác của các Chủ đầu , các Nhà quản lý, Doanh nghiệp và cá nhân khác, phần đấu vì sự nghiệp Công nghiệp hóa, hiện đại hóa đất nước.
 
 					Rất hân hạnh được cộng tác với các Chủ đầu tư và Quý khách hàng!',
-	        	'type'=>'1',
 	        	'active'=>'1',
 	        ],
 	        [
@@ -32,7 +31,6 @@ class introduce extends Seeder
 	        	'title'=>'Phương châm',
 	        	'slug'=>'phuong-cham',
 	        	'content'=>'Với phương châm “Chất lượng tiên phong - Hợp tác phát triển”, CÔNG TY TNHH Bếp ga KANZO luôn mong muốn đem đến cho đối tác những sản phẩm có chất lượng cao nhất. Qua đó, chúng tôi hy vọng sẽ cùng song hành với các đối tác trên con đường phát triển doanh nghiệp ngày một lớn mạnh, bền vững.',
-	        	'type'=>'1',
 	        	'active'=>'1',
 	        ],
 	        [
@@ -40,7 +38,6 @@ class introduce extends Seeder
 	        	'title'=>'Tầm nhìn',
 	        	'slug'=>'tam-nhìn',
 	        	'content'=>'Với phương châm “Chất lượng tiên phong - Hợp tác phát triển”, CÔNG TY TNHH Bếp ga KANZO luôn mong muốn đem đến cho đối tác những sản phẩm có chất lượng cao nhất. Qua đó, chúng tôi hy vọng sẽ cùng song hành với các đối tác trên con đường phát triển doanh nghiệp ngày một lớn mạnh, bền vững.',
-	        	'type'=>'1',
 	        	'active'=>'1',
 	        ],
 	        

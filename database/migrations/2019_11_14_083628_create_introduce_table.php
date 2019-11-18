@@ -18,7 +18,6 @@ class CreateIntroduceTable extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('content');
-            $table->tinyInteger('type');
             $table->tinyInteger('active')->default(1);
             $table->timestamps();
         });
