@@ -1,5 +1,5 @@
 @extends('admins.layout.master')
-@section('polycies','active')
+@section('question','active')
 @section('title','Thêm')
 @section('content')
 <div>
@@ -24,7 +24,7 @@
                             <label>Tiêu đề</label>
                             <input type="text" name="title" id="title" class="form-control" value="">
                             @if($errors->has('title'))
-                               <div class="alert alert-danger">{{$errors->first('title')}}</div>
+                                <div class="alert alert-danger">{{$errors->first('title')}}</div>
                             @endif
                         </div>
                         <div class="form-group">
@@ -40,26 +40,29 @@
                             @endif
                         </div>
                     </div>
+                    
+                    
                     <div class="col-md-12">
                         <div class="form-group">
                             <div class="form-group">
                                 <label class="form-label">Nội dung</label>
-                                <textarea name="polycies_content" id="polycies_content"></textarea>
+                                <textarea name="question_content" id="question_content"></textarea>
                             </div>
-                            @if($errors->has('polycies_content'))
-                                <div class="alert alert-danger">{{$errors->first('polycies_content')}}</div>
+                            @if($errors->has('question_content'))
+                                <div class="alert alert-danger">{{$errors->first('question_content')}}</div>
                             @endif
                         </div>
                     </div>
                     <div class="form-actions">
-                        <div class="pull-right">
-                            <button type="submit" class="btn btn-danger btn-cons"><i class="icon-ok"></i> Lưu</button>
-                            <a href="{{route('polycies.list')}}">
-                                <button type="button" class="btn btn-white btn-cons"> Trở lại</button>
-                            </a>
-                            
+                            <div class="pull-right">
+                                <button type="submit" class="btn btn-danger btn-cons"><i class="icon-ok"></i> Lưu</button>
+                                <a href="{{route('question.list')}}">
+                                    <button type="button" class="btn btn-white btn-cons"> Trở lại</button>
+                                </a>
+                                
+                            </div>
                         </div>
-                    </div>
+                    
                 </form>
 
             </div>

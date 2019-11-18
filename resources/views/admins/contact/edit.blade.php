@@ -24,7 +24,7 @@
                             <label>Địa chỉ</label>
                             <input type="text" name="address" id="address" class="form-control" value="{{$contact->address}}">
                             @if($errors->has('address'))
-                                {{$errors->first('address')}}
+                                <div class="alert alert-danger">{{$errors->first('address')}}</div>
                             @endif
                         </div>
                         <div class="col-md-6">
@@ -32,7 +32,7 @@
                                 <label>Số điện thoại</label>
                                 <input type="text" name="phone" id="phone" class="form-control" value="{{$contact->phone}}">
                                 @if($errors->has('phone'))
-                                    {{$errors->first('phone')}}
+                                    <div class="alert alert-danger">{{$errors->first('phone')}}</div>
                                 @endif
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                                 <label>Fax</label>
                                 <input type="text" name="fax" id="fax" class="form-control" value="{{$contact->fax}}">
                                 @if($errors->has('fax'))
-                                    {{$errors->first('fax')}}
+                                    <div class="alert alert-danger">{{$errors->first('fax')}}</div>
                                 @endif
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                                 <label>Email</label>
                                 <input type="text" name="email" id="email" class="form-control" value="{{$contact->email}}">
                                 @if($errors->has('email'))
-                                    {{$errors->first('email')}}
+                                    <div class="alert alert-danger">{{$errors->first('email')}}</div>
                                 @endif
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                                 <label>Fanpage</label>
                                 <input type="text" name="fanpage" id="fanpage" class="form-control" value="{{$contact->fanpage}}">
                                 @if($errors->has('fanpage'))
-                                    {{$errors->first('fanpage')}}
+                                    <div class="alert alert-danger">{{$errors->first('fanpage')}}</div>
                                 @endif
                             </div>
                         </div>

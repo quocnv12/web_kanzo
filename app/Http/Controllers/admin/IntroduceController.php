@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\models\introduce;
+use App\models\banner_introduce;
 
 class IntroduceController extends Controller
 {
@@ -60,4 +61,24 @@ class IntroduceController extends Controller
         introduce::destroy($id);
         return redirect()->route('introduce.list');
     }
+    public function banner(){
+        $banner = banner_introduce::all();
+        return view('admins.introduce.banner',compact('banner'));
+    }
+    public function banner_edit($id){
+        $banner = banner_introduce::find($id);
+        return view('admins.introduce.banner_edit',compact('banner'));
+    }
+    public function post_banner_edit($id,Request $req){
+        $this->validate($req,[
+            'image' => 'required',
+        ],[
+            'image.required' => 'Ảnh chưa được cập nhật',
+        ]);
+        $banner = banner_introduce::find($id);
+        $banner->image = $req->image;
+        $banner->save();
+        return redirect()->route('introduce.banner');
+    }
+
 }
