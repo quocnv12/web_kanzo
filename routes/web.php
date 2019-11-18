@@ -62,6 +62,23 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
     	Route::get('del/{id}','IntroduceController@del')->name('introduce.del');
     });
 
+    Route::group(['prefix' => 'product'], function(){
+        Route::get('list', 'ProductController@getListProduct')->name('product.list');
+        Route::get('add', 'ProductController@getAddProduct')->name('product.add');
+        Route::post('add', 'ProductController@postAddProduct')->name('product.add.post');
+        Route::get('edit/{id_product}', 'ProductController@getEditProduct')->name('product.edit');
+        Route::post('edit/{id_product}', 'ProductController@postEditProduct')->name('product.edit.post');
+        Route::get('delete/{id_product}', 'ProductController@getDeleteProduct')->name('product.delete');
+    });
+    Route::group(['prefix' => 'category'], function(){
+        Route::get('list', 'CategoryController@getListCategory')->name('category.list');
+        Route::get('add', 'CategoryController@getAddCategory')->name('category.add');
+        Route::post('add', 'CategoryController@postAddCategory')->name('category.add.post');
+        Route::get('edit/{id_category}', 'CategoryController@getEditCategory')->name('category.edit');
+        Route::post('edit/{id_category}', 'CategoryController@postEditCategory')->name('category.edit.post');
+        Route::get('delete/{id_category}', 'CategoryController@getDeleteCategory')->name('category.delete');
+    });
+
         // -------------tài khoản
     Route::group(['prefix' => 'account'],function(){
         Route::get('','AccountController@GetList');
@@ -104,7 +121,6 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::post('add','SentusController@post_add')->name('sentus.add');
         Route::get('del/{id}','SentusController@del')->name('sentus.del');
     });
-
 
 
 

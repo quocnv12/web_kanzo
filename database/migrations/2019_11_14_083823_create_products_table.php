@@ -15,14 +15,18 @@ class CreateProductsTable extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('name')->unique();
             $table->string('slug');
-            $table->string('price');
-            $table->string('sale_price');
+            $table->string('code_name');
+            $table->integer('price');
+            $table->integer('sale_price');
             $table->string('image');
             $table->text('content');
             $table->unsignedBigInteger('id_category');
             $table->tinyInteger('active')->default(1);
+            $table->tinyInteger('new')->default(1);//1 là sản phẩm mới
+            $table->integer('count_view');
+
             $table->timestamps();
             $table->foreign('id_category')->references('id')->on('category');
         });
