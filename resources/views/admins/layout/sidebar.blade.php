@@ -3,14 +3,14 @@
     <div class="page-sidebar-wrapper scrollbar-dynamic" id="main-menu-wrapper">
         <div class="user-info-wrapper sm">
             <div class="profile-wrapper sm">
-                <img src="admin-template/assets/img/profiles/avatar.jpg" alt=""
-                    data-src="admin-template/assets/img/profiles/avatar.jpg"
-                    data-src-retina="admin-template/assets/img/profiles/avatar2x.jpg" width="69" height="69" />
+                <img src="images/{{ Auth::user()->image }}" alt=""
+                    data-src=""
+                    data-src-retina="" width="69" height="69" />
                 <div class="availability-bubble online"></div>
             </div>
             <div class="user-info sm">
-                <div class="username">Fred <span class="semi-bold">Smith</span></div>
-                <div class="status">Life goes on...</div>
+                <div class="username"><span class="semi-bold">{{ Auth::user()->name }}</span></div>
+                <div class="status">{{ Auth::user()->level }}</div>
             </div>
         </div>
         <!-- END MINI-PROFILE -->
