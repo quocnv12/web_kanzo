@@ -32,6 +32,6 @@ class CreateSentUsesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sent_uses');
+        Schema::dropIfExists('sent_us');
     }
 }

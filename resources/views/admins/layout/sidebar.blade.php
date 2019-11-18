@@ -35,8 +35,22 @@
                                 class=" label label-info pull-right m-r-30">NEW</span></a></li>
                 </ul>
             </li>
-           
-
+           <li>
+                <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
+                        class="title">Sản phẩm</span> <span class=" arrow"></span> </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('product.add')}}"> Thêm sản phẩm </a> </li>
+                    <li> <a href="{{route('product.list')}}"> Danh sách sản phẩm </a> </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
+                        class="title">Loại sản phẩm</span> <span class=" arrow"></span> </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('category.add')}}"> Thêm loại sản phẩm </a> </li>
+                    <li> <a href="{{route('category.list')}}"> Danh sách loại sản phẩm </a> </li>
+                </ul>
+            </li>
             <li>
                 <a href="widgets.html"> <i class="material-icons">panorama_horizontal</i> <span
                         class="title">Widgets</span> <span

@@ -117,10 +117,10 @@
                        $(document).ready(function() {
                            $('#avatar').click(function(){
                                $('#img').click();
-                           });
-                       });
+                        });
+                    });
                
-                   </script> 
+        </script> 
 </body>
 
 </html>
