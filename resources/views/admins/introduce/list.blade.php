@@ -33,7 +33,7 @@
                         <tr class="odd gradeX">
                             <td class="center">{{$row->id}}</td>
                             <td>{{$row->title}}</td>
-                            <td>{!! $row->content !!}</td>
+                            <td>{{ $row->content }}</td>
                             <td class="center">
                                 @if($row->active == 1)
                                     Hiện @else Ẩn
