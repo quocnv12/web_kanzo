@@ -138,7 +138,30 @@
                         });
                     });
                
-        </script> 
+        </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+             $('#example').dataTable({
+
+                "oLanguage": {
+                    sSearch: "Tìm kiếm:",
+                    "oPaginate": {
+                        sNext:    "Sau",
+                        sPrevious: "Trước",
+                    },
+                    EmptyTable:     "Không có dữ liệu trong bảng",
+                    sInfo:           "Hiển thị _START_ đến _END_ trong tổng số _TOTAL_ dữ liệu",
+                    sInfoEmpty:      "Hiển thị 0 dữ liệu",
+                    sInfoFiltered:   "(lọc từ toàn bộ _MAX_ dữ liệu)",
+                    sLengthMenu:     "HIển Thị _MENU_ dữ liệu",
+                    sLoadingRecords: "Đang Tải...",
+                    sProcessing:     "Đang Xử Lí...",
+                    sZeroRecords:    "Không tìm thấy dữ liệu",
+                },
+                 "bDestroy": true,
+            });
+        });
+    </script>
 </body>
 
 </html>
