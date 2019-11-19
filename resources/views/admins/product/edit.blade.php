@@ -1,6 +1,6 @@
 @extends('admins.layout.master')
 @section('title','Sửa Sản phẩm')
-<!-- @section('introduce','active') -->
+@section('product','active')
 @section('content')
 
 <div>
