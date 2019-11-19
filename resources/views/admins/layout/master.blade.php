@@ -107,13 +107,16 @@
     <script src="admin-template/assets/ckeditor/ckeditor.js" type="text/javascript"></script>
 
 
-<script>
-    CKEDITOR.replace('content');
-    CKEDITOR.replace('introduce_content');
-    CKEDITOR.replace('intro_content');
-    CKEDITOR.replace('polycies_content');
+
+            <script>
+                CKEDITOR.replace('content');
+                CKEDITOR.replace('introduce_content');
+                CKEDITOR.replace('intro_content');
+                CKEDITOR.replace('polycies_content');
+                CKEDITOR.replace('question_content');
+
                
-</script>
+            </script>
             
    
  @yield('script')

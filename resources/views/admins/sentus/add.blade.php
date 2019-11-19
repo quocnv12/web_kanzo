@@ -24,7 +24,7 @@
                             <label>Tiêu đề</label>
                             <input type="text" name="title" id="title" class="form-control" value="">
                             @if($errors->has('title'))
-                                {{$errors->first('title')}}
+                                <div class="alert alert-danger">{{$errors->first('title')}}</div>
                             @endif
                         </div>
                         <div class="form-group">
@@ -36,7 +36,7 @@
                                 Ẩn
                             </div>
                             @if($errors->has('active'))
-                                {{ $errors->first('active') }}
+                                <div class="alert alert-danger">{{$errors->first('active')}}</div>
                             @endif
                         </div>
                     </div>
@@ -44,10 +44,10 @@
                         <div class="form-group">
                             <div class="form-group">
                                 <label class="form-label">Nội dung</label>
-                                <textarea name="polycies_content" id="polycies_content"></textarea>
+                                <textarea name="sentus_content" id="sentus_content"></textarea>
                             </div>
-                            @if($errors->has('polycies_content'))
-                                {{$errors->first('polycies_content')}}
+                            @if($errors->has('sentus_content'))
+                                <div class="alert alert-danger">{{$errors->first('sentus_content')}}</div>
                             @endif
                         </div>
                     </div>

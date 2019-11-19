@@ -50,9 +50,14 @@
                                     <span class="badge badge-important animated bounceIn">2</span>
                                 </a>
                             </li> --}}
+                            @can('admin')
                             <li>
-                                <a href="admin/password">Đổi mật khẩu</a>
+                                <a href="admin/phanquyen">Sửa quyền</a>
                             </li>
+                            @endcan
+                            <li>
+                                    <a href="admin/password">Đổi mật khẩu</a>
+                                </li>
                             <li class="divider"></li>
                             <li>
                                 <a href="admin/logout"><i class="material-icons">power_settings_new</i>&nbsp;&nbsp;Log

@@ -11,7 +11,7 @@ class product extends Seeder
      */
     public function run()
     {
-    	DB::table('category')->delete();
+        DB::table('category')->delete();
         DB::table('category')->insert([
 	        [
 	        	'name'=>'Bếp ga',
