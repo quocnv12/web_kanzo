@@ -12,16 +12,58 @@
 */
 
 // --------------------route fontend viết vào đấy-----------------------
+Route::group(['prefix' => '','namespace' => 'frontend'],function(){
 
 
+    Route::get('/', function () {
+        return view('pages.home');
+    })->name('home');
 
-Route::get('/', function () {
-    return view('admins.index');
+    // ỉntro
+    Route::get('/intro', function () {
+        return view('pages.intro');
+    })->name('intro');
+
+    //product
+    Route::get('/product', function () {
+        return view('pages.product');
+    })->name('product');
+    Route::get('/product_detail', function () {
+        return view('pages.product_detail');
+    })->name('product_detail');
+
+    //new
+    Route::get('/new', function () {
+        return view('pages.new');
+    })->name('new');
+    Route::get('/new_detail', function () {
+        return view('pages.new_detail');
+    })->name('new_detail');
+
+    //policy
+    Route::get('/policy', function () {
+        return view('pages.policy');
+    })->name('policy');
+    Route::get('/policy_detail', function () {
+        return view('pages.policy_detail');
+    })->name('policy_detail');
+
+    //contact
+    Route::get('/contact', function () {
+        return view('pages.contact');
+    })->name('contact');
+
+    Route::get('/diemban', function () {
+        return view('pages.diemban');
+    })->name('diemban');
 });
 
+// ------------End
 
 
-
+Route::get('admin', function () {
+    return view('admins.index');
+});
 // ------------------------route admins viết vào đây-----------------------
 
 
@@ -68,9 +110,40 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
     	Route::get('edit/{id}','IntroduceController@edit')->name('introduce.edit');
     	Route::post('edit/{id}','IntroduceController@post_edit')->name('introduce.edit');
     	Route::get('del/{id}','IntroduceController@del')->name('introduce.del');
+        Route::get('banner','IntroduceController@banner')->name('introduce.banner');
+        Route::get('banner-edit/{id}','IntroduceController@banner_edit')->name('introduce.banner_edit');
+        Route::post('banner-edit/{id}','IntroduceController@post_banner_edit')->name('introduce.banner_edit');
     });
 
-        // -------------tài khoản
+    //---------------San Pham
+    Route::group(['prefix' => 'product'], function(){
+        Route::get('list', 'ProductController@getListProduct')->name('product.list');
+        Route::get('add', 'ProductController@getAddProduct')->name('product.add');
+        Route::post('add', 'ProductController@postAddProduct')->name('product.add.post');
+        Route::get('edit/{id_product}', 'ProductController@getEditProduct')->name('product.edit');
+        Route::post('edit/{id_product}', 'ProductController@postEditProduct')->name('product.edit.post');
+        Route::get('delete/{id_product}', 'ProductController@getDeleteProduct')->name('product.delete');
+    });
+    Route::group(['prefix' => 'category'], function(){
+        Route::get('list', 'CategoryController@getListCategory')->name('category.list');
+        Route::get('add', 'CategoryController@getAddCategory')->name('category.add');
+        Route::post('add', 'CategoryController@postAddCategory')->name('category.add.post');
+        Route::get('edit/{id_category}', 'CategoryController@getEditCategory')->name('category.edit');
+        Route::post('edit/{id_category}', 'CategoryController@postEditCategory')->name('category.edit.post');
+        Route::get('delete/{id_category}', 'CategoryController@getDeleteCategory')->name('category.delete');
+    });
+
+    //-------------------Tin Tuc
+    Route::group(['prefix' => 'news'], function(){
+        Route::get('', 'NewsController@list')->name('news.list');
+        Route::get('add', 'NewsController@add')->name('news.add');
+        Route::post('add', 'NewsController@post_add')->name('news.add');
+        Route::get('edit/{id}', 'NewsController@edit')->name('news.edit');
+        Route::post('edit/{id}', 'NewsController@post_edit')->name('news.edit');
+        Route::get('delete/{id}', 'NewsController@del')->name('news.del');
+    });
+
+    // -------------tài khoản
     Route::group(['prefix' => 'account'],function(){
         Route::get('','AccountController@GetList');
         Route::get('add','AccountController@GetAddAccount');
@@ -103,6 +176,25 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}','ContactController@edit')->name('contact.edit');
         Route::post('edit/{id}','ContactController@post_edit')->name('contact.edit');
     });
+    //-----------------Khach hang lien he
+    Route::group(['prefix' => 'sent_us'],function(){
+        Route::get('','SentusController@list')->name('sentus.list');
+        Route::get('processed','SentusController@list2')->name('sentus.list2');
+        Route::get('edit/{id}','SentusController@edit')->name('sentus.edit');
+        Route::get('add','SentusController@add')->name('sentus.add');
+        Route::post('add','SentusController@post_add')->name('sentus.add');
+        Route::get('del/{id}','SentusController@del')->name('sentus.del');
+    });
+    //-----------------Cau hoi thuong gap
+    Route::group(['prefix' => 'question'],function(){
+        Route::get('','QuestionController@list')->name('question.list');
+        Route::get('add','QuestionController@add')->name('question.add');
+        Route::post('add','QuestionController@post_add')->name('question.add');
+        Route::get('edit/{id}','QuestionController@edit')->name('question.edit');
+        Route::post('edit/{id}','QuestionController@post_edit')->name('question.edit');
+        Route::get('del/{id}','QuestionController@del')->name('question.del');
+    });
+
 
 
 });

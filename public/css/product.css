@@ -1,0 +1,265 @@
+/*Started*/
+
+ul{
+	padding: 0;
+	margin: 0;
+}
+ul li{
+	list-style: none;
+}
+img {
+	width: 100%;
+}
+main{
+	margin: 1rem 0;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+a{
+	color: #000;
+}
+a:hover{
+	text-decoration: none;
+	color: #000;
+}
+/*Main*/
+.slide-bar{
+	background-color: #f9f9f9;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1)
+}
+.list-product{
+	width: 100%;
+	padding: 1rem 0.5rem;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #ccc;
+}
+.title-list-product{
+	text-transform: uppercase;
+	background-color: #0f7fc1;
+	text-align: center;
+	font-size:20px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 0.5rem;
+	border-radius: 5px;
+}
+.item-product-list{
+	padding : 0.3rem	 0.5rem ;
+
+}
+.item-product-list span{
+	float: right;
+
+}
+.item-product-list:hover>a>span{
+	transition: all 1s ;
+	transform: translateX(10px);
+}
+.collect-product {
+    font-size: 25px;
+    font-weight: 600;
+}
+.product {
+    position: relative;
+    border-radius: 3px;
+    border:1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.product:hover{
+	transition: 1s all ;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.image-product:hover{
+	transition: 2s all;
+	transform: translateX(-10px);
+	filter: blur(1px);
+}
+.sale {
+    width: 75px;
+    height: 40px;
+    text-align: center;
+    background: navy;
+    padding: 5px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    animation: colorConvert 10s infinite;
+}
+@keyframes colorConvert {
+	0%  {
+		color:#FF1493;
+	}
+	50%{
+		color:magenta;
+	}
+	100%{
+		color:violet;
+	}
+}
+.name-product {
+	font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.final-price{
+	color: #ea2a2a;
+	font-size: 20px;
+	font-weight: 600;
+}
+.first-price{
+	text-decoration: line-through;
+}
+.tab{
+	display: flex;
+	width: 80%;
+	margin: auto;
+	padding:0.5rem;
+}
+.tab li{
+	margin: 0 0.5rem;
+	border-radius: 3px;
+	border:1px #ccc solid;
+	width: 6%;
+	height: 35px;
+	text-align: center;
+	padding-top: 6px;
+	font-weight: 600;
+}
+.tab .active {
+	background: #f9f9f9;
+	
+}
+/*Gam mau chu dao : #ea2a2a*/
+
+h2{
+  text-align:center;
+  padding: 20px;
+}
+/* Slider */
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+/*Responsive*/
+
+@media only screen and (max-width: 768px){
+	.tab li{
+		width: 11%;
+	}
+}

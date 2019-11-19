@@ -32,7 +32,7 @@
                 <ul class="sub-menu">
                     <li> <a href="{{route('introduce.list')}}"> Danh sách </a> </li>
                     <li> <a href="{{route('intro.list')}}"> Giới thiệu về công ty</a> </li>
-                    <li> <a href="{{route('introduce.add')}}"> Thêm giới thiệu </a> </li>
+                    <li> <a href="{{route('introduce.banner')}}"> Banner </a> </li>
                     <!-- <li class=""> <a href="index.html "> Dashboard v2 <span
                                 class=" label label-info pull-right m-r-30">NEW</span></a></li> -->
                 </ul>
@@ -46,6 +46,24 @@
                     <li> <a href="{{route('polycies.add')}}"> Thêm chính sách</a> </li>
                 </ul>
             </li>
+            <li class="start  open  @yield('question') "> <a href="{{route('question.list')}}"><i class="material-icons">question_answer</i> <span
+                        class="title">Câu hỏi thường gặp</span> <span class="selected"></span> <span class="arrow  open "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('question.list')}}"> Danh sách </a> </li>
+                    <li> <a href="{{route('question.add')}}"> Thêm chính sách</a> </li>
+                </ul>
+            </li>
+
+            <li class="start  open  @yield('sentus') "> <a href="{{route('sentus.list')}}"><i class="material-icons">shopping_cart</i> <span
+                        class="title">Đơn hàng</span> <span class="selected"></span> <span class="arrow  open "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('sentus.list')}}"> Đơn mới </a> </li>
+                    <li> <a href="{{route('sentus.list2')}}"> Đơn đã xử lý </a> </li>
+                </ul>
+            </li>
+
             <li class="start  open  @yield('contact') "> <a href="{{route('contact.list')}}"><i class="material-icons">contacts</i> <span
                         class="title">Liên hệ</span> <span class="selected"></span> <span class="arrow  open "></span>
                 </a>
@@ -53,8 +71,30 @@
                     <li> <a href="{{route('contact.list')}}"> Thông tin liên hệ </a> </li>
                 </ul>
             </li>
-           
-
+            <li>
+                <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
+                            class="title">Tin Tức</span> <span class=" arrow"></span> </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('news.add')}}"> Thêm Tin Tức </a> </li>
+                    <li> <a href="{{route('news.list')}}"> Danh sách Tin Tức </a> </li>
+                </ul>
+            </li>
+           <li>
+                <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
+                        class="title">Sản phẩm</span> <span class=" arrow"></span> </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('product.add')}}"> Thêm sản phẩm </a> </li>
+                    <li> <a href="{{route('product.list')}}"> Danh sách sản phẩm </a> </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
+                        class="title">Loại sản phẩm</span> <span class=" arrow"></span> </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('category.add')}}"> Thêm loại sản phẩm </a> </li>
+                    <li> <a href="{{route('category.list')}}"> Danh sách loại sản phẩm </a> </li>
+                </ul>
+            </li>
             <li>
                 <a href="widgets.html"> <i class="material-icons">panorama_horizontal</i> <span
                         class="title">Widgets</span> <span

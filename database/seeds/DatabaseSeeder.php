@@ -13,8 +13,12 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(admin::class);
         $this->call(introduce::class);
+        $this->call(product::class);
         $this->call(intro_general::class);
         $this->call(polycies::class);
         $this->call(contact::class);
+        $this->call(sent_us::class);
+        $this->call(question::class);
+        $this->call(banner_introduce::class);
     }
 }

@@ -24,7 +24,7 @@
                             <label>Tiêu đề</label>
                             <input type="text" name="title" id="title" class="form-control" value="{{$introduce->title}}">
                             @if($errors->has('title'))
-                                {{$errors->first('title')}}
+                                <div class="alert alert-danger">{{$errors->first('title')}}</div>
                             @endif
                         </div>
                         <div class="form-group">
@@ -33,24 +33,26 @@
                                 <textarea name="intro_content" id="intro_content">{{$introduce->content}}</textarea>
                             </div>
                             @if($errors->has('intro_content'))
-                                {{$errors->first('intro_content')}}
+                                <div class="alert alert-danger">{{$errors->first('intro_content')}}</div>
                             @endif
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Ảnh sản phẩm</label>
-                            <input id="img" type="file" name="img" value="" class="form-control hidden"
+                            <input id="img" type="file" name="image" value="" class="form-control hidden"
                                 onchange="changeImg(this)">
                             <img id="avatar" class="thumbnail" width="100%" height="350px" style="height: 350px;object-fit: contain" src="images/import-img.png">
                         </div>
+                        @if($errors->has('image'))
+                            <div class="alert alert-danger">{{$errors->first('image')}}</div>
+                        @endif
                         <div class="form-actions">
                         <div class="pull-right">
                             <button type="submit" class="btn btn-danger btn-cons"><i class="icon-ok"></i> Cập nhật</button>
                             <a href="{{route('introduce.list')}}">
                                 <button type="button" class="btn btn-white btn-cons"> Trở lại</button>
                             </a>
-                            
                         </div>
                     </div>
                     </div>
