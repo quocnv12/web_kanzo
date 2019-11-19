@@ -194,6 +194,16 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::post('edit/{id}','QuestionController@post_edit')->name('question.edit');
         Route::get('del/{id}','QuestionController@del')->name('question.del');
     });
+    //--------------------Đại lý
+    Route::group(['prefix' => 'agency'],function(){
+        Route::get('','AgencyController@GetList');
+        Route::get('add','AgencyController@GetAdd');
+        Route::post('add','AgencyController@PostAdd');
+        Route::get('edit/{id}','AgencyController@GetEdit');
+        Route::post('edit/{id}','AgencyController@PostEdit');
+        Route::get('delete/{id}','AgencyController@delete');
+        
+    });
 
 
 

@@ -1,4 +1,5 @@
 @extends('admins.layout.master')
+@section('category','active')
 @section('title','Danh sách Loại San phẩm')
 <!-- @section('introduce','active') -->
 @section('content')
