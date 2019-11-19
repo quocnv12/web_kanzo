@@ -308,9 +308,11 @@
                 </ul>
             </li>
         </ul>
+        @can('admin')
         <div class="side-bar-widgets">
             <p class="menu-title sm">Account <span class="pull-right"><a href="#" class="create-folder"></a></span></p>
             <ul class="folders">
+              
                 <li>
                     <a href="admin/account">
                         <div class="status-icon green"></div>
@@ -323,6 +325,7 @@
                         Thêm tài khoản
                     </a>
                 </li>
+               
                 <p></p>
                 <p></p>
                 <li class="folder-input" style="display:none">
@@ -331,11 +334,12 @@
             </ul>
 
         </div>
+        @endcan
         <div class="clearfix"></div>
         <!-- END SIDEBAR MENU -->
     </div>
 </div>
-<a href="#" class="scrollup">Scroll</a>
+{{-- <a href="#" class="scrollup">Scroll</a>
 <div class="footer-widget">
     <div class="progress transparent progress-small no-radius no-margin">
         <div class="progress-bar progress-bar-success animate-progress-bar" data-percentage="79%" style="width: 79%;">
@@ -346,4 +350,4 @@
                 data-animation-duration="560">86</span>% </div>
         <a href="lockscreen.html"><i class="material-icons">power_settings_new</i></a>
     </div>
-</div>
+</div> --}}

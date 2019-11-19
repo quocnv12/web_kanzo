@@ -70,5 +70,28 @@ class LoginController extends Controller
     }
 
 
+    //---------------phân quyền
+    function GetPhanQuyen()
+    {
+        $data['phanquyen']=account::orderBy('id','desc')->get();
+        return view('admins.account.phanquyen.list',$data);
+    }
+
+
+
+    function GetEditPhanQuyen($id)
+    {
+        $data['phanquyen']=account::find($id);
+        return view('admins.account.phanquyen.edit',$data);
+    }
+    function PostEditPhanQuyen(request $request, $id)
+    {
+        $phanquyen=account::find($id);
+        $phanquyen->level=$request->level;
+        $phanquyen->save();
+        return redirect('admin/phanquyen')->with('thongbao','Sửa thành công !');
+    }
+
+
 
 }

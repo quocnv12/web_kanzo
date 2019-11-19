@@ -85,6 +85,14 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
     Route::get('password','LoginController@GetPassword');
     Route::post('password','LoginController@PostPassword');
 
+            //-------đổi quyền
+    Route::group(['prefix' => 'phanquyen'],function(){
+        Route::get('','LoginController@GetPhanQuyen');
+        Route::get('edit/{id}','LoginController@GetEditPhanQuyen');
+        Route::post('edit/{id}','LoginController@PostEditPhanQuyen');
+    });        
+
+
 
     Route::get('form', function () {
         return view('admins.form.list');
