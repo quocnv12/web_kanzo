@@ -1,0 +1,364 @@
+
+.sectiontop1{
+  background-image: url(https://demotheme.site/prestashop/at_kola_demo/themes/at_kola/assets/img/bg-breadcrumb.jpg);
+  height: 174px;
+  background-size: contain;
+  max-width:100%
+}
+.row1-sec1{
+    margin-top: 6rem;
+}
+.row1-sec1 a{
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+.row1-sec1 a:hover{
+    color: #c18d28;
+}
+/* Position the image container (needed to position the left and right arrows) */
+.contailer {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+
+  .roww:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 17%;
+    margin-left: 2%;
+    border: #c18d28 solid 1px;
+    border-radius: 15px;
+  }
+  .column img{
+      border-radius: 15px;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  .content-main{
+      margin-top: 5rem;
+  }
+  .roww{
+      margin-top: 2rem;
+  }
+  .name-fruid{
+    font-size: 2.2em;
+    font-weight: 600;
+  }
+
+  .share i{
+    color: #999;
+    margin: 0rem 0.6rem;
+    cursor: pointer;
+  }
+  .fa-facebook:hover{
+    color: blue;
+  }
+  .fa-twitter:hover{
+    color: aqua;
+  }
+  .fa-google-plus:hover{
+    color: red;
+  }
+  .price{
+    color: #c18d28;
+    font-size: 2.2em;
+    font-weight: 600;
+  }
+.attribute{
+  color: #999;
+}
+.size-fruid{
+  margin-top: 2rem;
+}
+.size-fruid ul{
+margin-left: 2rem;
+}
+.size-fruid li{
+  font-weight: bold;
+  padding: 0.1rem 1rem;
+  float: left;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.li-size-1,.li-size-s{
+  color: #c18d28;
+  border: #c18d28 solid 2px;
+}
+.li-size-2,.li-size-3,.li-size-m,.li-size-l,.li-size-xl{
+  border: 2px solid #ebebeb;
+}
+.size-fruid li:hover{
+  color: #c18d28;
+  border: 2px solid #c18d28;
+}
+.amount{
+  color: #666;
+  background-color: #fff;
+  height: 45px;
+  width: 100px;
+  text-align: center;
+  border-color: #ddd;
+  padding: 5px 20px 5px 15px;
+  border-radius: 50px;
+}
+.add-to-cart{
+  margin-top: 20px;
+}
+.add-cart{
+  font-size: 14px!important;
+  font-weight: 700!important;
+  padding: 8px 30px!important;
+  height: 45px!important;
+  letter-spacing: 2px;
+  background-color: #c18d28!important;
+  color: #FFF!important;
+  border: 1px solid transparent;
+  margin:0px 10px;
+  border-radius: 50px!important;
+}
+.add-cart:hover{
+  background-color: #fff!important;
+  color: #c18d28!important;
+  border: #c18d28 solid 1px;
+}
+.add-to-cart i{
+  border: #c18d28 solid 1px;
+  padding: 15px;
+  border-radius: 50%;
+  color: #c18d28;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.add-to-cart i:hover{
+  background-color:#c18d28;
+  color: #fff;
+}
+.introduce img{
+  float: left;
+  margin: 0px 15px;
+}
+.introduce{
+  margin-top: 3rem;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 5px;
+}
+.introduce li{
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  width: 100%;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 1.7em;
+  font-family: "Roboto Slab",serif;
+  font-weight: bold;
+  border-color: transparent!important;
+  margin-left: 5rem;
+}
+.h-category-banner {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/gg.jpg);
+    background-size: cover;
+    background-position: 0% 65%;
+    text-transform: capitalize;
+    padding: 120px 0;
+    position: relative;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+    color: #c18d28;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  color: #c18d28;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  width: 100%;
+  height: auto;
+  padding: 40px 50px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.tabcontent p,li{
+  color: #666;
+  list-style: none;
+}
+#paris img{
+  width: 70px;
+  border: #999 solid 1px;
+  border-radius: 5px;
+}
+#paris strong{
+  font-weight: bolder;
+  color: #333;
+  font-size: 1.2em;
+}
+.content-table td{
+  background-color: #f6f6f6;
+  color: #666;
+  height: 4rem;
+  width: 55%!important;
+  max-width: 49%!important;
+}
+.content-table .row{
+  margin-top: 1rem;
+}
+.content-fainaly h1{
+  font-size: 3em;
+  margin-top: 3rem;
+  font-weight: bold;
+}
+.content-fainaly p{
+  font: caption;
+    color: #999;
+}
+.content-fainaly img{
+  width: 25%;
+}
+.fa-star{
+  color: #fcbe32;
+}
+.comment a{
+  margin-left: 20px;
+  color: #666;
+}
+
+.sale h5{
+  font-size: 2em;
+  color: #999;
+  font-weight: 600;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.color a{
+  margin-left: 5.3rem;
+  margin-top: 0.5rem;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: #999 solid 1px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* responsive */
+
+@media screen and (max-width: 1024px){
+  .sectiontop1{
+    height: 160px;
+  }
+  .row1-sec1{
+    margin-top: 5rem;
+  }
+}
+@media screen and (max-width: 768px){
+  .sectiontop1{
+    height: 120px;
+  }
+  .row1-sec1{
+    margin-top: 4rem;
+  }
+  .li-size-1,.li-size-2,.li-size-3{
+    padding: 0.1rem 0rem!important;
+  }
+  .content-table td{
+    max-width: 48%!important;
+  }
+  .tab button{
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 430px){
+.sectiontop1{
+  height: 67px;
+}
+.row1-sec1 {
+  margin-top: 2rem;
+}
+}
+@media screen and (max-width: 380px){
+.sectiontop1{
+  height: 50px;
+}
+.row1-sec1{
+  margin-top: 1rem;
+}
+}

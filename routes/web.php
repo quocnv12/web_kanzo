@@ -12,16 +12,54 @@
 */
 
 // --------------------route fontend viết vào đấy-----------------------
-
-
-
 Route::get('/', function () {
+    return view('pages.home');
+})->name('home');
+
+// ỉntro
+Route::get('/intro', function () {
+    return view('pages.intro');
+})->name('intro');
+
+//product
+Route::get('/product', function () {
+    return view('pages.product');
+})->name('product');
+Route::get('/product_detail', function () {
+    return view('pages.product_detail');
+})->name('product_detail');
+
+//new
+Route::get('/new', function () {
+    return view('pages.new');
+})->name('new');
+Route::get('/new_detail', function () {
+    return view('pages.new_detail');
+})->name('new_detail');
+
+//policy
+Route::get('/policy', function () {
+    return view('pages.policy');
+})->name('policy');
+Route::get('/policy_detail', function () {
+    return view('pages.policy_detail');
+})->name('policy_detail');
+
+//contact
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
+
+Route::get('/diemban', function () {
+    return view('pages.diemban');
+})->name('diemban');
+
+// ------------End
+
+
+Route::get('admin', function () {
     return view('admins.index');
 });
-
-
-
-
 // ------------------------route admins viết vào đây-----------------------
 
 
@@ -93,7 +131,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('delete/{id}', 'NewsController@del')->name('news.del');
     });
 
-        // -------------tài khoản
+    // -------------tài khoản
     Route::group(['prefix' => 'account'],function(){
         Route::get('','AccountController@GetList');
         Route::get('add','AccountController@GetAddAccount');
