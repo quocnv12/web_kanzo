@@ -12,47 +12,51 @@
 */
 
 // --------------------route fontend viết vào đấy-----------------------
-Route::get('/', function () {
-    return view('pages.home');
-})->name('home');
+Route::group(['prefix' => '','namespace' => 'frontend'],function(){
 
-// ỉntro
-Route::get('/intro', function () {
-    return view('pages.intro');
-})->name('intro');
 
-//product
-Route::get('/product', function () {
-    return view('pages.product');
-})->name('product');
-Route::get('/product_detail', function () {
-    return view('pages.product_detail');
-})->name('product_detail');
+    Route::get('/', function () {
+        return view('pages.home');
+    })->name('home');
 
-//new
-Route::get('/new', function () {
-    return view('pages.new');
-})->name('new');
-Route::get('/new_detail', function () {
-    return view('pages.new_detail');
-})->name('new_detail');
+    // ỉntro
+    Route::get('/intro', function () {
+        return view('pages.intro');
+    })->name('intro');
 
-//policy
-Route::get('/policy', function () {
-    return view('pages.policy');
-})->name('policy');
-Route::get('/policy_detail', function () {
-    return view('pages.policy_detail');
-})->name('policy_detail');
+    //product
+    Route::get('/product', function () {
+        return view('pages.product');
+    })->name('product');
+    Route::get('/product_detail', function () {
+        return view('pages.product_detail');
+    })->name('product_detail');
 
-//contact
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
+    //new
+    Route::get('/new', function () {
+        return view('pages.new');
+    })->name('new');
+    Route::get('/new_detail', function () {
+        return view('pages.new_detail');
+    })->name('new_detail');
 
-Route::get('/diemban', function () {
-    return view('pages.diemban');
-})->name('diemban');
+    //policy
+    Route::get('/policy', function () {
+        return view('pages.policy');
+    })->name('policy');
+    Route::get('/policy_detail', function () {
+        return view('pages.policy_detail');
+    })->name('policy_detail');
+
+    //contact
+    Route::get('/contact', function () {
+        return view('pages.contact');
+    })->name('contact');
+
+    Route::get('/diemban', function () {
+        return view('pages.diemban');
+    })->name('diemban');
+});
 
 // ------------End
 
