@@ -61,9 +61,6 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
 // ------------End
 
 
-Route::get('admin', function () {
-    return view('admins.index');
-});
 // ------------------------route admins viết vào đây-----------------------
 
 
@@ -93,13 +90,6 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
     });        
 
 
-
-    Route::get('form', function () {
-        return view('admins.form.list');
-    });
-    Route::get('form/add', function () {
-        return view('admins.form.add');
-    });
 
 
     //-----------------Gioi thieu

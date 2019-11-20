@@ -3,9 +3,9 @@
     <div class="navbar-inner">
         <div class="header-seperation">
             <a href="admin">
-                <img src="admin-template/assets/img/logo.png" class="logo" alt=""
-                    data-src="admin-template/assets/img/logo.png" data-src-retina="admin-template/assets/img/logo2x.png"
-                    width="180" height="30" />
+                <img src="images/logo_kazo.png" class="logo" alt=""
+                    data-src="images/logo_kazo.png" data-src-retina="images/logo_kazo.png"
+                    width="220" height="50px" />
             </a>
         </div>
         <!-- END RESPONSIVE MENU TOGGLER -->
@@ -14,7 +14,7 @@
             <div class="pull-left">
                 <ul class="nav quick-section">
                     <li class="quicklinks">
-                        <a href="#" class="" id="layout-condensed-toggle">
+                        <a  class="" id="layout-condensed-toggle">
                             <i class="material-icons">menu</i>
                         </a>
                     </li>
