@@ -1,6 +1,6 @@
 @extends('master-layout')
 @section('title')
-Giới thiệu
+Chính sách
 @endsection
 
 @section('css')
@@ -25,8 +25,8 @@ Giới thiệu
   <div class="row mt-5 gioithieu-content">
       <div class="col-md-3 windows">
       <div class="nav nav-content pr-0 codong-tt codongs-tt mb-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        @foreach($introduce as $row)
-        <a class="nav-link {{Request::is('gioi-thieu/'.$row->slug) ? 'active' : ''}} " id="v-pills-settings-tab-1"  href="{{route('intro',['slug'=>$row->slug])}}" role="tab"  aria-selected="true" >{{$row->title}}</a>
+        @foreach($polycies as $row)
+        <a class="nav-link {{Request::is('chinh-sach/'.$row->slug) ? 'active' : ''}} " id="v-pills-settings-tab-1"  href="{{route('polycies',['slug'=>$row->slug])}}" role="tab"  aria-selected="true" >{{$row->title}}</a>
         @endforeach
         <!-- <a class="nav-link   " id="v-pills-settings-tab-2" data-toggle="pill" href="#v-pills-settings-2" role="tab" aria-controls="v-pills-settings-1" aria-selected="true">Phương Châm</a>
         <a class="nav-link   " id="v-pills-settings-tab-3" data-toggle="pill" href="#v-pills-settings-3" role="tab" aria-controls="v-pills-settings-1" aria-selected="true">Tầm nhìn</a>
@@ -34,7 +34,7 @@ Giới thiệu
       </div>
       <div class="img_intro">
         <!-- <img src="images/beptu1.png" class="mb-4 mt-2" style="height: 300px;    width: 100%;"> -->
-        @foreach($banner_introduce as $row)
+        @foreach($banner_polycies as $row)
         <img src="images/{{$row->image}}" class="mb-4 mt-2" style="height: 300px;    width: 100%;">
         @endforeach
     </div>

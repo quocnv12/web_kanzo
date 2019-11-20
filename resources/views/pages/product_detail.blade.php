@@ -11,7 +11,7 @@ Chi tiết sản phẩm
 
 @section('js')
 <script>
-	new WOW().init();
+  new WOW().init();
 
 </script>
 <script src="js/product-detail.js"></script>
@@ -96,10 +96,17 @@ Chi tiết sản phẩm
               </p>
               <div class="row add-to-cart">
                 <button class="btn add-cart" type="button">Xem điểm bán</button>
-                <button class="btn add-cart" type="button">Mua ngay</button>
-                
+                <button class="btn add-cart" type="button">Mua ngay</button>               
               </div>
-              
+              <div class="k5-sale">
+                <div class="sale-p"><p><i class="fas fa-share-square"></i> Chia sẻ:</p></div>
+                <div class="sale-icon">                 
+                  <a href="#"><i class="fab fa-facebook-square" title="facebook"></i></a>
+                  <a href="#"><i class="fab fa-instagram" title="instagram"></i></a>
+                  <a href="#"><i class="fab fa-pinterest-square" title="printerest"></i></a>
+                  <a href="#"><img src="images/zalo-icon.png" alt="" style="height: 39px; margin-top: -8px;" title="zalo"></a>
+                </div>
+              </div>
             </div>
         </div>
         
@@ -215,62 +222,62 @@ Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, 
     <h1>SẢN PHẨM XEM NHIỀU NHẤT</h1>
     <p>Có 4 sản phẩm xem nhiều</p>
     <div class="row">
-    <div class="col-md-3">
-      <div class="product">
-            <a href="{{route('product_detail')}}">
-              <img class="image-product" src="images/bt1.jpg" alt="">
+      <div class="col-md-3">
+        <div class="product">
+              <a href="{{route('product_detail')}}">
+                <img class="image-product" src="images/bt1.jpg" alt="">
 
-              <div class="name-product">
-                Bếp từ maboshi 2 mặt
+                <div class="name-product">
+                  Bếp từ maboshi 2 mặt
+                </div>
+                <div class="hh">
+                  129.000
+                </div>
+              </a>
               </div>
-              <div class="hh">
-                129.000
-              </div>
-            </a>
-            </div>
-    </div> 
-    <div class="col-md-3 ">
-      <div class="product">
-            <a href="{{route('product_detail')}}">
-              <img class="image-product" src="images/bt1.jpg" alt="">
+      </div> 
+      <div class="col-md-3 ">
+        <div class="product">
+              <a href="{{route('product_detail')}}">
+                <img class="image-product" src="images/bt1.jpg" alt="">
 
-              <div class="name-product">
-                Bếp từ maboshi 2 mặt
+                <div class="name-product">
+                  Bếp từ maboshi 2 mặt
+                </div>
+                <div class="hh">
+                  129.000
+                </div>
+              </a>
               </div>
-              <div class="hh">
-                129.000
-              </div>
-            </a>
-            </div>
-    </div> 
-    <div class="col-md-3 ">
-      <div class="product">
-            <a href="{{route('product_detail')}}">
-              <img class="image-product" src="images/bt1.jpg" alt="">
+      </div> 
+      <div class="col-md-3 ">
+        <div class="product">
+              <a href="{{route('product_detail')}}">
+                <img class="image-product" src="images/bt1.jpg" alt="">
 
-              <div class="name-product">
-                Bếp từ maboshi 2 mặt
+                <div class="name-product">
+                  Bếp từ maboshi 2 mặt
+                </div>
+                <div class="hh">
+                  129.000
+                </div>
+              </a>
               </div>
-              <div class="hh">
-                129.000
-              </div>
-            </a>
-            </div>
-    </div> 
-    <div class="col-md-3 ">
-      <div class="product">
-            <a href="{{route('product_detail')}}">
-              <img class="image-product" src="images/bt1.jpg" alt="">
+      </div> 
+      <div class="col-md-3 ">
+        <div class="product">
+              <a href="{{route('product_detail')}}">
+                <img class="image-product" src="images/bt1.jpg" alt="">
 
-              <div class="name-product">
-                Bếp từ maboshi 2 mặt
+                <div class="name-product">
+                  Bếp từ maboshi 2 mặt
+                </div>
+                <div class="hh">
+                  129.000
+                </div>
+              </a>
               </div>
-              <div class="hh">
-                129.000
-              </div>
-            </a>
-            </div>
-    </div> 
+      </div> 
     </div>
   </center>
 </section>

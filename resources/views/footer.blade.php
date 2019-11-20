@@ -5,7 +5,6 @@
 	 <div class="phonering-alo-ph-img-circle"></div>
 	 </a>
 	</div>
-	
 <footer>
 	<div class="container">
 		<div class="row" style="padding-bottom: 50px;">
@@ -31,8 +30,8 @@
 				<h3>Liên Kết Nhanh</h3>
 				<ul>
 					<li><a href="{{route('home')}}">Trang Chủ</a></li>
-					<li><a href="{{route('intro')}}">Giới Thiệu</a></li>
-					<li><a href="{{route('product')}}">Sản Phẩm</a></li>
+					<li><a href="intro">Giới Thiệu</a></li>
+					<li><a href="">Sản Phẩm</a></li>
 					<li><a href="{{route('new')}}">Tin Tức</a></li>
 					<li><a href="#">Chính sách</a></li>
 					<li><a href="{{route('contact')}}">Liên Hệ</a></li>
@@ -40,6 +39,7 @@
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 bot-2">
 				<h3>Liên Kết Fanpage</h3>
+
 				<iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/Kanzovietnam&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=326766014703690" style="width:100%; height:160px;border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 		</div>
 	</div>

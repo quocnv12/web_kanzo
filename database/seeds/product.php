@@ -47,7 +47,7 @@ class product extends Seeder
 	        	'code_name'=>'KZ-ECO6666GA',
 	        	'price'=>3900000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
+	        	'image'=>'KZ-ECO6666GA.png',
 	        	'content'=>'* Tính năng sản phẩm:
 							-Mâm chia lửa bằng đồng
 							-Chế độ tiết kiệm gas
@@ -72,7 +72,7 @@ class product extends Seeder
 	        	'code_name'=>'KZ-ECO8888GA',
 	        	'price'=>5790000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
+	        	'image'=>'KZ-ECO8888GA.png',
 	        	'content'=>'* Tính năng sản phẩm:
 							-Mâm chia lửa bằng đồng
 							-Chế độ tiết kiệm gas
@@ -97,7 +97,7 @@ class product extends Seeder
 	        	'code_name'=>'KZ-666I',
 	        	'price'=>11400000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
+	        	'image'=>'KZ-666IH.png',
 	        	'content'=>'
 							*/Tính năng sản phẩm và thông số kỹ thuật:
 							Bếp  từ đôi âm cảm ứng
@@ -128,7 +128,7 @@ class product extends Seeder
 	        	'code_name'=>'KZ-666IH',
 	        	'price'=>11400000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
+	        	'image'=>'KZ-666IH.png',
 	        	'content'=>'
 							*/Tính năng sản phẩm và thông số kỹ thuật:
 							Bếp  01 từ + 01 hồng ngoại cảm ứng
@@ -159,7 +159,7 @@ class product extends Seeder
 	        	'code_name'=>'KZ-HQ888I',
 	        	'price'=>13500000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
+	        	'image'=>'KZ-HQ888I.png',
 	        	'content'=>'
 							*/Tính năng sản phẩm và thông số kỹ thuật:
 							Bếp đôi 02 từ cảm ứng 
@@ -185,12 +185,12 @@ class product extends Seeder
 	        	'created_at'=>now(),
 	        ],
 	        [// STT 1
-	        	'name'=>'KZ-HQ999I (Bếp Ba từ cao cấp)',
-	        	'slug'=>str_slug('KZ-HQ999I (Bếp Ba từ cao cấp)'),
+	        	'name'=>'KZ-HQ999I (Bếp Nấu từ cao cấp)',
+	        	'slug'=>str_slug('KZ-HQ999I (Bếp Ba từ  siêu cao cấp)'),
 	        	'code_name'=>'KZ-HQ999I',
 	        	'price'=>19500000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
+	        	'image'=>'KZ-HQ999I.png',
 	        	'content'=>'*/Tính năng sản phẩm và thông số kỹ thuật:
 							Bếp 03 từ cảm ứng 
 							Điện áp 220V / 50HZ
@@ -220,7 +220,7 @@ class product extends Seeder
 	        	'code_name'=>'KZ-70HD1',
 	        	'price'=>6690000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
+	        	'image'=>'KZ-70HD1.png',
 	        	'content'=>'*/Tính năng sản phẩm:
 							-Dòng sản phẩm hút mùi kính cong, cường lực, kiểu dang treo áp tường
 							-Phím điều khiển cơ, 3 cấp độ
@@ -234,7 +234,7 @@ class product extends Seeder
 							-Kích thước ống thoát: 160mm, dài 1500mm
 							-Công suất hút từ 850m3 đến 1,250m3/H
 							-Siêu tiết kiệm với động cơ 180W',
-	        	'id_category'=>2,
+	        	'id_category'=>3,
 	        	'active'=>1,
 	        	'new'=>1,
 	        	'count_view'=>0,
@@ -246,7 +246,7 @@ class product extends Seeder
 	        	'code_name'=>'KZ-90HD1',
 	        	'price'=>7170000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
+	        	'image'=>'KZ-70HD1.png',
 	        	'content'=>'*/Tính năng sản phẩm:
 							-Dòng sản phẩm hút mùi kính cong, cường lực, kiểu dang treo áp tường
 							-Phím điều khiển cơ, 3 cấp độ
@@ -260,7 +260,7 @@ class product extends Seeder
 							-Kích thước ống thoát: 160mm, dài 1500mm
 							-Công suất hút từ 850m3 đến 1,250m3/H
 							-Siêu tiết kiệm với động cơ 180W',
-	        	'id_category'=>2,
+	        	'id_category'=>3,
 	        	'active'=>1,
 	        	'new'=>1,
 	        	'count_view'=>0,
@@ -272,7 +272,7 @@ class product extends Seeder
 	        	'code_name'=>'KZ-G88',
 	        	'price'=>1335000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
+	        	'image'=>'KZ-G88.png',
 	        	'content'=>'*/Tính năng sản phẩm và công dụng:
 							-Ấm đun nước còi báo Luxury 3.0L, còi báo nước sôi
 							-Thể tích đun tối đa 3.0 lít
@@ -280,7 +280,7 @@ class product extends Seeder
 							-Sử dụng được nhiều loại bếp: Từ, Hồng ngoại, Gas, Điện
 							-Kiểu dang đẹp, sang trọng
 							-Tiện nghi cho sử dụng nước đun sôi để nguội, phục vụ nhu cầu sinh hoạt',
-	        	'id_category'=>2,
+	        	'id_category'=>4,
 	        	'active'=>1,
 	        	'new'=>1,
 	        	'count_view'=>0,
@@ -292,7 +292,7 @@ class product extends Seeder
 	        	'code_name'=>'KZ-G68',
 	        	'price'=>1335000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
+	        	'image'=>'KZ-G68.png',
 	        	'content'=>'*/Tính năng sản phẩm và công dụng:
 							-Ấm đun nước còi báo Luxury 3.0L, còi báo nước sôi
 							-Thể tích đun tối đa 3.0 lít
@@ -300,7 +300,7 @@ class product extends Seeder
 							-Sử dụng được nhiều loại bếp: Từ, Hồng ngoại, Gas, Điện
 							-Kiểu dang đẹp, sang trọng
 							-Tiện nghi cho sử dụng nước đun sôi để nguội, phục vụ nhu cầu sinh hoạt',
-	        	'id_category'=>2,
+	        	'id_category'=>4,
 	        	'active'=>1,
 	        	'new'=>1,
 	        	'count_view'=>0,
@@ -312,7 +312,7 @@ class product extends Seeder
 	        	'code_name'=>'KZ-G58',
 	        	'price'=>1335000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
+	        	'image'=>'KZ-G58.png',
 	        	'content'=>'*/Tính năng sản phẩm và công dụng:
 							-Ấm đun nước còi báo Luxury 3.0L, còi báo nước sôi
 							-Thể tích đun tối đa 3.0 lít
@@ -320,7 +320,7 @@ class product extends Seeder
 							-Sử dụng được nhiều loại bếp: Từ, Hồng ngoại, Gas, Điện
 							-Kiểu dang đẹp, sang trọng
 							-Tiện nghi cho sử dụng nước đun sôi để nguội, phục vụ nhu cầu sinh hoạt',
-	        	'id_category'=>2,
+	        	'id_category'=>4,
 	        	'active'=>1,
 	        	'new'=>1,
 	        	'count_view'=>0,
