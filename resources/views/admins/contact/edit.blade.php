@@ -38,6 +38,15 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label>Số điện thoại 2</label>
+                                <input type="text" name="phone2" id="phone" class="form-control" value="{{$contact->phone2}}">
+                                @if($errors->has('phone2'))
+                                    <div class="alert alert-danger">{{$errors->first('phone2')}}</div>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
                                 <label>Fax</label>
                                 <input type="text" name="fax" id="fax" class="form-control" value="{{$contact->fax}}">
                                 @if($errors->has('fax'))

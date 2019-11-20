@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContactsTable extends Migration
+class CreatePopupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateContactsTable extends Migration
      */
     public function up()
     {
-        Schema::create('contact', function (Blueprint $table) {
+        Schema::create('popup', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('address');
-            $table->string('phone');
-            $table->string('phone2');
-            $table->string('fax');
-            $table->string('email');
-            $table->string('fanpage');
+            $table->string('title');
+            $table->string('image');
+            $table->tinyInteger('active')->default(0);
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class CreateContactsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contact');
+        Schema::dropIfExists('popup');
     }
 }

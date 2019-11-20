@@ -25,7 +25,8 @@
                             <th data-hide="phone,tablet">Số điện thoại</th>
                             <th data-hide="phone,tablet">Email</th>
                             <th data-hide="phone,tablet">địa chỉ</th>
-                            <th data-hide="phone,tablet"></th>
+                            <th data-hide="phone,tablet">Ngày xử lý đơn</th>
+                            <th data-hide="phone,tablet">Xóa đơn</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,8 +37,9 @@
                             <td>{{$row->phone}}</td>
                             <td>{{$row->email}}</td>
                             <td>{{$row->address}}</td>
+                            <td>{{date('H:i:s d/m/Y',strtotime($row->updated_at))}}</td>
                             <td>
-                                <a href="{{route('sentus.del',['id'=>$row->id])}}" class="btn btn-xs btn-danger" onclick="return confirm('Xóa! bạn có muốn tiếp tục?')"><i class="fa fa-trash-o"></i></a>
+                                <a href="{{route('sentus.del',['id'=>$row->id])}}" class="btn btn-xs btn-danger" onclick="return confirm('Xóa đơn! bạn có muốn tiếp tục?')"><i class="fa fa-trash-o"></i></a>
                             </td>
                         </tr>
                         @endforeach

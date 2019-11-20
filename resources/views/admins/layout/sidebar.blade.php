@@ -42,16 +42,17 @@
                         class="title">Chính sách</span> <span class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
-                    <li> <a href="{{route('polycies.list')}}"> Danh sách </a> </li>
                     <li> <a href="{{route('polycies.add')}}"> Thêm chính sách</a> </li>
+                    <li> <a href="{{route('polycies.list')}}"> Danh sách</a> </li>
+                    <li> <a href="{{route('polycies.banner')}}"> Banner</a> </li>
                 </ul>
             </li>
             <li class="start  open  @yield('question') "> <a href="{{route('question.list')}}"><i class="material-icons">question_answer</i> <span
                         class="title">Câu hỏi thường gặp</span> <span class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
+                    <li> <a href="{{route('question.add')}}"> Thêm mới</a> </li>
                     <li> <a href="{{route('question.list')}}"> Danh sách </a> </li>
-                    <li> <a href="{{route('question.add')}}"> Thêm chính sách</a> </li>
                 </ul>
             </li>
 
@@ -64,7 +65,15 @@
                 </ul>
             </li>
 
-            <li class="start  open  @yield('contact') "> <a href="{{route('contact.list')}}"><i class="material-icons">contacts</i> <span
+            <li class="start  open  @yield('popup') "> <a href="{{route('popup.list')}}"><i class="material-icons">contacts</i> <span
+                        class="title">Pop-up</span> <span class="selected"></span> <span class="arrow  open "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('popup.list')}}"> Danh sách</a> </li>
+                    <li> <a href="{{route('popup.list2')}}"> Danh sách 2</a> </li>
+                </ul>
+            </li>
+            <li class="start  open  @yield('popup') "> <a href="{{route('popup.list')}}"><i class="material-icons">contacts</i> <span
                         class="title">Liên hệ</span> <span class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
