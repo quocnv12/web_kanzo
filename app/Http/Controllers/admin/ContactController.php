@@ -20,14 +20,18 @@ class ContactController extends Controller
     	$this->validate($req,[
     		'address' => 'required',
     		'phone' => 'required|numeric|digits_between:8,12',
+            'phone2' => 'required|numeric|digits_between:8,12',
     		'fax' => 'required|numeric',
     		'email' => 'required|email',
     		'fanpage' => 'required',
     	],[
     		'address.required' => 'Địa chỉ là trường không được để trống!',
     		'phone.required' => 'Số điện thoại là trường không được để trống!',
+            'phone2.required' => 'Số điện thoại là trường không được để trống!',
     		'phone.numeric' => 'Số điện thoại phải là số!',
+            'phone2.numeric' => 'Số điện thoại phải là số!',
     		'phone.digits_between' => 'Số điện thoại không đúng định dạng',
+            'phone2.digits_between' => 'Số điện thoại không đúng định dạng',
     		'fax.required' => 'Fax là trường không được để trống!',
     		'fax.numeric' => 'Fax không đúng định dạng!',
     		'email.required' => 'Email là trường không được để trống!',
@@ -37,6 +41,7 @@ class ContactController extends Controller
     	$update = contact::find($id);
     	$update->address = $req->address;
     	$update->phone = $req->phone;
+        $update->phone2 = $req->phone2;
     	$update->fax = $req->fax;
     	$update->email = $req->email;
     	$update->fanpage = $req->fanpage;

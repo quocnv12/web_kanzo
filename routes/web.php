@@ -19,10 +19,11 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
         return view('pages.home');
     })->name('home');
 
-    // ỉntro
-    Route::get('/intro', function () {
-        return view('pages.intro');
-    })->name('intro');
+    //-----------------gioi thieu
+    Route::get('gioi-thieu','IntroduceController@index')->name('introduce.index');
+    // Route::get('/intro', function () {
+    //     return view('pages.intro');
+    // })->name('intro');
 
     //product
     Route::get('/product', function () {
@@ -168,6 +169,9 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}','PolyciesController@edit')->name('polycies.edit');
         Route::post('edit/{id}','PolyciesController@post_edit')->name('polycies.edit');
         Route::get('del/{id}','PolyciesController@del')->name('polycies.del');
+        Route::get('banner','PolyciesController@banner')->name('polycies.banner');
+        Route::get('banner-edit/{id}','PolyciesController@banner_edit')->name('polycies.banner_edit');
+        Route::post('banner-edit/{id}','PolyciesController@post_banner_edit')->name('polycies.banner_edit');
     });
 
     //-----------------Lien he
@@ -176,7 +180,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}','ContactController@edit')->name('contact.edit');
         Route::post('edit/{id}','ContactController@post_edit')->name('contact.edit');
     });
-    //-----------------Khach hang lien he
+    //-----------------Don hang
     Route::group(['prefix' => 'sent_us'],function(){
         Route::get('','SentusController@list')->name('sentus.list');
         Route::get('processed','SentusController@list2')->name('sentus.list2');
@@ -194,6 +198,18 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::post('edit/{id}','QuestionController@post_edit')->name('question.edit');
         Route::get('del/{id}','QuestionController@del')->name('question.del');
     });
+
+    //-----------------pop-up
+    Route::group(['prefix' => 'popup'],function(){
+        Route::get('see','PopupController@list')->name('popup.list');
+        Route::get('','PopupController@list2')->name('popup.list2');
+        Route::get('add','PopupController@add')->name('popup.add');
+        Route::post('add','PopupController@post_add')->name('popup.add');
+        Route::get('active-edit/{id}','PopupController@active_edit')->name('popup.active_edit');
+        Route::get('edit/{id}','PopupController@edit')->name('popup.edit');
+        Route::post('edit/{id}','PopupController@post_edit')->name('popup.edit');
+        Route::get('del/{id}','PopupController@del')->name('popup.del');
+
     //--------------------Đại lý
     Route::group(['prefix' => 'agency'],function(){
         Route::get('','AgencyController@GetList');
@@ -202,9 +218,6 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}','AgencyController@GetEdit');
         Route::post('edit/{id}','AgencyController@PostEdit');
         Route::get('delete/{id}','AgencyController@delete');
-        
-    });
-
 
 
 });
