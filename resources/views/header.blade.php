@@ -65,22 +65,22 @@
 						<a href="#"><span>Trang chủ</span></a>
 					</li>
 					<li>
-						<a href="{{route('intro')}}"><span>Giới thiệu</span></a>
+						<a href="intro"><span>Giới thiệu</span></a>
 					</li>
 					<li>
-						<a href="{{route('product')}}"><span> Sản phẩm </span></a> <i class="fa fa-angle-right"></i>
+						<a href=""><span> Sản phẩm </span></a> <i class="fa fa-angle-right"></i>
 						<ul class="supmenu">
-							<li><a href="{{route('product')}}"><span>Bếp ga âm</span></a></li>
-							<li><a href="{{route('product')}}"><span>Bếp từ </span></a></li>
-							<li><a href="{{route('product')}}"><span>Máy hút mùi</span></a></li>
+							<li><a href=""><span>Bếp ga âm</span></a></li>
+							<li><a href=""><span>Bếp từ </span></a></li>
+							<li><a href=""><span>Máy hút mùi</span></a></li>
 
 						</ul>
 					</li>
 					<li>
-						<a href="{{route('policy')}}"><span> Chính sách </span></a> <i class="fa fa-angle-right"></i>
+						<a href="polycies"><span> Chính sách </span></a> <i class="fa fa-angle-right"></i>
 						<ul class="supmenu">
-							<li><a href="{{route('policy')}}"><span>Khuyến mãi </span></a></li>
-							<li><a href="{{route('policy')}}"><span> Bảo hành</span></a></li>
+							<li><a href="polycies"><span>Khuyến mãi </span></a></li>
+							<li><a href="polycies"><span> Bảo hành</span></a></li>
 						</ul>
 					</li>
 
@@ -107,19 +107,20 @@
 							<div class="menu-right">
 								<ul>
 									<li><a href="{{route('home')}}"><i class="fa fa-home"></i></a></li>
-									<li><a href="{{route('intro')}}">Giới thiệu</a></li>
-									<li class="menu-tier-2"><a href="{{route('product')}}">Sản phẩm </a>
+									<li><a href="/gioi-thieu/gioi-thieu-chung">Giới thiệu</a></li>
+									<li class="menu-tier-2"><a href="">Danh mục </a>
 										<ul class="submenu">
-											<li><a href="{{route('product')}}">Bếp ga âm </a></li>
-											<li><a href="{{route('product')}}">Bếp từ </a></li>
-											<li><a href="{{route('product')}}">Máy hút mùi </a></li>
+											@foreach($categorygl as $row)
+											<li><a href="{{route('product',['slug'=>$row->slug])}}">{{$row->name}}</a></li>
+											@endforeach
+											
 										</ul>
 									</li>
-									<li class="menu-tier-2 menu-tier-3"><a href="{{route('policy')}}">Chính sách</a>
+									<li class="menu-tier-2 menu-tier-3"><a href="polycies">Chính sách</a>
 										<ul class="submenu">
-											<li><a href="{{route('product')}}">Khuyến mãi</a></li>
-											<li><a href="{{route('product')}}">Bảo hành</a></li>
-
+											@foreach($polyciesgl as $row)
+											<li><a href="{{route('polycies',['slug'=>$row->slug])}}">{{$row->title}}</a></li>
+											@endforeach
 										</ul>
 									</li>
 									<li><a href="{{route('new')}}">Tin tức</a></li>
@@ -140,18 +141,18 @@
 								<div class="menu-right">
 									<ul>
 										<li><a href="{{route('home')}}"><i class="fa fa-home"></i></a></li>
-										<li><a href="{{route('intro')}}">Giới thiệu</a></li>
-										<li class="menu-tier-2"><a href="{{route('product')}}">Sản phẩm </a>
+										<li><a href="intro">Giới thiệu</a></li>
+										<li class="menu-tier-2"><a href="">Sản phẩm </a>
 											<ul class="submenu">
-												<li><a href="{{route('product')}}">Bếp ga âm </a></li>
-												<li><a href="{{route('product')}}">Bếp từ </a></li>
-												<li><a href="{{route('product')}}">Máy hút mùi </a></li>
+												<li><a href="">Bếp ga âm </a></li>
+												<li><a href="">Bếp từ </a></li>
+												<li><a href="">Máy hút mùi </a></li>
 											</ul>
 										</li>
-										<li class="menu-tier-2 menu-tier-3"><a href="{{route('policy')}}">Chính sách</a>
+										<li class="menu-tier-2 menu-tier-3"><a href="polycies">Chính sách</a>
 											<ul class="submenu">
-												<li><a href="{{route('product')}}">Khuyến mãi</a></li>
-												<li><a href="{{route('product')}}">Bảo hành</a></li>
+												<li><a href="">Khuyến mãi</a></li>
+												<li><a href="">Bảo hành</a></li>
 	
 											</ul>
 										</li>

@@ -4,6 +4,10 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+use App\models\introduce;
+use App\models\polycies;
+use App\models\category;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -23,6 +27,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('*',function($view){
+            $view->with([
+                //gioi thieu
+                'introducegl' => introduce::all(),
+                'polyciesgl' => polycies::all(),
+                'categorygl' => category::all(),
+                
+            ]);
+        });
     }
 }

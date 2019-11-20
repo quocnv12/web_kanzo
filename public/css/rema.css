@@ -220,7 +220,7 @@ margin-left: 2rem;
   font-family: "Roboto Slab",serif;
   font-weight: bold;
   border-color: transparent!important;
-  margin-left: 5rem;
+  font-size: 18px;
 }
 .h-category-banner {
     background-image:linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/gg.jpg);
@@ -233,6 +233,7 @@ margin-left: 2rem;
 /* Change background color of buttons on hover */
 .tab button:hover {
     color: #c18d28;
+    text-decoration: underline;
 }
 
 /* Create an active/current tablink class */
@@ -361,4 +362,39 @@ margin-left: 2rem;
 .row1-sec1{
   margin-top: 1rem;
 }
+}
+
+/*update */
+.tab button.active{
+  text-decoration: underline;
+}
+
+.k5-sale .sale-p p{
+  margin: 25px auto;
+    margin-bottom: 0;
+    font-size: 18px;
+    float: left;
+}
+.k5-sale .sale-icon{
+  margin-top: 9px;
+}
+
+.k5-sale .sale-icon a{
+  float: left;
+  font-size: 35px;
+  margin-top: 4px;
+  padding-left: 10px;
+
+}
+.k5-sale .sale-icon a img:hover{
+  color: blue;
+}
+.k5-tag a{
+  color: #ffffff ;
+  background-color: #5cb85c; 
+  padding: 5px;
+   border-style: 1px solid  #5cb85c;
+    border-radius: 8px; 
+    font-size: 13px; 
+    text-decoration: none !important;
 }

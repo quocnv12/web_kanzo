@@ -9,7 +9,7 @@ Liên hệ
 
 @section('js')
 <script>
-	new WOW().init();
+  new WOW().init();
 </script>
 @endsection
 
@@ -31,26 +31,26 @@ Liên hệ
 <div class="container">
   <div class="row hihih">
     <div class="col-sm-3 text-center ">
-	<a href=""><i class="fas fa-2x fa-map-marker-alt mb-3 "></i></a>
-	  <h3>Trụ sở chính</h3>
+  <a href=""><i class="fas fa-2x fa-map-marker-alt mb-3 "></i></a>
+    <h3>Trụ sở chính</h3>
       <p>Số 8 biệt thự 10,khu đô thị Vân Canh,Xã Vân Canh,huyện Hoài Đức thành phố Hà Nội</p>
      
     </div>
     <div class="col-sm-3 text-center">
-    	<a href=""><i class="fas fa-2x fa-phone mb-3"></i></a>
-      <h3>Liên hệ online</h3>
+      <a href=""><i class="fas fa-2x fa-phone mb-3"></i></a>
+      <h3>Điện thoại</h3>
       <p>0243.233.3311</p>
      
       
     </div>
     <div class="col-sm-3 text-center">
-    	<a href=""><i class="fas fa-2x fa-fax  mb-3"></i></a>
+      <a href=""><i class="fas fa-2x fa-fax  mb-3"></i></a>
       <h3>Số fax</h3>        
       <p>0243.233.3311</p>
       
     </div>
     <div class="col-sm-3 text-center">
-    	<a href=""><i class="fas fa-2x fa-envelope mb-3"></i></a>
+      <a href=""><i class="fas fa-2x fa-envelope mb-3"></i></a>
       <h3>Email</h3>        
       <p>Kanzo.anhtuan@gmail.com</p>
       
@@ -59,13 +59,13 @@ Liên hệ
 </div>
 <div class="lienhe mt-4">
 <div class="container mt-4 cutte">
-	<div class="row">
-		<div class="col-md-1 col-sm-0"></div>
-		<div class="col-md-5 col-sm-12">
-			<div class="container">
-				<h2>Gửi đến chúng tôi</h2>
+  <div class="row">
+    <div class="col-md-1 col-sm-0"></div>
+    <div class="col-md-5 col-sm-12">
+      <div class="container">
+        <h2>Gửi đến chúng tôi</h2>
          <form action="/action_page.php">
-         	<div class="form-group">
+          <div class="form-group">
       <label for="email">Họ và tên</label>
       <input type="text" class="form-control" id="name" placeholder="tên chủa bạn" name="name">
     </div>
@@ -83,18 +83,18 @@ Liên hệ
     </div>
        <button type="submit" class="btn btn-primary">Gửi</button>
   </form>
-			</div>
-		</div>
-		<div class="col-md-6 col-sm-12">
-		   <div class="banner_contract">
-		   	<div class="container">
-		   		<h2 style="margin-bottom: 15px;">Chi nhánh chúng tôi</h2>
-		   		<img src="images/ll.jpg">
-		   	</div>
-		   </div>
-		</div>
-		<!-- <div class="col-md-1 col-sm-0"></div> -->
-	</div>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+       <div class="banner_contract">
+        <div class="container">
+          <h2 style="margin-bottom: 15px;">Chi nhánh chúng tôi</h2>
+          <img src="images/ll.jpg">
+        </div>
+       </div>
+    </div>
+    <!-- <div class="col-md-1 col-sm-0"></div> -->
+  </div>
 </div>
 </div>
 </section>

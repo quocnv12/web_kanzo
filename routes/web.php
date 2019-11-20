@@ -20,15 +20,15 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
     })->name('home');
 
     //-----------------gioi thieu
-    Route::get('gioi-thieu','IntroduceController@index')->name('introduce.index');
-    // Route::get('/intro', function () {
-    //     return view('pages.intro');
-    // })->name('intro');
+    Route::get('gioi-thieu/{slug}','IntroduceController@index')->name('intro');
+    //-----------------chinh sach
+    Route::get('chinh-sach/{slug}','PolyciesController@index')->name('polycies');
 
     //product
-    Route::get('/product', function () {
-        return view('pages.product');
-    })->name('product');
+    Route::get('danh-muc/{slug}','ProductController@index')->name('product');
+    // Route::get('/product', function () {
+    //     return view('pages.product');
+    // })->name('product');
     Route::get('/product_detail', function () {
         return view('pages.product_detail');
     })->name('product_detail');
@@ -41,10 +41,7 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
         return view('pages.new_detail');
     })->name('new_detail');
 
-    //policy
-    Route::get('/policy', function () {
-        return view('pages.policy');
-    })->name('policy');
+    
     Route::get('/policy_detail', function () {
         return view('pages.policy_detail');
     })->name('policy_detail');
