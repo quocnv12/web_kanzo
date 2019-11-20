@@ -1,46 +1,45 @@
-<nav>
-	<div class="header-logo ">
-		<div class="row" style="margin:0;">
-			<div class="col-md-3 logo">
-				<a href="{{route('home')}}"><img src="images/logo_kazo.png" alt="logo_kanzo"></a>
-			</div>
-		
-			<div class="col-md-9 row menu_left" style="padding:0;">
-				<div class="col-md-1"></div>
-				<div class="col-md-3 a1">
-					<div class="icon_ship row">
-						<div class="ic col-md-3">
+<nav class="container-fluid">
+	<div class="select-language">
+		<div class="container">
+			<a href="#"><img src="images/5-1503128133747.png"></a>
+			<a href="#"><img src="images/1200px-Flag_of_Vietnam.svg.png"></a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="header-logo ">
+			<div class="row" style="margin:0;">
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 logo">
+					<a href="{{route('home')}}"><img src="images/logo_kazo.png" alt="logo_kanzo"></a>
+				</div>
+			
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 menu_left" style="padding:0;">
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+						<div class="ic col-md-3 icon_ship">
 							<i class="fa fa-phone" aria-hidden="true"></i>
 						</div>
-						<div class="title col-md-8">
+						<div class="title col-md-9">
 							<span>0243.233.3311</span>
 							<p>Hotline tư vấn miễn phí</p>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-3 a1">
-					<div class="icon_ship row">
-						<div class="ic col-md-3">
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+						<div class="ic col-md-3 icon_ship">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+						</div>
+						<div class="title col-md-9">
+							<span>0243.233.3311</span>
+							<p>Hotline tư vấn miễn phí</p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+						<div class="ic col-md-3 icon_ship">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</div>
-						<div class="title col-md-8">
+						<div class="title col-md-9">
 							<span>Kanzo.anhtuan@gmail.com</span>
 							<p>Liên hệ với chúng tôi</p>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-3 a1 menu-search">
-						<div>
-							<input type="text" placeholder="Nội dung tìm kiếm ...">
-							<a href=""><i class="fa fa-search"></i></a>
-						</div>
-				</div>
-				<div class="col-md-2">
-					<p></p>
-					<select name="lang" id="lang_op">
-						<option value="vietnam">VietNam</option>
-						<option value="english">English</option>
-					</select>
 				</div>
 			</div>
 		</div>
@@ -73,7 +72,6 @@
 							<li><a href="{{route('product')}}"><span>Bếp ga âm</span></a></li>
 							<li><a href="{{route('product')}}"><span>Bếp từ </span></a></li>
 							<li><a href="{{route('product')}}"><span>Máy hút mùi</span></a></li>
-
 						</ul>
 					</li>
 					<li>
@@ -95,7 +93,12 @@
 					<li>
 						<a href="{{route('contact')}}"><span> Liên hệ</span></a>
 					</li>
-
+					<li>
+						<div>
+							<input type="text" placeholder="Nội dung tìm kiếm ...">
+							<a href=""><i class="fa fa-search"></i></a>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -125,6 +128,12 @@
 									<li><a href="{{route('new')}}">Tin tức</a></li>
 									<li><a href="{{route('diemban')}}">Điểm bán</a></li>
 									<li><a href="{{route('contact')}}">Liên hệ</a></li>
+									<li>
+										<form action="" method="get" name="form_tim_kiem">
+											<input type="text" placeholder="Nội dung tìm kiếm ...">
+											<button type="submit"><i class="fa fa-search"></i></button>
+										</form>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -152,12 +161,18 @@
 											<ul class="submenu">
 												<li><a href="{{route('product')}}">Khuyến mãi</a></li>
 												<li><a href="{{route('product')}}">Bảo hành</a></li>
-	
+
 											</ul>
 										</li>
 										<li><a href="{{route('new')}}">Tin tức</a></li>
 										<li><a href="{{route('diemban')}}">Điểm bán</a></li>
 										<li><a href="{{route('contact')}}">Liên hệ</a></li>
+										<li>
+											<form action="" method="get" name="form_tim_kiem">
+												<input type="text" placeholder="Nội dung tìm kiếm ...">
+												<button type="submit"><i class="fa fa-search"></i></button>
+											</form>
+										</li>
 									</ul>
 								</div>
 							</div>

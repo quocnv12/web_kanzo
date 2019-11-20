@@ -17,10 +17,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="csss/home.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/all.css">
     <!-- CSS libs -->
     @yield('css')
     <!-- JS libs --> 
     <script type="text/javascript" src="libs/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script type="text/javascript" src="libs/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -30,7 +32,6 @@
 </body>
     <!-- JS libs slick -->
     <script type="text/javascript" src="libs/slick-1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <!-- JS libs wow -->
     <script src="js/wow.js"></script>
     <script src="js/home.js"></script>
