@@ -209,7 +209,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}','PopupController@edit')->name('popup.edit');
         Route::post('edit/{id}','PopupController@post_edit')->name('popup.edit');
         Route::get('del/{id}','PopupController@del')->name('popup.del');
-
+    });
     //--------------------Đại lý
     Route::group(['prefix' => 'agency'],function(){
         Route::get('','AgencyController@GetList');
@@ -218,7 +218,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}','AgencyController@GetEdit');
         Route::post('edit/{id}','AgencyController@PostEdit');
         Route::get('delete/{id}','AgencyController@delete');
-
+    });
 
 });
 
