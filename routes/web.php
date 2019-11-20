@@ -86,6 +86,14 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
     Route::get('password','LoginController@GetPassword');
     Route::post('password','LoginController@PostPassword');
 
+            //-------đổi quyền
+    Route::group(['prefix' => 'phanquyen'],function(){
+        Route::get('','LoginController@GetPhanQuyen');
+        Route::get('edit/{id}','LoginController@GetEditPhanQuyen');
+        Route::post('edit/{id}','LoginController@PostEditPhanQuyen');
+    });        
+
+
 
     Route::get('form', function () {
         return view('admins.form.list');
@@ -190,6 +198,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::post('edit/{id}','QuestionController@post_edit')->name('question.edit');
         Route::get('del/{id}','QuestionController@del')->name('question.del');
     });
+
     //-----------------pop-up
     Route::group(['prefix' => 'popup'],function(){
         Route::get('see','PopupController@list')->name('popup.list');
@@ -200,8 +209,15 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}','PopupController@edit')->name('popup.edit');
         Route::post('edit/{id}','PopupController@post_edit')->name('popup.edit');
         Route::get('del/{id}','PopupController@del')->name('popup.del');
-    });
 
+    //--------------------Đại lý
+    Route::group(['prefix' => 'agency'],function(){
+        Route::get('','AgencyController@GetList');
+        Route::get('add','AgencyController@GetAdd');
+        Route::post('add','AgencyController@PostAdd');
+        Route::get('edit/{id}','AgencyController@GetEdit');
+        Route::post('edit/{id}','AgencyController@PostEdit');
+        Route::get('delete/{id}','AgencyController@delete');
 
 
 });

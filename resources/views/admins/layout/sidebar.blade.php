@@ -3,9 +3,8 @@
     <div class="page-sidebar-wrapper scrollbar-dynamic" id="main-menu-wrapper">
         <div class="user-info-wrapper sm">
             <div class="profile-wrapper sm">
-                <img src="images/{{ Auth::user()->image }}" alt=""
-                    data-src=""
-                    data-src-retina="" width="69" height="69" />
+                <img src="images/{{ Auth::user()->image }}" alt="" data-src="" data-src-retina="" width="69"
+                    height="69" />
                 <div class="availability-bubble online"></div>
             </div>
             <div class="user-info sm">
@@ -17,17 +16,19 @@
         <!-- BEGIN SIDEBAR MENU -->
         <p></p>
         <ul>
-            <li class="start  open @yield('form') "> <a href="admin/form"><i class="material-icons">home</i> <span
+            {{-- demo --}}
+            {{-- <li class="start  open @yield('form') "> <a href="admin/form"><i class="material-icons">home</i> <span
                         class="title">Demo</span> <span class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
                     <li> <a href="admin/form"> Danh sach</a> </li>
                     <li class=""> <a href="admin/form/add"> Thêm </a></li>
                 </ul>
-            </li>
-
-            <li class="start  open  @yield('introduce') "> <a href="{{route('introduce.list')}}"><i class="material-icons">import_contacts</i> <span
-                        class="title">Giới thiệu</span> <span class="selected"></span> <span class="arrow  open "></span>
+            </li> --}}
+            {{-- introduce --}}
+            <li class="start  open  @yield('introduce') "> <a href="{{route('introduce.list')}}"><i
+                        class="material-icons">import_contacts</i> <span class="title">Giới thiệu</span> <span
+                        class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
                     <li> <a href="{{route('introduce.list')}}"> Danh sách </a> </li>
@@ -37,9 +38,10 @@
                                 class=" label label-info pull-right m-r-30">NEW</span></a></li> -->
                 </ul>
             </li>
-
-            <li class="start  open  @yield('polycies') "> <a href="{{route('polycies.list')}}"><i class="material-icons">library_books</i> <span
-                        class="title">Chính sách</span> <span class="selected"></span> <span class="arrow  open "></span>
+            {{-- Chính sách --}}
+            <li class="start  open  @yield('polycies') "> <a href="{{route('polycies.list')}}"><i
+                        class="material-icons">library_books</i> <span class="title">Chính sách</span> <span
+                        class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
                     <li> <a href="{{route('polycies.add')}}"> Thêm chính sách</a> </li>
@@ -47,23 +49,28 @@
                     <li> <a href="{{route('polycies.banner')}}"> Banner</a> </li>
                 </ul>
             </li>
-            <li class="start  open  @yield('question') "> <a href="{{route('question.list')}}"><i class="material-icons">question_answer</i> <span
-                        class="title">Câu hỏi thường gặp</span> <span class="selected"></span> <span class="arrow  open "></span>
+
+            {{-- cau hỏi thường gặp --}}
+            <li class="start  open  @yield('question') "> <a href="{{route('question.list')}}"><i
+                        class="material-icons">question_answer</i> <span class="title">Câu hỏi thường gặp</span> <span
+                        class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
                     <li> <a href="{{route('question.add')}}"> Thêm mới</a> </li>
                     <li> <a href="{{route('question.list')}}"> Danh sách </a> </li>
                 </ul>
             </li>
-
-            <li class="start  open  @yield('sentus') "> <a href="{{route('sentus.list')}}"><i class="material-icons">shopping_cart</i> <span
-                        class="title">Đơn hàng</span> <span class="selected"></span> <span class="arrow  open "></span>
+            {{-- Đơn hàng --}}
+            <li class="start  open  @yield('sentus') "> <a href="{{route('sentus.list')}}"><i
+                        class="material-icons">shopping_cart</i> <span class="title">Đơn hàng</span> <span
+                        class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
                     <li> <a href="{{route('sentus.list')}}"> Đơn mới </a> </li>
                     <li> <a href="{{route('sentus.list2')}}"> Đơn đã xử lý </a> </li>
                 </ul>
             </li>
+
 
             <li class="start  open  @yield('popup') "> <a href="{{route('popup.list')}}"><i class="material-icons">contacts</i> <span
                         class="title">Pop-up</span> <span class="selected"></span> <span class="arrow  open "></span>
@@ -73,37 +80,68 @@
                     <li> <a href="{{route('popup.list2')}}"> Danh sách 2</a> </li>
                 </ul>
             </li>
-            <li class="start  open  @yield('popup') "> <a href="{{route('popup.list')}}"><i class="material-icons">contacts</i> <span
-                        class="title">Liên hệ</span> <span class="selected"></span> <span class="arrow  open "></span>
+            
+            {{-- Liên hệ --}}
+            <li class="start  open  @yield('contact') "> <a href="{{route('contact.list')}}"><i
+                        class="material-icons">contacts</i> <span class="title">Liên hệ</span> <span
+                        class="selected"></span> <span class="arrow  open "></span>
+
                 </a>
                 <ul class="sub-menu">
                     <li> <a href="{{route('contact.list')}}"> Thông tin liên hệ </a> </li>
                 </ul>
             </li>
-            <li>
-                <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
-                            class="title">Tin Tức</span> <span class=" arrow"></span> </a>
+
+
+            {{-- tin tức --}}
+            <li class="start  open  @yield('news') "> <a href="admin/news"><i
+                class="material-icons">contacts</i> <span class="title">Tin tức</span> <span
+                class="selected"></span> <span class="arrow  open "></span>
+                </a>
                 <ul class="sub-menu">
-                    <li> <a href="{{route('news.add')}}"> Thêm Tin Tức </a> </li>
-                    <li> <a href="{{route('news.list')}}"> Danh sách Tin Tức </a> </li>
+                        <li> <a href="{{route('news.add')}}"> Thêm Tin Tức </a> </li>
+                        <li> <a href="{{route('news.list')}}"> Danh sách Tin Tức </a> </li>
                 </ul>
             </li>
-           <li>
-                <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
-                        class="title">Sản phẩm</span> <span class=" arrow"></span> </a>
+
+           
+
+            {{-- product --}}
+            <li class="start  open  @yield('product') "> <a href="admin/product/list"><i
+                class="material-icons">contacts</i> <span class="title">Sản phẩm</span> <span
+                class="selected"></span> <span class="arrow  open "></span>
+                </a>
                 <ul class="sub-menu">
-                    <li> <a href="{{route('product.add')}}"> Thêm sản phẩm </a> </li>
-                    <li> <a href="{{route('product.list')}}"> Danh sách sản phẩm </a> </li>
+                        <li> <a href="{{route('product.add')}}"> Thêm sản phẩm </a> </li>
+                        <li> <a href="{{route('product.list')}}"> Danh sách sản phẩm </a> </li>
                 </ul>
             </li>
-            <li>
-                <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span
-                        class="title">Loại sản phẩm</span> <span class=" arrow"></span> </a>
+
+       
+            {{-- Cate_product --}}
+
+            <li class="start  open  @yield('category') "> <a href="admin/category/list"><i
+                class="material-icons">contacts</i> <span class="title">Loại sản phẩm</span> <span
+                class="selected"></span> <span class="arrow  open "></span>
+                </a>
                 <ul class="sub-menu">
-                    <li> <a href="{{route('category.add')}}"> Thêm loại sản phẩm </a> </li>
-                    <li> <a href="{{route('category.list')}}"> Danh sách loại sản phẩm </a> </li>
+                        <li> <a href="{{route('category.add')}}"> Thêm loại sản phẩm </a> </li>
+                        <li> <a href="{{route('category.list')}}"> Danh sách loại sản phẩm </a> </li>
                 </ul>
             </li>
+
+            {{-- Đại lý --}}
+            <li class="start  open  @yield('agency') "> <a href="admin/agency"><i
+                class="material-icons">contacts</i> <span class="title">Đại lý</span> <span
+                class="selected"></span> <span class="arrow  open "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li> <a href="admin/agency">Danh sách đại lý</a> </li>
+                    <li> <a href="admin/agency/add">Thêm đại lý</a> </li>
+                </ul>
+            </li>
+{{-- 
+
             <li>
                 <a href="widgets.html"> <i class="material-icons">panorama_horizontal</i> <span
                         class="title">Widgets</span> <span
@@ -315,11 +353,13 @@
                         </div>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
         </ul>
+        @can('admin')
         <div class="side-bar-widgets">
             <p class="menu-title sm">Account <span class="pull-right"><a href="#" class="create-folder"></a></span></p>
             <ul class="folders">
+
                 <li>
                     <a href="admin/account">
                         <div class="status-icon green"></div>
@@ -332,6 +372,7 @@
                         Thêm tài khoản
                     </a>
                 </li>
+
                 <p></p>
                 <p></p>
                 <li class="folder-input" style="display:none">
@@ -340,11 +381,12 @@
             </ul>
 
         </div>
+        @endcan
         <div class="clearfix"></div>
         <!-- END SIDEBAR MENU -->
     </div>
 </div>
-<a href="#" class="scrollup">Scroll</a>
+{{-- <a href="#" class="scrollup">Scroll</a>
 <div class="footer-widget">
     <div class="progress transparent progress-small no-radius no-margin">
         <div class="progress-bar progress-bar-success animate-progress-bar" data-percentage="79%" style="width: 79%;">
@@ -355,4 +397,4 @@
                 data-animation-duration="560">86</span>% </div>
         <a href="lockscreen.html"><i class="material-icons">power_settings_new</i></a>
     </div>
-</div>
+</div> --}}

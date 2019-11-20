@@ -9,7 +9,6 @@ class banner_introduce extends Seeder
      *
      * @return void
      */
-    
     public function run()
     {
         DB::table('banner_introduce')->delete();
