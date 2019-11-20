@@ -113,7 +113,7 @@
 							<div class="menu-right">
 								<ul>
 									<li><a href="{{route('home')}}"><i class="fa fa-home"></i></a></li>
-									<li><a href="/gioi-thieu/gioi-thieu-chung">Giới thiệu</a></li>
+									<li><a href="gioi-thieu/gioi-thieu-chung">Giới thiệu</a></li>
 									<li class="menu-tier-2"><a href="">Danh mục </a>
 										<ul class="submenu">
 											@foreach($categorygl as $row)
@@ -122,7 +122,7 @@
 											
 										</ul>
 									</li>
-									<li class="menu-tier-2 menu-tier-3"><a href="polycies">Chính sách</a>
+									<li class="menu-tier-2 menu-tier-3"><a href="">Chính sách</a>
 										<ul class="submenu">
 											@foreach($polyciesgl as $row)
 											<li><a href="{{route('polycies',['slug'=>$row->slug])}}">{{$row->title}}</a></li>
@@ -152,34 +152,33 @@
 							<div class="menu">
 								<div class="menu-right">
 									<ul>
-										<li><a href="{{route('home')}}"><i class="fa fa-home"></i></a></li>
-										<li><a href="intro">Giới thiệu</a></li>
-										<li class="menu-tier-2"><a href="">Sản phẩm </a>
-											<ul class="submenu">
-												<li><a href="">Bếp ga âm </a></li>
-												<li><a href="">Bếp từ </a></li>
-												<li><a href="">Máy hút mùi </a></li>
-											</ul>
-										</li>
-										<li class="menu-tier-2 menu-tier-3"><a href="polycies">Chính sách</a>
-											<ul class="submenu">
-
-												<li><a href="">Khuyến mãi</a></li>
-												<li><a href="">Bảo hành</a></li>
-	
-
-											</ul>
-										</li>
-										<li><a href="{{route('new')}}">Tin tức</a></li>
-										<li><a href="{{route('diemban')}}">Điểm bán</a></li>
-										<li><a href="{{route('contact')}}">Liên hệ</a></li>
-										<li>
-											<form action="" method="get" name="form_tim_kiem">
-												<input type="text" placeholder="Nội dung tìm kiếm ...">
-												<button type="submit"><i class="fa fa-search"></i></button>
-											</form>
-										</li>
-									</ul>
+									<li><a href="{{route('home')}}"><i class="fa fa-home"></i></a></li>
+									<li><a href="gioi-thieu/gioi-thieu-chung">Giới thiệu</a></li>
+									<li class="menu-tier-2"><a href="">Danh mục </a>
+										<ul class="submenu">
+											@foreach($categorygl as $row)
+											<li><a href="{{route('product',['slug'=>$row->slug])}}">{{$row->name}}</a></li>
+											@endforeach
+											
+										</ul>
+									</li>
+									<li class="menu-tier-2 menu-tier-3"><a href="">Chính sách</a>
+										<ul class="submenu">
+											@foreach($polyciesgl as $row)
+											<li><a href="{{route('polycies',['slug'=>$row->slug])}}">{{$row->title}}</a></li>
+											@endforeach
+										</ul>
+									</li>
+									<li><a href="{{route('new')}}">Tin tức</a></li>
+									<li><a href="{{route('diemban')}}">Điểm bán</a></li>
+									<li><a href="{{route('contact')}}">Liên hệ</a></li>
+									<li>
+										<form action="" method="get" name="form_tim_kiem">
+											<input type="text" placeholder="Nội dung tìm kiếm ...">
+											<button type="submit"><i class="fa fa-search"></i></button>
+										</form>
+									</li>
+								</ul>
 								</div>
 							</div>
 						</div>
