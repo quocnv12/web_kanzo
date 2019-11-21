@@ -18,7 +18,7 @@ Danh mục Sản phẩm
 
 @section('content')
 <main>
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 slide-bar">
 				<div class="list-product">

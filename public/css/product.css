@@ -59,6 +59,7 @@ a:hover{
     font-weight: 600;
 }
 .product {
+    height: 280px;
     position: relative;
     border-radius: 3px;
     border:1px solid #ccc;
@@ -100,7 +101,8 @@ a:hover{
 	}
 }
 .name-product {
-	font-size: 20px;
+    margin-top: 10px;
+	font-size: 17px;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -255,11 +257,20 @@ h2{
     display: none;
 }
 
+/*update*/
+
+.product img{
+    height: 100px;
+}
+
 
 /*Responsive*/
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 767px){
 	.tab li{
 		width: 11%;
 	}
+    .product{
+        height: auto;
+    }
 }
