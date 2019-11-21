@@ -68,7 +68,7 @@ Trang chủ
                             <img src="images/image4.jpg" alt="">
                         </div>
                         <div class="title_slick">
-                            <a href="{{route('product')}}">Bếp gas âm</a>
+                            <a href="">Bếp gas âm</a>
                         </div>
                     </div>
                     <div class="item">
@@ -76,7 +76,7 @@ Trang chủ
                             <img src="images/image4.jpg" alt="">
                         </div>
                         <div class="title_slick">
-                            <a href="{{route('product')}}">Bếp từ</a>
+                            <a href="">Bếp từ</a>
                         </div>
                     </div>
                     <div class="item">
@@ -84,7 +84,7 @@ Trang chủ
                             <img src="images/image4.jpg" alt="">
                         </div>
                         <div class="title_slick">
-                            <a href="{{route('product')}}">Máy hút mùi</a>
+                            <a href="">Máy hút mùi</a>
                         </div>
                     </div>
                     <div class="item">
@@ -92,7 +92,7 @@ Trang chủ
                             <img src="images/image4.jpg" alt="">
                         </div>
                         <div class="title_slick">
-                            <a href="{{route('product')}}">Máy hút mùi</a>
+                            <a href="">Máy hút mùi</a>
                         </div>
                     </div>
                     <div class="item">
@@ -100,7 +100,7 @@ Trang chủ
                             <img src="images/image4.jpg" alt="">
                         </div>
                         <div class="title_slick">
-                            <a href="{{route('product')}}">Máy hút mùi</a>
+                            <a href="">Máy hút mùi</a>
                         </div>
                     </div>
                 </div>
@@ -293,7 +293,7 @@ Trang chủ
                                     Công ty cổ phần điện tử KANZO Việt Nam hoạt động theo phương châm “Tin cậy, chất lương và hiệu quả”, luôn đặt chữ tín lên hàng đầu, vì vậy chúng tôi luôn ý thức được rằng chất lượng và tiến độ của dự án là một phần quan trọng, chính vì lẽ đó ngoài năng lực về quản lý, nhân sự, nhân lực, kỹ thuật, trang thiết bị, vấn đề tài chính luôn được công ty chú trọng hàng đầu. Chúng tôi luôn có kế hoạch tài chính hàng năm, hàng quý, hàng tháng và từng dự án, từng công việc cụ thể. Vì vậy, Công ty luôn chủ động trong việc thanh quyết toán mua nguyên vật liệu, các khoảng chi phí cũng như lương nhân công,... nhằm đảm bảo chất lượng dự án luôn thông suốt, đúng tiến độ.
                                 </p>
 
-                                <a href="{{route('intro')}}" class="btn-detail" style="border-radius: none;">Xem
+                                <a href="" class="btn-detail" style="border-radius: none;">Xem
                                     thêm</a>
 
                             </div>
