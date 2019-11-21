@@ -704,8 +704,10 @@ footer {
       padding: 4%; }
   #bepgas .item_product {
     background: rgba(0, 0, 0, 0.0588235294); }
-    #bepgas .item_product .cap-mat {
-      padding: 3%; }
+    #bepgas .item_product .capmat1 {
+      padding: 3%;
+      height: 90px; }
+      
 
 #tintuc {
   margin-top: 2%; }
