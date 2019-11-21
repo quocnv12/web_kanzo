@@ -9,7 +9,7 @@ Chi tiết tin tức
 
 @section('js')
 <script>
-	new WOW().init();
+    new WOW().init();
 </script>
 @endsection
 
@@ -37,11 +37,11 @@ Chi tiết tin tức
                                 height: auto !important;
                             }
                             .list-group-item p{
-                            	font-weight: 600;
-                            	padding: 5px 0 5px 0;
+                                font-weight: 600;
+                                padding: 5px 0 5px 0;
                             }
                             .list-group-item span{
-                            	padding: 5px 0 0 0;
+                                padding: 5px 0 0 0;
                             }
                             .list-group-item.active{
                                 background-color:#c18d28  !important;
@@ -60,29 +60,44 @@ Chi tiết tin tức
                         <img src="images/7.jpg" style="padding: 10px 30px 10px 30px">
                        <p>2.Không nên bật tắt bếp nhiều lần khi nấu</p>
                         <span>
-                        	Trước khi bắt tay vào chế biến món ăn cho gia đình mình, bạn nên chuẩn bị sẵn đầy đủ nguyên liệu và lên kế hoạch mình sẽ nấu những món ăn gì. Có như vậy, khi bật bếp gas lên, bạn mới có thể cho thức ăn vào nồi nấu một cách liên tục được. Việc bật tắt bếp gas nhiều lần trong một lần nấu sẽ gây tốn gas.
+                            Trước khi bắt tay vào chế biến món ăn cho gia đình mình, bạn nên chuẩn bị sẵn đầy đủ nguyên liệu và lên kế hoạch mình sẽ nấu những món ăn gì. Có như vậy, khi bật bếp gas lên, bạn mới có thể cho thức ăn vào nồi nấu một cách liên tục được. Việc bật tắt bếp gas nhiều lần trong một lần nấu sẽ gây tốn gas.
 
 
                         </span>
                         <p>3.điều chỉnh ngọn lửa vừa phải</p>
                         <span>
-                        	Trong khi nấu bạn hãy chú ý tới ngọn lửa, chỉ cần điều chỉnh núm bếp gas sao cho ngọn lửa vừa với đáy nồi là được. Ngọn lửa quá lớn vừa tốn gas mà món ăn của bạn lại lâu chín bởi lượng nhiệt thay vì tập trung vào đáy nồi lại bị phân tán ra xung quanh.
+                            Trong khi nấu bạn hãy chú ý tới ngọn lửa, chỉ cần điều chỉnh núm bếp gas sao cho ngọn lửa vừa với đáy nồi là được. Ngọn lửa quá lớn vừa tốn gas mà món ăn của bạn lại lâu chín bởi lượng nhiệt thay vì tập trung vào đáy nồi lại bị phân tán ra xung quanh.
                         </span>
                         <img src="images/1.jpg" style="padding: 10px 30px 10px 30px">
                         <p>4.Tập trung khi nấu ăn không nên chú ý vào việc khác</p>
                         <span>
-                        	Một số người có thói quen vừa nấu (đun nước, ninh cháo…) vừa làm việc khác như quét nhà, xem tivi... Và hầu hết đều quên cho tới khi nhớ ra thì một lượng gas đã tiêu hao uổng phí vì món ăn đã quá lửa, nước cạn, thậm chí cháy nồi. Vì thế hãy tập trung khi nấu.
+                            Một số người có thói quen vừa nấu (đun nước, ninh cháo…) vừa làm việc khác như quét nhà, xem tivi... Và hầu hết đều quên cho tới khi nhớ ra thì một lượng gas đã tiêu hao uổng phí vì món ăn đã quá lửa, nước cạn, thậm chí cháy nồi. Vì thế hãy tập trung khi nấu.
                         </span>
                         <p>5.Thường xuyên vệ sinh bếp ga</p>
                         <span>
-                        	Mỗi ngày sau khi nấu, bạn nên chùi rửa bếp gas, để những cặn bẩn không đọng lại làm bít các lỗ khí (đường dẫn gas). Nếu không chùi rửa thường xuyên, lỗ khí sẽ dễ bị bít khiến gas không ổn định, ngọn lửa không cháy đều dẫn tới nấu thức ăn lâu hơn và hao gas.
-
-
+                            Mỗi ngày sau khi nấu, bạn nên chùi rửa bếp gas, để những cặn bẩn không đọng lại làm bít các lỗ khí (đường dẫn gas). Nếu không chùi rửa thường xuyên, lỗ khí sẽ dễ bị bít khiến gas không ổn định, ngọn lửa không cháy đều dẫn tới nấu thức ăn lâu hơn và hao gas.
                         </span>
                     </li>
-
                 </ul>
-            </div>
+                <div class="container row k5-tag">
+                    <div class="col-md-6 tag-1">
+                      <span class="tag">
+                        <strong><i class="fas fa-tags"></i> Tag:</strong>
+                      </span>
+                      <a href="#">Content</a>
+                      <a href="#">SEO</a>
+                    </div>
+                    <div class="col-md-6 k5-sale" style="">
+                        <div class="sale-p"><p><i class="fas fa-share-square"></i> Chia sẻ:</p></div>
+                        <div class="sale-icon">                 
+                          <a href="#"><i class="fab fa-facebook-square" title="facebook"></i></a>
+                          <a href="#"><i class="fab fa-instagram" title="instagram"></i></a>
+                          <a href="#"><i class="fab fa-pinterest-square" title="printerest"></i></a>
+                          <a href="#"><img src="images/zalo-icon.png" alt=""title="zalo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>            
 
             <!-- cột 3 -->
             <div class="col-md-3 tin-tuc-content" data-aos="fade-up" data-aos-delay="400">

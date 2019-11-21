@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\models\polycies;
+use App\models\banner_polycies;
 
 class PolyciesController extends Controller
 {
@@ -56,5 +57,24 @@ class PolyciesController extends Controller
     public function del($id){
         polycies::destroy($id);
         return redirect()->route('polycies.list');
+    }
+    public function banner(){
+        $banner = banner_polycies::all();
+        return view('admins.polycies.banner',compact('banner'));
+    }
+    public function banner_edit($id){
+        $banner = banner_polycies::find($id);
+        return view('admins.polycies.banner_edit',compact('banner'));
+    }
+    public function post_banner_edit($id,Request $req){
+        $this->validate($req,[
+            'image' => 'required',
+        ],[
+            'image.required' => 'Ảnh chưa được cập nhật',
+        ]);
+        $banner = banner_polycies::find($id);
+        $banner->image = $req->image;
+        $banner->save();
+        return redirect()->route('polycies.banner');
     }
 }

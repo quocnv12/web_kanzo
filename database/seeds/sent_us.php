@@ -21,6 +21,7 @@ class sent_us extends Seeder
 	        	'address'=>'Cầu Giấy,Hà Nội',
 	        	'content'=>'Mua máy hút mùi',
 	        	'status'=>'1',
+	        	'updated_at'=>'2019-11-15 01:09:03',
 	        ],
 	        [
 	        	'id'=>2,
@@ -30,6 +31,7 @@ class sent_us extends Seeder
 	        	'address'=>'Cầu Giấy,Hà Nội',
 	        	'content'=>'Mua máy hút mùi',
 	        	'status'=>'0',
+	        	'updated_at'=>'2019-11-15 01:09:03',
 	        ],
 	        [
 	        	'id'=>3,
@@ -39,6 +41,7 @@ class sent_us extends Seeder
 	        	'address'=>'Cầu Giấy,Hà Nội',
 	        	'content'=>'Mua bếp ga âm',
 	        	'status'=>'1',
+	        	'updated_at'=>'2019-11-15 01:09:03',
 	        ],
 	        
         ]);

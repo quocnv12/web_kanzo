@@ -21,6 +21,7 @@
                         <tr>
                             <th style="width:35%">Địa chỉ</th>
                             <th style="width:10%" data-hide="phone,tablet">Số điện thoại</th>
+                            <th style="width:10%" data-hide="phone,tablet">Số điện thoại 2</th>
                             <th style="width:10%">Số Fax</th>
                             <th style="width:8%">Email</th>
                             <th style="width:6%" data-hide="phone,tablet">Fanpage</th>
@@ -31,8 +32,9 @@
                         @foreach($contact as $row)
                         <tr class="odd gradeX">
                             <td>{{$row->address}}</td>
-                            <td>{{$row->phone}}</td>
-                            <td class="center">{{$row->fax}}</td>
+                            <td>{{$format = chunk_split($row->phone, 4, ' ')}}</td>
+                            <td>{{$format = chunk_split($row->phone2, 4, ' ')}}</td>
+                            <td class="center">{{$format = chunk_split($row->fax, 4, ' ')}}</td>
                             <td class="center">{{$row->email}}</td>
                             <td class="center">{{$row->fanpage}}</td>
                             <td>

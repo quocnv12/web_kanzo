@@ -53,7 +53,7 @@ class ContactController extends Controller
 
         Mail::send('pages.mailsend', $data, function ($message) {
             $message->from('Kanzo.anhtuan@gmail.com', 'Kanzo');
-            $message->to('vanquocnb@gmail.com', 'Kanzo')->subject('Kanzo - thông báo có đơn đặt hàng mới !');
+            $message->to('kanzo.anhtuan@gmail.com', 'Kanzo')->subject('Kanzo - thông báo có đơn đặt hàng mới !');
         });
 
 

@@ -25,6 +25,7 @@
                             <th data-hide="phone,tablet">Số điện thoại</th>
                             <th data-hide="phone,tablet">Email</th>
                             <th data-hide="phone,tablet">Địa chỉ</th>
+                            <th data-hide="phone,tablet">Ngày nhận đơn</th>
                             <th>Xác nhận đơn</th>
                             
                         </tr>
@@ -37,9 +38,10 @@
                             <td>{{$row->phone}}</td>
                             <td>{{$row->email}}</td>
                             <td>{{$row->address}}</td>
+                            <td>{{date('H:i:s d/m/Y',strtotime($row->updated_at))}}</td>
                             <td class="center">
                                 @if($row->status == 1)
-                                    <a href="{{route('sentus.edit',['id'=>$row->id])}}" class="btn btn-xs btn-primary">Xác nhận</a>
+                                    <a href="{{route('sentus.edit',['id'=>$row->id])}}" onclick="return confirm('Xác nhận đơn! Bạn có muốn tiếp tục?')" class="btn btn-xs btn-primary">Xác nhận</a>
                                 @endif
                             </td>
                             

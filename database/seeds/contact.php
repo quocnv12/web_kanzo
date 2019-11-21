@@ -16,9 +16,10 @@ class contact extends Seeder
 	       
 	        	'id'=>1,
 	        	'address'=>'Số 8, Biệt thự 10, Khu đô thị Vân Canh, Huyện Hoài Đức, Tp.Hà Nội',
-	        	'phone'=>'0243 233 3311',
-	        	'fax'=>'0243 233 3311',
-	        	'email'=>'kanzo@gmail.com',
+	        	'phone'=>'02432333311',
+                'phone2'=>'02432333311',
+	        	'fax'=>'02432333311',
+	        	'email'=>'Kanzo.anhtuan@gmail.com',
 	        	'fanpage'=>'kanzo@gmail.com',
 	    ]);
     }

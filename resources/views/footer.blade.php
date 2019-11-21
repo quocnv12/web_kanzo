@@ -5,11 +5,10 @@
 	 <div class="phonering-alo-ph-img-circle"></div>
 	 </a>
 	</div>
-	
 <footer>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-3 bot-1">
+		<div class="row" style="padding-bottom: 50px;">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 bot-1">
 				<a href="{{route('home')}}">
 					<img src="images/logo_footer.png" alt="">
 				</a>
@@ -20,27 +19,28 @@
 					<a href="#"><i class="fa fa-paper-plane pl"></i></a>
 				</div>
 			</div>
-			<div class="col-md-3 bot-2">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 bot-2 lien_he_footer">
 				<h3>Liên Hệ</h3>
 				<p><span>Công ty: </span>Công ty cổ phần điện tử Kanzo Việt Nam.</p>
 				<p><span>Địa chỉ: </span>Số 8, Biệt thự 10, Khu đô thị Văn Canh , xã Văn Canh , huyện Hoài Đức, thành phố Hà Nội.</p>
 				<p><span>Fax: </span>02432333311</p>
 				<p><span>Email: </span>kanzo.anhtuan@gmail.com</p>
 			</div>
-			<div class="col-md-3 bot-2">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 bot-2">
 				<h3>Liên Kết Nhanh</h3>
 				<ul>
 					<li><a href="{{route('home')}}">Trang Chủ</a></li>
-					<li><a href="{{route('intro')}}">Giới Thiệu</a></li>
-					<li><a href="{{route('product')}}">Sản Phẩm</a></li>
+					<li><a href="intro">Giới Thiệu</a></li>
+					<li><a href="">Sản Phẩm</a></li>
 					<li><a href="{{route('new')}}">Tin Tức</a></li>
 					<li><a href="#">Chính sách</a></li>
 					<li><a href="{{route('contact')}}">Liên Hệ</a></li>
 				</ul>
 			</div>
-			<div class="col-md-3 bot-2">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 bot-2">
 				<h3>Liên Kết Fanpage</h3>
-				<iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/Kanzovietnam&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=326766014703690" width="340" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+				<iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/Kanzovietnam&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=326766014703690" style="width:100%; height:160px;border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 		</div>
 	</div>
 </footer>

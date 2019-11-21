@@ -9,14 +9,14 @@ Tin tức
 
 @section('js')
 <script>
-	new_detail WOW().init();
+    new_detail WOW().init();
 </script>
 @endsection
 
 @section('content')
 
 <section>
-	
+    
    <div class="container-fruid">
    <div class="h-category-banner">
   <h2 class="text-center" data-aos="fade-up" data-aos-delay="200" style="color: #fff;">TIN TỨC</h2>
@@ -63,9 +63,7 @@ Tin tức
                                             <div class="thumbnail text-center">
                                                 <img src="images/1.jpg"
                                                      alt="" style="width:100%;">
-                                            </div>
-                                       
-                                       
+                                            </div>                                       
                                     </div>
                                     <!-- Blog Content -->
                                     <div class="col-md-8 blog-content">
@@ -76,25 +74,21 @@ Tin tức
                                             07-11-2019
                                         </div>
                                         <a href="{{route('new_detail')}}" class="ccc">
-                                        	<p>Đun nấu xong nhớ bỏ 3s làm việc này, vừa tiết kiệm 50% ga lại an toàn, chống cháy nổ</p>
+                                            <p>Đun nấu xong nhớ bỏ 3s làm việc này, vừa tiết kiệm 50% ga lại an toàn, chống cháy nổ</p>
                                         </a>
                                         <a href="{{route('new_detail')}}"
                                            class="btn btn-outline-primary btn-sm mt-3">
                                             Đọc tiếp 
                                         </a>
                                     </div>
-                                </div>
-                                
+                                </div>                               
                                 <div class="row new_row">
                                     <div class="col-md-4">
-                                  
-                                            <div class="thumbnail text-center">
-                                                <img src="images/2.jpg"
-                                                     alt="" style="width:100%;">
-                                            </div>
-                                       
-                                       
-                                    </div>
+                                        <div class="thumbnail text-center">
+                                            <img src="images/2.jpg"
+                                                 alt="" style="width:100%;">
+                                        </div>                                              
+                                   </div>
                                     <!-- Blog Content -->
                                     <div class="col-md-8 blog-content">
                                         <a href="{{route('new_detail')}}" class="blog-headline">
@@ -104,7 +98,7 @@ Tin tức
                                             07-11-2019
                                         </div>
                                         <a href="{{route('new_detail')}}" class="ccc">
-                                        	<p>GiadinhNet - Rất nhiều vụ tai nạn đáng tiếc xảy ra mà nguyên nhân từ sự thiếu hiểu biết của người tiêu dùng về gas.</p>
+                                            <p>GiadinhNet - Rất nhiều vụ tai nạn đáng tiếc xảy ra mà nguyên nhân từ sự thiếu hiểu biết của người tiêu dùng về gas.</p>
                                         </a>
                                         <a href="{{route('new_detail')}}"
                                            class="btn btn-outline-primary btn-sm mt-3">
@@ -133,7 +127,7 @@ Tin tức
                                             07-11-2019
                                         </div>
                                         <a href="{{route('new_detail')}}" class="ccc">
-                                        	<p>Đây là những mẹo nhỏ nhưng không phải ai cũng biết giúp tiết kiệm ga cho gia đình.</p>
+                                            <p>Đây là những mẹo nhỏ nhưng không phải ai cũng biết giúp tiết kiệm ga cho gia đình.</p>
                                         </a>
                                         <a href="{{route('new_detail')}}"
                                            class="btn btn-outline-primary btn-sm mt-3">
@@ -160,7 +154,7 @@ Tin tức
                                             07-11-2019
                                         </div>
                                         <a href="{{route('new_detail')}}" class="ccc">
-                                        	<p>Từng có trường hợp nạn nhân N.K.T, 21 tuổi (Đắk Lắk) phải cắt bỏ bàn tay trái vì bếp ga mini bất ngờ phát nổ như bom.</p>
+                                            <p>Từng có trường hợp nạn nhân N.K.T, 21 tuổi (Đắk Lắk) phải cắt bỏ bàn tay trái vì bếp ga mini bất ngờ phát nổ như bom.</p>
                                         </a>
                                         <a href="{{route('new_detail')}}"
                                            class="btn btn-outline-primary btn-sm mt-3">
@@ -187,7 +181,7 @@ Tin tức
                                             07-11-2019
                                         </div>
                                         <a href="{{route('new_detail')}}" class="ccc">
-                                        	<p>Mỗi loại bếp ga khác nhau lại có cách làm sạch khác nhau mà bạn nên lưu ý.</p>
+                                            <p>Mỗi loại bếp ga khác nhau lại có cách làm sạch khác nhau mà bạn nên lưu ý.</p>
                                         </a>
                                         <a href="{{route('new_detail')}}"
                                            class="btn btn-outline-primary btn-sm mt-3">
@@ -214,7 +208,7 @@ Tin tức
                                             07-11-2019
                                         </div>
                                         <a href="{{route('new_detail')}}" class="ccc">
-                                        	<p>Có lần mẹ vợ mua cho cái bếp ga, thế là sấm sét nổ ra luôn trong nhà. Hùng thấy vô cùng mất mặt khi cả cái bếp cũng phải nhờ đến mẹ vợ.</p>
+                                            <p>Có lần mẹ vợ mua cho cái bếp ga, thế là sấm sét nổ ra luôn trong nhà. Hùng thấy vô cùng mất mặt khi cả cái bếp cũng phải nhờ đến mẹ vợ.</p>
                                         </a>
                                         <a href="{{route('new_detail')}}"
                                            class="btn btn-outline-primary btn-sm mt-3">
@@ -227,7 +221,6 @@ Tin tức
 
                         
                     </div>
-
                 </div>
             </div>
 
