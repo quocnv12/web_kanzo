@@ -21,9 +21,9 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
 
     //-----------------gioi thieu
     Route::get('gioi-thieu','IntroduceController@index')->name('introduce.index');
-    // Route::get('/intro', function () {
-    //     return view('pages.intro');
-    // })->name('intro');
+     Route::get('/intro', function () {
+         return view('pages.intro');
+     })->name('intro');
 
     //product
     Route::get('/product', function () {
