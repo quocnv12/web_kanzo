@@ -45,6 +45,6 @@
 	</div>
 </footer>
 <div class="copyright">
-	<p>Copyright © 2017 All rights reserved. Công ty cổ phần Điện tử Kanzo Việt Nam | Thiết kế bởi web88.vn</p>
+	<p>Copyright © 2019 All rights reserved. Công ty cổ phần Điện tử Kanzo Việt Nam | Thiết kế bởi web88.vn</p>
 </div>
 
