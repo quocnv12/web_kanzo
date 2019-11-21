@@ -55,7 +55,6 @@
 						<h2 style=" padding-top:15%;"></h2>
 					</a>
 					<span class="close-menu">
-
 						<i class="fa fa-times-circle"></i>
 					</span>
 				</span>
@@ -86,11 +85,11 @@
 					</li>
 
 					<li>
-						<a href="{{route('new')}}"><span> Tin tức </span></a>
+						<a href="{{route('new')}}"><span> Điểm bán </span></a>
 					</li>
 
 					<li>
-						<a href="{{route('diemban')}}"><span> Điểm bán </span></a>
+						<a href="{{route('diemban')}}"><span> Tin tức </span></a>
 					</li>
 
 					<li>
