@@ -4,12 +4,15 @@
 @section('content')
 
 <div>
-	<div class="page-title">
-        <h3>Sản phẩm - <span class="semi-bold">Thêm</span>
-        </h3>
-    </div>
+	<ul class="breadcrumb">
+		<li>
+			<p>YOU ARE HERE</p>
+		</li>
+		<li><a href="admin/product" class="active">Sản phẩm</a> </li>
+	</ul>
+	<hr>
     <div>
-            @if(count($errors) > 0)
+            {{-- @if(count($errors) > 0)
                 <div class="alert alert-danger">
                     @foreach($errors->all() as $err)
                         {{$err}}<br>
@@ -17,12 +20,8 @@
 
                 </div>
 
-            @endif
-            @if(session('thongbao'))
-                <div class="alert alert-success">
-                    {{session('thongbao')}}
-                </div>
-            @endif
+            @endif --}}
+         
     </div>
 </div>
 
@@ -36,41 +35,54 @@
 	            <div class="row">
 	                <div class="col-md-8">
 	                	<div class="form-group">
-	                        <label>Loại sản phẩm</label>
+	                        <label>Danh mục sản phẩm</label>
 	                        <select name="id_category" class="form-control">
+								<option value="0">---Chọn---</option>
 	                        	@foreach($category as $item)
 	                            	<option value="{{$item->id}}">{{$item->name}}</option>
 	                            @endforeach
-	                        </select>
+							</select>
+							@if(session('thongbao'))
+							<div class="alert alert-danger">
+								{{session('thongbao')}}
+							</div>
+							@endif
+						</div>
+						<div class="form-group">
+	                        <label>Mã sản phẩm</label>
+							<input type="text" name="code_name" placeholder="Nhập mã sản phẩm" class="form-control" value="{{ old('code_name') }}">
+							{!! ShowError($errors,'code_name') !!}
 	                    </div>
 	                    <div class="form-group">
 	                        <label>Tên sản phẩm</label>
-	                        <input type="text" name="name" class="form-control" value="">
+							<input type="text" name="name" placeholder="Nhập tên sản phẩm" class="form-control" value="{{ old('name') }}">
+							{!! ShowError($errors,'name') !!}
 	                    </div>
+	                    
 	                    <div class="form-group">
-	                        <label>Mã sản phẩm</label>
-	                        <input type="text" name="code_name" class="form-control" value="">
-	                    </div>
-	                    <div class="form-group">
-	                        <label>Giá sp</label>
-	                        <input type="text" name="price" class="form-control" value="">
+	                        <label>Giá sản phẩm</label>
+							<input type="text" name="price" placeholder="Nhập giá sản phẩm" class="form-control" value="{{ old('price') }}">
+							{!! ShowError($errors,'price') !!}
 	                    </div>
 	                    <div class="form-group">
 	                        <label>Giá sale</label>
-	                        <input type="text" name="sale_price" class="form-control" value="">
+							<input type="text" placeholder="ex : 0% ,10%" name="sale_price" class="form-control" value="{{ old('sale_price') }}">
+							{!! ShowError($errors,'sale_price') !!}
 	                    </div>
 	                    <div class="form-group">
-	                        <label>Sản phẩm mới</label>
-	                        <select name="new" class="form-control">
+	                        <label>Sản phẩm nổi bật</label>
+	                        <select name="state" class="form-control">
 	                            <option value="0">Không</option>
 	                            <option value="1">Có</option>
 	                        </select>
-	                    </div>
+						</div>
+						
 	                </div>
 	                <div class="col-md-4">
 	                    <div class="form-group">
-	                        <label>Ảnh sản phẩm</label>
-	                        <input id="img" type="file" name="img" class="form-control"
+							<label>Ảnh sản phẩm</label>
+							{!! ShowError($errors,'image') !!}
+	                        <input id="img" type="file" name="image" value="{{ old('image') }}"  class="form-control hidden"
 	                            onchange="changeImg(this)">
 	                        <img id="avatar" class="thumbnail" width="100%" height="350px" src="images/import-img.png">
 	                    </div>
@@ -78,15 +90,34 @@
 	                <div class="col-md-12">
 	                    <div class="form-group">
 	                        <div class="form-group">
-	                            <label class="form-label">Nội dung</label>
-	                            <textarea name="content" id="content"></textarea>
+	                            <label class="form-label">Thông tin sản phẩm</label>
+								<textarea placeholder="Nhập thông tin sản phẩm" name="information" id="content1">{{ old('information') }}</textarea>
+								{!! ShowError($errors,'information') !!}
+	                        </div>
+	                    </div>
+					</div>
+					<div class="col-md-12">
+	                    <div class="form-group">
+	                        <div class="form-group">
+	                            <label class="form-label">Thông số kĩ thuật</label>
+								<textarea placeholder="Nhập thông số kĩ thuật" name="thongso" id="content2">{{ old('thongso') }}</textarea>
+								{!! ShowError($errors,'thongso') !!}
+	                        </div>
+	                    </div>
+					</div>
+					<div class="col-md-12">
+	                    <div class="form-group">
+	                        <div class="form-group">
+	                            <label class="form-label">Hướng dẫn sử dụng</label>
+								<textarea placeholder="Nhập hướng dẫn sử dụng" name="huongdan" id="content3">{{ old('huongdan') }}</textarea>
+								{!! ShowError($errors,'huongdan') !!}
 	                        </div>
 	                    </div>
 	                </div>
 	                <div class="form-actions">
 	                    <div class="pull-right">
 	                        <button type="submit" class="btn btn-danger btn-cons"><i class="icon-ok"></i> Save</button>
-	                        <button type="button" class="btn btn-white btn-cons">Cancel</button>
+	                        {{-- <button type="button" class="btn btn-white btn-cons">Cancel</button> --}}
 	                    </div>
 	                </div>
 	            </div>

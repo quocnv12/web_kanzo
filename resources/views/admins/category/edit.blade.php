@@ -6,10 +6,13 @@
 @section('content')
 
 <div>
-	<div class="page-title">
-        <h3>loại sản phẩm - <span class="semi-bold">Sửa</span>
-        </h3>
-    </div>
+    <ul class="breadcrumb">
+        <li>
+            <p>YOU ARE HERE</p>
+        </li>
+        <li><a href="admin/category" class="active">Danh mục</a> </li>
+    </ul>
+    <hr>
     <div>
             @if(count($errors) > 0)
                 <div class="alert alert-danger">
@@ -46,7 +49,7 @@
 	                        <label>Tên loại sản phẩm</label>
 	                        <input type="text" name="name" class="form-control" value="{{$category->name}}">
 	                    </div>
-	                    <div class="form-group">
+	                    {{-- <div class="form-group">
                             <label>Hiển thị</label>
                         @if($category->active == 1)
                             <label class="radio-inline">
@@ -63,13 +66,13 @@
                                 <input name="active" value="0" checked type="radio">Không
                             </label>
                         @endif
-                        </div>
+                        </div> --}}
 	                </div>
 
 	                <div class="form-actions">
 	                    <div class="pull-right">
 	                        <button type="submit" class="btn btn-danger btn-cons"><i class="icon-ok"></i> Save</button>
-	                        <button type="button" class="btn btn-white btn-cons">Cancel</button>
+	                        {{-- <button type="button" class="btn btn-white btn-cons">Cancel</button> --}}
 	                    </div>
 	                </div>
 	            </div>
