@@ -145,12 +145,13 @@ Danh mục Sản phẩm
 			<div class="col-lg-9">
 				<div class="link">
 					<a href="{{route('home')}}">Trang chủ</a>
+
 					<span>/</span>
-					<a>{{$category->name}}</a>
+					<a href="{{route('product', $cats->slug)}}">{{$cats->name}}</a>
 				</div>
 				<hr>
 				<div class="collect-product">
-				{{$category->name}}
+				    {{$cats->name}}
 				</div>
 				<hr>
 
@@ -158,7 +159,7 @@ Danh mục Sản phẩm
 					@foreach($products as $row)
 					<div class="col-md-3">
 						<div class="product">
-							<a href="{{route('product_detail')}}">
+							<a href="{{route('product_detail', $row->slug)}}">
 								<img class="" src="images/{{$row->image}}" alt="">
 								
 								<div class="name-product">
@@ -172,18 +173,12 @@ Danh mục Sản phẩm
 					</div>
 					@endforeach
 				</div>
-				
-				
-					<!-- <ul class="tab">
-						<li><a href="#" class="active">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#" class="vvsv">...</a></li>
-						<li><a href="#">10</a></li>
-						<li><a href="#">>></a></li>
-					</ul> -->
-				
+		
+                <div style="text-align: center">
+                    {{$products->links()}}
+
+                </div>
+
 			</div>
 		</div>
 	</div>

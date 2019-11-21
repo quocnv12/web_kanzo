@@ -1,14 +1,11 @@
 <?php
-
 namespace App\Http\Controllers\frontend;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\models\product;
 use App\models\popup;
 use App\models\intro_general;
 use App\models\question;
-
 class HomeController extends Controller
 {
 	public function index(){
