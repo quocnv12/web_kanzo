@@ -20,16 +20,27 @@ class QuestionController extends Controller
     		'title' => 'required|unique:question,title',
             'active' => 'required',
     		'question_content' => 'required',
+            'image' => 'required',
     	],[
     		'title.required' => 'Tiêu đề là trường bắt buộc!',
     		'title.unique' => 'Tiêu đề đã tồn tại!',
     		'question_content.required' => 'Nội dung là trường bắt buộc!',
+            'image.required' => 'Ảnh là trường bắt buộc!',
             'active.required' => 'Trạng thái là trường bắt buộc!',
     	]);
     	$new = new question;
     	$new->title = $req->title;
     	$new->slug = str_slug($req->title);
     	$new->content = $req->question_content;
+        // $new->image = $req->image;
+        if($req->hasFile('image'))
+        {
+            $file = $req->image;
+            $file_name = uniqid().'.'.$file->getClientOriginalExtension();
+           // dd($file_name); 
+            $file->move('images',$file_name);
+            $new->image=$file_name;
+        }
     	$new->active = $req->active;
     	$new->save();
 
@@ -52,6 +63,14 @@ class QuestionController extends Controller
         $new->title = $req->title;
         $new->slug = str_slug($req->title);
         $new->content = $req->question_content;
+        if($req->hasFile('image'))
+        {
+            $file = $req->image;
+            $file_name = uniqid().'.'.$file->getClientOriginalExtension();
+           // dd($file_name); 
+            $file->move('images',$file_name);
+            $new->image=$file_name;
+        }
         $new->active = $req->active;
         $new->save();
         return redirect()->route('question.list');
