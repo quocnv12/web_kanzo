@@ -180,24 +180,24 @@ Trang chủ
                             <h3 class="group__services-text">video về Kanzo</h3>
                         </div>
                         <div class="silde_video_kanzo owl-carousel owl-theme">
-                            <div class="silde_video_kanzo_item" style="width: 100%;height: 450px;object-fit: cover;">
-                                <img src="images/slide1.jpg" alt="">
+                            <div class="silde_video_kanzo_item">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
                             </div>
                             <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 450px;object-fit: cover;" controls>
                                   <source src="video/Xiaomi DCL01CM Precise Control Induction Cooker Review - very advanced.mp4" type="video/mp4">
                                 </video>
                             </div>
-                            <div class="silde_video_kanzo_item" style="width: 100%;height: 450px;object-fit: cover;">
-                                <img src="images/slide1.jpg" alt="">
+                            <div class="silde_video_kanzo_item">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
                             </div>
                             <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 450px;object-fit: cover;" controls>
                                   <source src="video/Xiaomi DCL01CM Precise Control Induction Cooker Review - very advanced.mp4" type="video/mp4">
                                 </video>
                             </div>
-                            <div class="silde_video_kanzo_item" style="width: 100%;height: 450px;object-fit: cover;">
-                                <img src="images/slide1.jpg" alt="">
+                            <div class="silde_video_kanzo_item">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
                             </div>
                             <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 450px;object-fit: cover;" controls>
@@ -277,24 +277,24 @@ Trang chủ
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                         <div class="silde_video_kanzo_gioi_thieu owl-carousel owl-theme">
-                            <div class="silde_video_kanzo_item" style="width: 100%;height: 450px;object-fit: cover;">
-                                <img src="images/slide1.jpg" alt="">
+                            <div class="silde_video_kanzo_item">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
                             </div>
                             <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 320px;object-fit: cover;" controls>
                                   <source src="video/The Siemens Gas Cooktops.mp4" type="video/mp4">
                                 </video>
                             </div>
-                            <div class="silde_video_kanzo_item" style="width: 100%;height: 450px;object-fit: cover;">
-                                <img src="images/slide1.jpg" alt="">
+                            <div class="silde_video_kanzo_item">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
                             </div>
                             <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 320px;object-fit: cover;" controls>
                                   <source src="video/Xiaomi DCL01CM Precise Control Induction Cooker Review - very advanced.mp4" type="video/mp4">
                                 </video>
                             </div>
-                            <div class="silde_video_kanzo_item" style="width: 100%;height: 450px;object-fit: cover;">
-                                <img src="images/slide1.jpg" alt="">
+                            <div class="silde_video_kanzo_item">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
                             </div>
                             <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 320px;object-fit: cover;" controls>
