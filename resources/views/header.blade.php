@@ -55,7 +55,6 @@
 						<h2 style=" padding-top:15%;"></h2>
 					</a>
 					<span class="close-menu">
-
 						<i class="fa fa-times-circle"></i>
 					</span>
 				</span>
@@ -69,16 +68,13 @@
 					<li>
 						<a href=""><span> Sản phẩm </span></a> <i class="fa fa-angle-right"></i>
 						<ul class="supmenu">
-
 							<li><a href=""><span>Bếp ga âm</span></a></li>
 							<li><a href=""><span>Bếp từ </span></a></li>
 							<li><a href=""><span>Máy hút mùi</span></a></li>
-
-
 						</ul>
 					</li>
 					<li>
-						<a href="polycies"><span> Chính sách </span></a> <i class="fa fa-angle-right"></i>
+						<a href="polycies"><span> Khuyến Mãi </span></a> <i class="fa fa-angle-right"></i>
 						<ul class="supmenu">
 							<li><a href="polycies"><span>Khuyến mãi </span></a></li>
 							<li><a href="polycies"><span> Bảo hành</span></a></li>
@@ -86,11 +82,11 @@
 					</li>
 
 					<li>
-						<a href="{{route('new')}}"><span> Tin tức </span></a>
+						<a href="{{route('new')}}"><span> Điểm bán </span></a>
 					</li>
 
 					<li>
-						<a href="{{route('diemban')}}"><span> Điểm bán </span></a>
+						<a href="{{route('diemban')}}"><span> Tin tức </span></a>
 					</li>
 
 					<li>
