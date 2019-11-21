@@ -47,21 +47,22 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
     })->name('policy_detail');
 
     //contact
-    Route::get('/contact', function () {
-        return view('pages.contact');
-    })->name('contact');
-
-    Route::get('/diemban', function () {
-        return view('pages.diemban');
-    })->name('diemban');
+    Route::group(['prefix' => 'contact'], function () {
+        Route::get('','ContactController@GetContact')->name('contact');
+        Route::post('','ContactController@PostContact');
+    });
+   
+    //------đại lý
+    Route::group(['prefix' => 'diemban'], function () {
+        Route::get('','AgencyController@GetAgency')->name('diemban');
+        Route::get('search','AgencyController@GetSearch');
+    });
+   
 });
 
 // ------------End
 
 
-Route::get('admin', function () {
-    return view('admins.index');
-});
 // ------------------------route admins viết vào đây-----------------------
 
 
@@ -91,13 +92,6 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
     });        
 
 
-
-    Route::get('form', function () {
-        return view('admins.form.list');
-    });
-    Route::get('form/add', function () {
-        return view('admins.form.add');
-    });
 
 
     //-----------------Gioi thieu
