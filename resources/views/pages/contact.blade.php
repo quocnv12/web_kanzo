@@ -29,33 +29,33 @@ Liên hệ
     <div class="jumbotron text-center">
         <h3>Liên Hệ Với Kanzo</h3>
     </div>
-    <div class="container">
-        <div class="row hihih">
-            <div class="col-sm-3 text-center ">
-                <a href=""><i class="fas fa-2x fa-map-marker-alt mb-3 "></i></a>
-                <h3>Trụ sở chính</h3>
-                <p>Số 8 biệt thự 10,khu đô thị Vân Canh,Xã Vân Canh,huyện Hoài Đức thành phố Hà Nội</p>
+</section>
+<section class="container">
+    <div class="row hihih">
+        <div class="col-sm-3 text-center ">
+            <a href=""><i class="fas fa-2x fa-map-marker-alt mb-3 "></i></a>
+            <h3>Trụ sở chính</h3>
+            <p>Số 8 biệt thự 10,khu đô thị Vân Canh,Xã Vân Canh,huyện Hoài Đức thành phố Hà Nội</p>
 
-            </div>
-            <div class="col-sm-3 text-center">
-                <a href=""><i class="fas fa-2x fa-phone mb-3"></i></a>
-                <h3>Liên hệ online</h3>
-                <p>0243.233.3311</p>
+        </div>
+        <div class="col-sm-3 text-center">
+            <a href=""><i class="fas fa-2x fa-phone mb-3"></i></a>
+            <h3>Liên hệ online</h3>
+            <p>0243.233.3311</p>
 
 
-            </div>
-            <div class="col-sm-3 text-center">
-                <a href=""><i class="fas fa-2x fa-fax  mb-3"></i></a>
-                <h3>Số fax</h3>
-                <p>0243.233.3311</p>
+        </div>
+        <div class="col-sm-3 text-center">
+            <a href=""><i class="fas fa-2x fa-fax  mb-3"></i></a>
+            <h3>Số fax</h3>
+            <p>0243.233.3311</p>
 
-            </div>
-            <div class="col-sm-3 text-center">
-                <a href=""><i class="fas fa-2x fa-envelope mb-3"></i></a>
-                <h3>Email</h3>
-                <p>Kanzo.anhtuan@gmail.com</p>
+        </div>
+        <div class="col-sm-3 text-center">
+            <a href=""><i class="fas fa-2x fa-envelope mb-3"></i></a>
+            <h3>Email</h3>
+            <p>Kanzo.anhtuan@gmail.com</p>
 
-            </div>
         </div>
     </div>
     <div class="lienhe mt-4">
@@ -75,7 +75,7 @@ Liên hệ
                           @csrf
                             <div class="form-group">
                                 <label for="email">Họ và tên :</label>
-                                <input type="text" class="form-control" id="name" placeholder="Tên chủa bạn"
+                                <input type="text" class="form-control" id="name" placeholder="Tên của bạn"
                                     name="name">
                                     {!! ShowError($errors,'name') !!}
                             </div>
@@ -115,6 +115,24 @@ Liên hệ
                     </div>
                 </div>
                 <!-- <div class="col-md-1 col-sm-0"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="row k5-tag">
+        <div class="col-md-6 tag-1">
+          <span class="tag">
+            <strong><i class="fas fa-tags"></i> Tag:</strong>
+          </span>
+          <a href="#">Content</a>
+          <a href="#">SEO</a>
+        </div>
+        <div class="col-md-6 k5-sale" style="">
+            <div class="sale-p"><p><i class="fas fa-link"></i> Liên kết với Kanzo: </p></div>
+            <div class="sale-icon">                 
+              <a href="#"><i class="fab fa-facebook-square" title="facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram" title="instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest-square" title="printerest"></i></a>
+              <a href="#"><img src="images/zalo-icon.png" alt=""title="zalo"></a>
             </div>
         </div>
     </div>
