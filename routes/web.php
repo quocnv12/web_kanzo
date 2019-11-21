@@ -109,7 +109,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
 
     //---------------San Pham
     Route::group(['prefix' => 'product'], function(){
-        Route::get('list', 'ProductController@getListProduct')->name('product.list');
+        Route::get('', 'ProductController@getListProduct')->name('product.list');
         Route::get('add', 'ProductController@getAddProduct')->name('product.add');
         Route::post('add', 'ProductController@postAddProduct')->name('product.add.post');
         Route::get('edit/{id_product}', 'ProductController@getEditProduct')->name('product.edit');
@@ -117,7 +117,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('delete/{id_product}', 'ProductController@getDeleteProduct')->name('product.delete');
     });
     Route::group(['prefix' => 'category'], function(){
-        Route::get('list', 'CategoryController@getListCategory')->name('category.list');
+        Route::get('', 'CategoryController@getListCategory')->name('category.list');
         Route::get('add', 'CategoryController@getAddCategory')->name('category.add');
         Route::post('add', 'CategoryController@postAddCategory')->name('category.add.post');
         Route::get('edit/{id_category}', 'CategoryController@getEditCategory')->name('category.edit');

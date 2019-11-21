@@ -5,11 +5,13 @@
 @section('content')
 
 <div>
-	<div class="page-title">
-        <h3>loại sản phẩm - <span class="semi-bold">Thêm</span>
-        </h3>
-    </div>
-    <div>
+    <ul class="breadcrumb">
+        <li>
+            <p>YOU ARE HERE</p>
+        </li>
+        <li><a href="admin/category" class="active">Danh mục</a> </li>
+    </ul>
+    <hr>
             @if(count($errors) > 0)
                 <div class="alert alert-danger">
                     @foreach($errors->all() as $err)
@@ -29,7 +31,7 @@
 
 <div class="col-xs-6 col-md-12 col-lg-12">
     <div class="panel panel-primary">
-        <div class="panel-heading" style="font-size:16px">Thêm loại sản phẩm</div>
+        <div class="panel-heading" style="font-size:16px">Thêm danh mục sản phẩm</div>
         <div class="panel-body">
 
         	<form role="form" action="{{route('category.add.post')}}" method="post" enctype="multipart/form-data">
@@ -37,7 +39,7 @@
 	            <div class="row">
 	                <div class="col-md-8">
 	                    <div class="form-group">
-	                        <label>Tên loại sản phẩm</label>
+	                        <label>Tên danh mục sản phẩm</label>
 	                        <input type="text" name="name" class="form-control" value="">
 	                    </div>
 	                </div>
@@ -45,7 +47,7 @@
 	                <div class="form-actions">
 	                    <div class="pull-right">
 	                        <button type="submit" class="btn btn-danger btn-cons"><i class="icon-ok"></i> Save</button>
-	                        <button type="button" class="btn btn-white btn-cons">Cancel</button>
+	                        {{-- <button type="button" class="btn btn-white btn-cons">Cancel</button> --}}
 	                    </div>
 	                </div>
 	            </div>
