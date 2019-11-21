@@ -278,7 +278,7 @@ Trang chủ
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                         <div class="silde_video_kanzo_gioi_thieu owl-carousel owl-theme">
                             <div class="silde_video_kanzo_item">
-                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 320px;object-fit: cover;">
                             </div>
                             <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 320px;object-fit: cover;" controls>
@@ -286,7 +286,7 @@ Trang chủ
                                 </video>
                             </div>
                             <div class="silde_video_kanzo_item">
-                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 320px;object-fit: cover;">
                             </div>
                             <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 320px;object-fit: cover;" controls>
@@ -294,7 +294,7 @@ Trang chủ
                                 </video>
                             </div>
                             <div class="silde_video_kanzo_item">
-                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height:320px;object-fit: cover;">
                             </div>
                             <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 320px;object-fit: cover;" controls>
