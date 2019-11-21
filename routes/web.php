@@ -26,10 +26,8 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
     // Route::get('/product', function () {
     //     return view('pages.product');
     // })->name('product');
-    Route::get('/product_detail', function () {
-        return view('pages.product_detail');
-    })->name('product_detail');
-
+    Route::get('/product_detail/{slug}', 'ProductController@getProductDetail'
+    )->name('product_detail');
     //new
     Route::get('/new', function () {
         return view('pages.new');
