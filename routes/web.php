@@ -13,22 +13,18 @@
 
 // --------------------route fontend viết vào đấy-----------------------
 Route::group(['prefix' => '','namespace' => 'frontend'],function(){
-
-
-    Route::get('/', function () {
-        return view('pages.home');
-    })->name('home');
-
+    //-----------------Trang chu
+    Route::get('','HomeController@index')->name('home');
     //-----------------gioi thieu
-    Route::get('gioi-thieu','IntroduceController@index')->name('introduce.index');
-     Route::get('/intro', function () {
-         return view('pages.intro');
-     })->name('intro');
-
+    Route::get('gioi-thieu/{slug}','IntroduceController@index')->name('intro');
+    //-----------------chinh sach
+    Route::get('chinh-sach/{slug}','PolyciesController@index')->name('polycies');
+    //-----------------Cau hoi thuong gap
     //product
-    Route::get('/product', function () {
-        return view('pages.product');
-    })->name('product');
+    Route::get('danh-muc/{slug}','ProductController@index')->name('product');
+    // Route::get('/product', function () {
+    //     return view('pages.product');
+    // })->name('product');
     Route::get('/product_detail', function () {
         return view('pages.product_detail');
     })->name('product_detail');
@@ -37,34 +33,33 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
     Route::get('/new', function () {
         return view('pages.new');
     })->name('new');
+
     Route::get('/new_detail', function () {
         return view('pages.new_detail');
     })->name('new_detail');
 
-    //policy
-    Route::get('/policy', function () {
-        return view('pages.policy');
-    })->name('policy');
+    
     Route::get('/policy_detail', function () {
         return view('pages.policy_detail');
     })->name('policy_detail');
 
     //contact
-    Route::get('/contact', function () {
-        return view('pages.contact');
-    })->name('contact');
-
-    Route::get('/diemban', function () {
-        return view('pages.diemban');
-    })->name('diemban');
+    Route::group(['prefix' => 'contact'], function () {
+        Route::get('','ContactController@GetContact')->name('contact');
+        Route::post('','ContactController@PostContact');
+    });
+   
+    //------đại lý
+    Route::group(['prefix' => 'diemban'], function () {
+        Route::get('','AgencyController@GetAgency')->name('diemban');
+        Route::get('search','AgencyController@GetSearch');
+    });
+   
 });
 
 // ------------End
 
 
-Route::get('admin', function () {
-    return view('admins.index');
-});
 // ------------------------route admins viết vào đây-----------------------
 
 
@@ -95,13 +90,6 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
 
 
 
-    Route::get('form', function () {
-        return view('admins.form.list');
-    });
-    Route::get('form/add', function () {
-        return view('admins.form.add');
-    });
-
 
     //-----------------Gioi thieu
     Route::group(['prefix' => 'introduce'],function(){
@@ -118,7 +106,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
 
     //---------------San Pham
     Route::group(['prefix' => 'product'], function(){
-        Route::get('list', 'ProductController@getListProduct')->name('product.list');
+        Route::get('', 'ProductController@getListProduct')->name('product.list');
         Route::get('add', 'ProductController@getAddProduct')->name('product.add');
         Route::post('add', 'ProductController@postAddProduct')->name('product.add.post');
         Route::get('edit/{id_product}', 'ProductController@getEditProduct')->name('product.edit');
@@ -126,7 +114,7 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('delete/{id_product}', 'ProductController@getDeleteProduct')->name('product.delete');
     });
     Route::group(['prefix' => 'category'], function(){
-        Route::get('list', 'CategoryController@getListCategory')->name('category.list');
+        Route::get('', 'CategoryController@getListCategory')->name('category.list');
         Route::get('add', 'CategoryController@getAddCategory')->name('category.add');
         Route::post('add', 'CategoryController@postAddCategory')->name('category.add.post');
         Route::get('edit/{id_category}', 'CategoryController@getEditCategory')->name('category.edit');

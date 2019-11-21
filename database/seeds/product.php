@@ -14,41 +14,46 @@ class product extends Seeder
         DB::table('category')->delete();
         DB::table('category')->insert([
 	        [
+				'id'=>1,
 	        	'name'=>'Bếp ga',
 	        	'slug'=>str_slug('Bếp ga'),
 	        	'active'=>1,
-	        	'created_at'=>now(),
+	        	
 	        ],
 	        [
+				'id'=>2,
 	        	'name'=>'Bếp từ',
 	        	'slug'=>str_slug('Bếp từ'),
 	        	'active'=>1,
-	        	'created_at'=>now(),
+	        	
 	        ],
 	        [
+				'id'=>3,
 	        	'name'=>'Hút mùi',
 	        	'slug'=>str_slug('Hút mùi'),
 	        	'active'=>1,
-	        	'created_at'=>now(),
+	        	
 	        ],
 	        [
+				'id'=>4,
 	        	'name'=>'Ấm nước',
 	        	'slug'=>str_slug('Ấm nước'),
 	        	'active'=>1,
-	        	'created_at'=>now(),
+	        	
 	        ],
 	    ]);
         DB::table('product')->delete();
         DB::table('product')->insert([
 	        [
-	        	// STT 6
+				// STT 6
+				'id'=>1,
+				'code_name'=>'KZ-ECO6666GA',
 	        	'name'=>'KZ-ECO-6666-GAS Japan Technology',
 	        	'slug'=>str_slug('KZ-ECO-6666-GAS Japan Technology'),
-	        	'code_name'=>'KZ-ECO6666GA',
 	        	'price'=>3900000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
-	        	'content'=>'* Tính năng sản phẩm:
+	        	'image'=>'KZ-ECO6666GA.png',
+	        	'information'=>'* Tính năng sản phẩm:
 							-Mâm chia lửa bằng đồng
 							-Chế độ tiết kiệm gas
 							-Mặt kính cường lực, chịu nhiệt, dày 8mm
@@ -56,275 +61,337 @@ class product extends Seeder
 							-Khay Inox 304, bát, pép chia lửa bằng đồng
 							-Hệ thống đánh lửa I/C (pin)
 							-Họng bếp đồng chống kết dính khi sử dụng
-							* Thông số kỹ thuật:
-							-Kích thước mặt kính : 750x430mm
+						',
+				'thongso'=>'-Kích thước mặt kính : 750x430mm
 							-Kích thước khoét đá: 650x350mm
 							-Công suất : 3.0 KW + 3.0 KW',
+				'huongdan'=>'<p>Khi lắp đặt bếp gas, cần để bếp cách xa tường tối thiểu 15 cm, nếu phía trên bếp gas có kệ, thì nên đặt kệ cách xa bếp gas ít nhất 1 mét. Nên đặt bếp gas trên một kệ cố định, và kệ này cách mặt đất tối thiểu 1 mét. Việc này giúp cho không gian xung quanh bếp gas thông thoáng hơn, tránh cháy nổ.<br/>
+
+							Bên cạnh đó, nên đặt bếp gas ở nơi thoáng mát, nhưng không nên đặt bếp gas ở nơi có gió lùa (cửa sổ, gần quạt máy…) để tránh lửa bị tắt, hao phí gas.<br/>
+							
+							Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
 	        	'id_category'=>1,
 	        	'active'=>1,
-	        	'new'=>1,
+	        	'state'=>1,
 	        	'count_view'=>0,
-	        	'created_at'=>now(),
 	        ],
-	        [// STT 5
+			[// STT 5
+				'id'=>2,
+				'code_name'=>'KZ-ECO8888GA',
 	        	'name'=>'KZ-ECO-8888-GAS Italy Technology',
 	        	'slug'=>str_slug('KZ-ECO-8888-GAS Italy Technology'),
-	        	'code_name'=>'KZ-ECO8888GA',
 	        	'price'=>5790000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
-	        	'content'=>'* Tính năng sản phẩm:
-							-Mâm chia lửa bằng đồng
-							-Chế độ tiết kiệm gas
-							-Mặt kính cường lực, chịu nhiệt, dày 8mm
-							-Cảm biến an toàn tự động khóa gas
-							-Khay Inox 304, bát, pép chia lửa bằng đồng
-							-Hệ thống đánh lửa I/C (pin)
-							-Họng bếp đồng chống kết dính khi sử dụng
-							* Thông số kỹ thuật:
-							-Kích thước mặt kính : 750x430mm
-							-Kích thước khoét đá: 650x350mm
-							-Công suất : 3.0 KW + 3.0 KW',
+	        	'image'=>'KZ-ECO8888GA.png',
+				'information'=>'* Tính năng sản phẩm:
+					-Mâm chia lửa bằng đồng
+					-Chế độ tiết kiệm gas
+					-Mặt kính cường lực, chịu nhiệt, dày 8mm
+					-Cảm biến an toàn tự động khóa gas
+					-Khay Inox 304, bát, pép chia lửa bằng đồng
+					-Hệ thống đánh lửa I/C (pin)
+					-Họng bếp đồng chống kết dính khi sử dụng
+				',
+		'thongso'=>'-Kích thước mặt kính : 750x430mm
+					-Kích thước khoét đá: 650x350mm
+					-Công suất : 3.0 KW + 3.0 KW',
+		'huongdan'=>'<p>Khi lắp đặt bếp gas, cần để bếp cách xa tường tối thiểu 15 cm, nếu phía trên bếp gas có kệ, thì nên đặt kệ cách xa bếp gas ít nhất 1 mét. Nên đặt bếp gas trên một kệ cố định, và kệ này cách mặt đất tối thiểu 1 mét. Việc này giúp cho không gian xung quanh bếp gas thông thoáng hơn, tránh cháy nổ.<br/>
+
+					Bên cạnh đó, nên đặt bếp gas ở nơi thoáng mát, nhưng không nên đặt bếp gas ở nơi có gió lùa (cửa sổ, gần quạt máy…) để tránh lửa bị tắt, hao phí gas.<br/>
+					
+					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
 	        	'id_category'=>1,
 	        	'active'=>1,
-	        	'new'=>1,
+	        	'state'=>1,
 	        	'count_view'=>0,
-	        	'created_at'=>now(),
+	        	
 	        ],
-	        [// STT 3
+			[// STT 3
+				'id'=>3,
+				'code_name'=>'KZ-666I',
 	        	'name'=>'KZ-666I (Bếp đôi 2 từ âm)',
 	        	'slug'=>str_slug(' KZ-666I (Bếp đôi 2 từ âm)'),
-	        	'code_name'=>'KZ-666I',
 	        	'price'=>11400000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
-	        	'content'=>'
-							*/Tính năng sản phẩm và thông số kỹ thuật:
-							Bếp  từ đôi âm cảm ứng
-							Điện áp 220V / 50 HZ
-							Kính chuyên dụng,  Kanger cường lực, mài vát 4 cạnh
-							Kích thước mặt kính: 730 * 430 mm
-							Kích thước khoét lỗ: 680 *390 mm
-							IGBT Siemens (Đức), Công nghệ, chức năng Inverter tiết kiệm 30% điện năng tiêu thụ
-							Khung bếp làm bằng thép mạ kẽm, mâm nhiệt đồng nguyên chất
-							Công suất thực 2 bếp (4,000W): 2,000W + 2,000W
-							Công suất Booster (4,800W): 2,400W + 2400W
-							Cảm biến, cảm ứng và điều khiển trượt mượt mà 9 mức công suất + Booster
-							Hẹn giờ độc lập cho vùng nấu thời gian (0-99 phút)
-							*/Tính năng an toàn
-							Cảnh báo gia nhiệt dư "H" vùng nấu Residual heat
-							Tự động tắt bếp khi không có nồi
-							Chức năng khóa an toàn bảo vệ  trẻ em
-							Hệ thống bảo vệ an toàn quá nhiệt, quá áp, quá dòng',
+	        	'image'=>'KZ-666IH.png',
+				'information'=>'* Tính năng sản phẩm:
+					-Mâm chia lửa bằng đồng
+					-Chế độ tiết kiệm gas
+					-Mặt kính cường lực, chịu nhiệt, dày 8mm
+					-Cảm biến an toàn tự động khóa gas
+					-Khay Inox 304, bát, pép chia lửa bằng đồng
+					-Hệ thống đánh lửa I/C (pin)
+					-Họng bếp đồng chống kết dính khi sử dụng
+				',
+		'thongso'=>'-Kích thước mặt kính : 750x430mm
+					-Kích thước khoét đá: 650x350mm
+					-Công suất : 3.0 KW + 3.0 KW',
+		'huongdan'=>'<p>Khi lắp đặt bếp gas, cần để bếp cách xa tường tối thiểu 15 cm, nếu phía trên bếp gas có kệ, thì nên đặt kệ cách xa bếp gas ít nhất 1 mét. Nên đặt bếp gas trên một kệ cố định, và kệ này cách mặt đất tối thiểu 1 mét. Việc này giúp cho không gian xung quanh bếp gas thông thoáng hơn, tránh cháy nổ.<br/>
+
+					Bên cạnh đó, nên đặt bếp gas ở nơi thoáng mát, nhưng không nên đặt bếp gas ở nơi có gió lùa (cửa sổ, gần quạt máy…) để tránh lửa bị tắt, hao phí gas.<br/>
+					
+					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
 	        	'id_category'=>1,
 	        	'active'=>1,
-	        	'new'=>1,
+	        	'state'=>1,
 	        	'count_view'=>0,
-	        	'created_at'=>now(),
+	        	
 	        ],
-	        [// STT 4
+			[// STT 4
+				'id'=>4,
+				'code_name'=>'KZ-666IH',
 	        	'name'=>'KZ-666IH (Bếp đôi  01 bếp từ + 01 bếp hồng ngoại)',
 	        	'slug'=>str_slug('KZ-666IH (Bếp đôi  01 bếp từ + 01 bếp hồng ngoại)'),
-	        	'code_name'=>'KZ-666IH',
+	        	
 	        	'price'=>11400000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
-	        	'content'=>'
-							*/Tính năng sản phẩm và thông số kỹ thuật:
-							Bếp  01 từ + 01 hồng ngoại cảm ứng
-							Điện áp 220V / 50 HZ
-							Kính chuyên dụng,  Kanger cường lực, mài vát 4 cạnh
-							Kích thước mặt kính: 730 * 430 mm
-							Kích thước khoét lỗ: 680 *390 mm
-							IGBT Siemens (Đức), Công nghệ, chức năng Inverter tiết kiệm 30% điện năng tiêu thụ
-							Khung bếp làm bằng thép mạ kẽm, mâm nhiệt đồng nguyên chất
-							Công suất thực 2 bếp (4,000W): 2,000W + 2,000W
-							Công suất Booster (4,800W): 2,400W + 2400W
-							Cảm biến, cảm ứng và điều khiển trượt mượt mà 9 mức công suất + Booster
-							Hẹn giờ độc lập cho vùng nấu thời gian (0-99 phút)
-							*/Tính năng an toàn
-							Cảnh báo gia nhiệt dư "H" vùng nấu Residual heat
-							Tự động tắt bếp khi không có nồi
-							Chức năng khóa an toàn bảo vệ  trẻ em
-							Hệ thống bảo vệ an toàn quá nhiệt, quá áp, quá dòng',
+	        	'image'=>'KZ-666IH.png',
+				'information'=>'* Tính năng sản phẩm:
+					-Mâm chia lửa bằng đồng
+					-Chế độ tiết kiệm gas
+					-Mặt kính cường lực, chịu nhiệt, dày 8mm
+					-Cảm biến an toàn tự động khóa gas
+					-Khay Inox 304, bát, pép chia lửa bằng đồng
+					-Hệ thống đánh lửa I/C (pin)
+					-Họng bếp đồng chống kết dính khi sử dụng
+				',
+		'thongso'=>'-Kích thước mặt kính : 750x430mm
+					-Kích thước khoét đá: 650x350mm
+					-Công suất : 3.0 KW + 3.0 KW',
+		'huongdan'=>'<p>Khi lắp đặt bếp gas, cần để bếp cách xa tường tối thiểu 15 cm, nếu phía trên bếp gas có kệ, thì nên đặt kệ cách xa bếp gas ít nhất 1 mét. Nên đặt bếp gas trên một kệ cố định, và kệ này cách mặt đất tối thiểu 1 mét. Việc này giúp cho không gian xung quanh bếp gas thông thoáng hơn, tránh cháy nổ.<br/>
+
+					Bên cạnh đó, nên đặt bếp gas ở nơi thoáng mát, nhưng không nên đặt bếp gas ở nơi có gió lùa (cửa sổ, gần quạt máy…) để tránh lửa bị tắt, hao phí gas.<br/>
+					
+					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
 	        	'id_category'=>2,
 	        	'active'=>1,
-	        	'new'=>1,
+	        	'state'=>1,
 	        	'count_view'=>0,
-	        	'created_at'=>now(),
+	        
 	        ],
-	        [// STT 2
+			[// STT 2
+				'id'=>5,
+				'code_name'=>'KZ-HQ888I',
 	        	'name'=>'KZ-HQ888I (Bếp đôi 2 từ cao cấp)',
 	        	'slug'=>str_slug('KZ-HQ888I (Bếp đôi 2 từ cao cấp)'),
-	        	'code_name'=>'KZ-HQ888I',
+	        	
 	        	'price'=>13500000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
-	        	'content'=>'
-							*/Tính năng sản phẩm và thông số kỹ thuật:
-							Bếp đôi 02 từ cảm ứng 
-							Điện áp 220V / 50HZ
-							Kính chuyên dụng,  Ceran cường lực, mài vát 4 mặt đẹp sang trọng
-							Kích thước mặt kính: 750 * 450 mm
-							Kích thước khoét lỗ: 680 *390 mm
-							IGBT Siemens (Đức), Công nghệ, chức năng Inverter tiết kiệm 35% điện năng tiêu thụ
-							Khung bếp làm bằng Inox 304, mâm nhiệt đồng nguyên chất
-							Công suất thực 2 bếp (4,000W): 2,000W + 2,000W
-							Công suất Booster (4,800W): 2,400W + 2400W
-							Cảm biến, cảm ứng và điều khiển trượt mượt mà 9 mức công suất + Booster
-							Hẹn giờ độc lập cho vùng nấu thời gian (0-99 phút)
-							*/Tính năng an toàn
-							Cảnh báo gia nhiệt dư "H" vùng nấu Residual heat
-							Tự động tắt bếp khi không có nồi
-							Chức năng khóa an toàn bảo vệ  trẻ em
-							Hệ thống bảo vệ an toàn quá nhiệt, quá áp, quá dòng',
+	        	'image'=>'KZ-HQ888I.png',
+				'information'=>'* Tính năng sản phẩm:
+					-Mâm chia lửa bằng đồng
+					-Chế độ tiết kiệm gas
+					-Mặt kính cường lực, chịu nhiệt, dày 8mm
+					-Cảm biến an toàn tự động khóa gas
+					-Khay Inox 304, bát, pép chia lửa bằng đồng
+					-Hệ thống đánh lửa I/C (pin)
+					-Họng bếp đồng chống kết dính khi sử dụng
+				',
+		'thongso'=>'-Kích thước mặt kính : 750x430mm
+					-Kích thước khoét đá: 650x350mm
+					-Công suất : 3.0 KW + 3.0 KW',
+		'huongdan'=>'<p>Khi lắp đặt bếp gas, cần để bếp cách xa tường tối thiểu 15 cm, nếu phía trên bếp gas có kệ, thì nên đặt kệ cách xa bếp gas ít nhất 1 mét. Nên đặt bếp gas trên một kệ cố định, và kệ này cách mặt đất tối thiểu 1 mét. Việc này giúp cho không gian xung quanh bếp gas thông thoáng hơn, tránh cháy nổ.<br/>
+
+					Bên cạnh đó, nên đặt bếp gas ở nơi thoáng mát, nhưng không nên đặt bếp gas ở nơi có gió lùa (cửa sổ, gần quạt máy…) để tránh lửa bị tắt, hao phí gas.<br/>
+					
+					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
 	        	'id_category'=>2,
 	        	'active'=>1,
-	        	'new'=>1,
+	        	'state'=>1,
 	        	'count_view'=>0,
-	        	'created_at'=>now(),
+	        	
 	        ],
 	        [// STT 1
-	        	'name'=>'KZ-HQ999I (Bếp Ba từ cao cấp)',
-	        	'slug'=>str_slug('KZ-HQ999I (Bếp Ba từ cao cấp)'),
-	        	'code_name'=>'KZ-HQ999I',
+				'id'=>6,
+				'code_name'=>'KZ-HQ999I',
+				'name'=>'KZ-HQ999I (Bếp Nấu từ cao cấp)',
+	        	'slug'=>str_slug('KZ-HQ999I (Bếp Ba từ  siêu cao cấp)'),
+	        	
 	        	'price'=>19500000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
-	        	'content'=>'*/Tính năng sản phẩm và thông số kỹ thuật:
-							Bếp 03 từ cảm ứng 
-							Điện áp 220V / 50HZ
-							Kính chuyên dụng,  Ceran cường lực, mài vát 4 mặt đẹp sang trọng
-							Kích thước mặt kính: 620 * 520 mm
-							Kích thước khoét lỗ: 560 * 490 mm
-							IGBT Siemens (Đức), Công nghệ, chức năng Inverter tiết kiệm 35% điện năng tiêu thụ
-							Khung bếp làm bằng Inox 304, mâm nhiệt đồng nguyên chất
-							Công suất thực 3 bếp (5,900W): 1600 + 1800 + 2500W
-							Công suất Booster (6,600W): 1800 + 2000 + 2800W
-							Cảm biến, cảm ứng và điều khiển trượt mượt mà 9 mức công suất + Booster
-							Hẹn giờ độc lập cho vùng nấu thời gian (0-99 phút)
-							*/Tính năng an toàn
-							Cảnh báo gia nhiệt dư "H" vùng nấu Residual heat
-							Tự động tắt bếp khi không có nồi
-							Chức năng khóa an toàn bảo vệ  trẻ em
-							Hệ thống bảo vệ an toàn quá nhiệt, quá áp, quá dòng',
+	        	'image'=>'KZ-HQ999I.png',
+				'information'=>'* Tính năng sản phẩm:
+					-Mâm chia lửa bằng đồng
+					-Chế độ tiết kiệm gas
+					-Mặt kính cường lực, chịu nhiệt, dày 8mm
+					-Cảm biến an toàn tự động khóa gas
+					-Khay Inox 304, bát, pép chia lửa bằng đồng
+					-Hệ thống đánh lửa I/C (pin)
+					-Họng bếp đồng chống kết dính khi sử dụng
+				',
+		'thongso'=>'-Kích thước mặt kính : 750x430mm
+					-Kích thước khoét đá: 650x350mm
+					-Công suất : 3.0 KW + 3.0 KW',
+		'huongdan'=>'<p>Khi lắp đặt bếp gas, cần để bếp cách xa tường tối thiểu 15 cm, nếu phía trên bếp gas có kệ, thì nên đặt kệ cách xa bếp gas ít nhất 1 mét. Nên đặt bếp gas trên một kệ cố định, và kệ này cách mặt đất tối thiểu 1 mét. Việc này giúp cho không gian xung quanh bếp gas thông thoáng hơn, tránh cháy nổ.<br/>
+
+					Bên cạnh đó, nên đặt bếp gas ở nơi thoáng mát, nhưng không nên đặt bếp gas ở nơi có gió lùa (cửa sổ, gần quạt máy…) để tránh lửa bị tắt, hao phí gas.<br/>
+					
+					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
 	        	'id_category'=>2,
 	        	'active'=>1,
-	        	'new'=>1,
+	        	'state'=>1,
 	        	'count_view'=>0,
-	        	'created_at'=>now(),
+	        
 	        ],
-	        [// STT 8
+			[// STT 8
+				'id'=>7,
+				'code_name'=>'KZ-70HD1',
 	        	'name'=>'KZ-70HD1 (Hút mùi kính cong 700mm)',
 	        	'slug'=>str_slug('KZ-70HD1 (Hút mùi kính cong 700mm)'),
-	        	'code_name'=>'KZ-70HD1',
+	        	
 	        	'price'=>6690000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
-	        	'content'=>'*/Tính năng sản phẩm:
-							-Dòng sản phẩm hút mùi kính cong, cường lực, kiểu dang treo áp tường
-							-Phím điều khiển cơ, 3 cấp độ
-							-Lưới lọc bằng thép không gỉ cao cấp, khỏe, đẹp siêu bền, 2 lưới lọc than hoạt tính khử mùi hiệu quả
-							-Khay  hứng mỡ bằng nhựa cao cấp, dễ dang thoa lắp khi vệ sinh 
-							-máy sử dụng động cơ turbin đôi
-							-Hệ thống đèn LED 2*2W ánh sáng trắng
-							-Máy hút mạnh, êm ái
-							*/ Thông số kỹ thuật:
-							-Kích thước sản phẩm: 700x480x545mm
-							-Kích thước ống thoát: 160mm, dài 1500mm
-							-Công suất hút từ 850m3 đến 1,250m3/H
-							-Siêu tiết kiệm với động cơ 180W',
-	        	'id_category'=>2,
+	        	'image'=>'KZ-70HD1.png',
+				'information'=>'* Tính năng sản phẩm:
+					-Mâm chia lửa bằng đồng
+					-Chế độ tiết kiệm gas
+					-Mặt kính cường lực, chịu nhiệt, dày 8mm
+					-Cảm biến an toàn tự động khóa gas
+					-Khay Inox 304, bát, pép chia lửa bằng đồng
+					-Hệ thống đánh lửa I/C (pin)
+					-Họng bếp đồng chống kết dính khi sử dụng
+				',
+		'thongso'=>'-Kích thước mặt kính : 750x430mm
+					-Kích thước khoét đá: 650x350mm
+					-Công suất : 3.0 KW + 3.0 KW',
+		'huongdan'=>'<p>Khi lắp đặt bếp gas, cần để bếp cách xa tường tối thiểu 15 cm, nếu phía trên bếp gas có kệ, thì nên đặt kệ cách xa bếp gas ít nhất 1 mét. Nên đặt bếp gas trên một kệ cố định, và kệ này cách mặt đất tối thiểu 1 mét. Việc này giúp cho không gian xung quanh bếp gas thông thoáng hơn, tránh cháy nổ.<br/>
+
+					Bên cạnh đó, nên đặt bếp gas ở nơi thoáng mát, nhưng không nên đặt bếp gas ở nơi có gió lùa (cửa sổ, gần quạt máy…) để tránh lửa bị tắt, hao phí gas.<br/>
+					
+					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
+	        	'id_category'=>3,
 	        	'active'=>1,
-	        	'new'=>1,
+	        	'state'=>1,
 	        	'count_view'=>0,
-	        	'created_at'=>now(),
+	        
 	        ],
-	        [// STT 7 
+			[// STT 7 
+				'id'=>8,
+				'code_name'=>'KZ-90HD1',
 	        	'name'=>'KZ-90HD1 (Hút mùi kính cong 900mm)',
 	        	'slug'=>str_slug('KZ-90HD1 (Hút mùi kính cong 900mm)'),
-	        	'code_name'=>'KZ-90HD1',
+	        	
 	        	'price'=>7170000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
-	        	'content'=>'*/Tính năng sản phẩm:
-							-Dòng sản phẩm hút mùi kính cong, cường lực, kiểu dang treo áp tường
-							-Phím điều khiển cơ, 3 cấp độ
-							-Lưới lọc bằng thép không gỉ cao cấp, khỏe, đẹp siêu bền, 2 lưới lọc than hoạt tính khử mùi hiệu quả
-							-Khay  hứng mỡ bằng nhựa cao cấp, dễ dang thoa lắp khi vệ sinh 
-							-máy sử dụng động cơ turbin đôi
-							-Hệ thống đèn LED 2*2W ánh sáng trắng
-							-Máy hút mạnh, êm ái
-							*/ Thông số kỹ thuật:
-							-Kích thước sản phẩm: 900x480x545mm
-							-Kích thước ống thoát: 160mm, dài 1500mm
-							-Công suất hút từ 850m3 đến 1,250m3/H
-							-Siêu tiết kiệm với động cơ 180W',
-	        	'id_category'=>2,
+	        	'image'=>'KZ-70HD1.png',
+				'information'=>'* Tính năng sản phẩm:
+					-Mâm chia lửa bằng đồng
+					-Chế độ tiết kiệm gas
+					-Mặt kính cường lực, chịu nhiệt, dày 8mm
+					-Cảm biến an toàn tự động khóa gas
+					-Khay Inox 304, bát, pép chia lửa bằng đồng
+					-Hệ thống đánh lửa I/C (pin)
+					-Họng bếp đồng chống kết dính khi sử dụng
+				',
+		'thongso'=>'-Kích thước mặt kính : 750x430mm
+					-Kích thước khoét đá: 650x350mm
+					-Công suất : 3.0 KW + 3.0 KW',
+		'huongdan'=>'<p>Khi lắp đặt bếp gas, cần để bếp cách xa tường tối thiểu 15 cm, nếu phía trên bếp gas có kệ, thì nên đặt kệ cách xa bếp gas ít nhất 1 mét. Nên đặt bếp gas trên một kệ cố định, và kệ này cách mặt đất tối thiểu 1 mét. Việc này giúp cho không gian xung quanh bếp gas thông thoáng hơn, tránh cháy nổ.<br/>
+
+					Bên cạnh đó, nên đặt bếp gas ở nơi thoáng mát, nhưng không nên đặt bếp gas ở nơi có gió lùa (cửa sổ, gần quạt máy…) để tránh lửa bị tắt, hao phí gas.<br/>
+					
+					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
+	        	'id_category'=>3,
 	        	'active'=>1,
-	        	'new'=>1,
+	        	'state'=>1,
 	        	'count_view'=>0,
-	        	'created_at'=>now(),
+	        
 	        ],
-	        [// STT 9 
+			[// STT 9 
+				'id'=>9,
+				'code_name'=>'KZ-G88',
 	        	'name'=>'KZ-G88 (Ấm đun nước KANZO còi báo Luxury)',
 	        	'slug'=>str_slug('KZ-G88 (Ấm đun nước KANZO còi báo Luxury)'),
-	        	'code_name'=>'KZ-G88',
+	        
 	        	'price'=>1335000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
-	        	'content'=>'*/Tính năng sản phẩm và công dụng:
-							-Ấm đun nước còi báo Luxury 3.0L, còi báo nước sôi
-							-Thể tích đun tối đa 3.0 lít
-							-Chất liệu Inox cao cấp hàng đầu, bắt từ 18-10 công nghệ Đức
-							-Sử dụng được nhiều loại bếp: Từ, Hồng ngoại, Gas, Điện
-							-Kiểu dang đẹp, sang trọng
-							-Tiện nghi cho sử dụng nước đun sôi để nguội, phục vụ nhu cầu sinh hoạt',
-	        	'id_category'=>2,
+	        	'image'=>'KZ-G88.png',
+				'information'=>'* Tính năng sản phẩm:
+					-Mâm chia lửa bằng đồng
+					-Chế độ tiết kiệm gas
+					-Mặt kính cường lực, chịu nhiệt, dày 8mm
+					-Cảm biến an toàn tự động khóa gas
+					-Khay Inox 304, bát, pép chia lửa bằng đồng
+					-Hệ thống đánh lửa I/C (pin)
+					-Họng bếp đồng chống kết dính khi sử dụng
+				',
+		'thongso'=>'-Kích thước mặt kính : 750x430mm
+					-Kích thước khoét đá: 650x350mm
+					-Công suất : 3.0 KW + 3.0 KW',
+		'huongdan'=>'<p>Khi lắp đặt bếp gas, cần để bếp cách xa tường tối thiểu 15 cm, nếu phía trên bếp gas có kệ, thì nên đặt kệ cách xa bếp gas ít nhất 1 mét. Nên đặt bếp gas trên một kệ cố định, và kệ này cách mặt đất tối thiểu 1 mét. Việc này giúp cho không gian xung quanh bếp gas thông thoáng hơn, tránh cháy nổ.<br/>
+
+					Bên cạnh đó, nên đặt bếp gas ở nơi thoáng mát, nhưng không nên đặt bếp gas ở nơi có gió lùa (cửa sổ, gần quạt máy…) để tránh lửa bị tắt, hao phí gas.<br/>
+					
+					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
+	        	'id_category'=>4,
 	        	'active'=>1,
-	        	'new'=>1,
+	        	'state'=>1,
 	        	'count_view'=>0,
-	        	'created_at'=>now(),
+	        
 	        ],
-	        [// STT 10 
+			[// STT 10 
+				'id'=>10,
+				'code_name'=>'KZ-G68',
 	        	'name'=>'KZ-G68 (Ấm đun nước KANZO còi báo Luxury)',
 	        	'slug'=>str_slug('KZ-G68 (Ấm đun nước KANZO còi báo Luxury)'),
-	        	'code_name'=>'KZ-G68',
+	        	
 	        	'price'=>1335000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
-	        	'content'=>'*/Tính năng sản phẩm và công dụng:
-							-Ấm đun nước còi báo Luxury 3.0L, còi báo nước sôi
-							-Thể tích đun tối đa 3.0 lít
-							-Chất liệu Inox cao cấp hàng đầu, bắt từ 18-10 công nghệ Đức
-							-Sử dụng được nhiều loại bếp: Từ, Hồng ngoại, Gas, Điện
-							-Kiểu dang đẹp, sang trọng
-							-Tiện nghi cho sử dụng nước đun sôi để nguội, phục vụ nhu cầu sinh hoạt',
-	        	'id_category'=>2,
+	        	'image'=>'KZ-G68.png',
+				'information'=>'* Tính năng sản phẩm:
+					-Mâm chia lửa bằng đồng
+					-Chế độ tiết kiệm gas
+					-Mặt kính cường lực, chịu nhiệt, dày 8mm
+					-Cảm biến an toàn tự động khóa gas
+					-Khay Inox 304, bát, pép chia lửa bằng đồng
+					-Hệ thống đánh lửa I/C (pin)
+					-Họng bếp đồng chống kết dính khi sử dụng
+				',
+		'thongso'=>'-Kích thước mặt kính : 750x430mm
+					-Kích thước khoét đá: 650x350mm
+					-Công suất : 3.0 KW + 3.0 KW',
+		'huongdan'=>'<p>Khi lắp đặt bếp gas, cần để bếp cách xa tường tối thiểu 15 cm, nếu phía trên bếp gas có kệ, thì nên đặt kệ cách xa bếp gas ít nhất 1 mét. Nên đặt bếp gas trên một kệ cố định, và kệ này cách mặt đất tối thiểu 1 mét. Việc này giúp cho không gian xung quanh bếp gas thông thoáng hơn, tránh cháy nổ.<br/>
+
+					Bên cạnh đó, nên đặt bếp gas ở nơi thoáng mát, nhưng không nên đặt bếp gas ở nơi có gió lùa (cửa sổ, gần quạt máy…) để tránh lửa bị tắt, hao phí gas.<br/>
+					
+					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
+	        	'id_category'=>4,
 	        	'active'=>1,
-	        	'new'=>1,
+	        	'state'=>1,
 	        	'count_view'=>0,
-	        	'created_at'=>now(),
+	        
 	        ],
-	        [// STT 11
+			[// STT 11
+				'id'=>11,
+				'code_name'=>'KZ-G58',
 	        	'name'=>' KZ-G58 (Ấm đun nước KANZO còi báo Luxury)',
 	        	'slug'=>str_slug(' KZ-G58 (Ấm đun nước KANZO còi báo Luxury)'),
-	        	'code_name'=>'KZ-G58',
+	        	
 	        	'price'=>1335000,
 	        	'sale_price'=>0,
-	        	'image'=>'',
-	        	'content'=>'*/Tính năng sản phẩm và công dụng:
-							-Ấm đun nước còi báo Luxury 3.0L, còi báo nước sôi
-							-Thể tích đun tối đa 3.0 lít
-							-Chất liệu Inox cao cấp hàng đầu, bắt từ 18-10 công nghệ Đức
-							-Sử dụng được nhiều loại bếp: Từ, Hồng ngoại, Gas, Điện
-							-Kiểu dang đẹp, sang trọng
-							-Tiện nghi cho sử dụng nước đun sôi để nguội, phục vụ nhu cầu sinh hoạt',
-	        	'id_category'=>2,
+	        	'image'=>'KZ-G58.png',
+				'information'=>'* Tính năng sản phẩm:
+					-Mâm chia lửa bằng đồng
+					-Chế độ tiết kiệm gas
+					-Mặt kính cường lực, chịu nhiệt, dày 8mm
+					-Cảm biến an toàn tự động khóa gas
+					-Khay Inox 304, bát, pép chia lửa bằng đồng
+					-Hệ thống đánh lửa I/C (pin)
+					-Họng bếp đồng chống kết dính khi sử dụng
+				',
+		'thongso'=>'-Kích thước mặt kính : 750x430mm
+					-Kích thước khoét đá: 650x350mm
+					-Công suất : 3.0 KW + 3.0 KW',
+		'huongdan'=>'<p>Khi lắp đặt bếp gas, cần để bếp cách xa tường tối thiểu 15 cm, nếu phía trên bếp gas có kệ, thì nên đặt kệ cách xa bếp gas ít nhất 1 mét. Nên đặt bếp gas trên một kệ cố định, và kệ này cách mặt đất tối thiểu 1 mét. Việc này giúp cho không gian xung quanh bếp gas thông thoáng hơn, tránh cháy nổ.<br/>
+
+					Bên cạnh đó, nên đặt bếp gas ở nơi thoáng mát, nhưng không nên đặt bếp gas ở nơi có gió lùa (cửa sổ, gần quạt máy…) để tránh lửa bị tắt, hao phí gas.<br/>
+					
+					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
+	        	'id_category'=>4,
 	        	'active'=>1,
-	        	'new'=>1,
+	        	'state'=>1,
 	        	'count_view'=>0,
-	        	'created_at'=>now(),
+	        	
 	        ],
 	    ]);
     }

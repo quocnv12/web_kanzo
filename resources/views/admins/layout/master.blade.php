@@ -110,6 +110,9 @@
 
             <script>
                 CKEDITOR.replace('content');
+                CKEDITOR.replace('content1');
+                CKEDITOR.replace('content2');
+                CKEDITOR.replace('content3');
                 CKEDITOR.replace('introduce_content');
                 CKEDITOR.replace('intro_content');
                 CKEDITOR.replace('polycies_content');

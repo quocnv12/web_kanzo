@@ -45,7 +45,8 @@ class ContactController extends Controller
     	$update->fax = $req->fax;
     	$update->email = $req->email;
     	$update->fanpage = $req->fanpage;
-    	$update->save();
+		$update->save();
+		
     	return redirect()->route('contact.list');
     }
 }

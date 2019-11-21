@@ -14,30 +14,30 @@ use App\models\category;
 class CategoryController extends Controller
 {
     //
-	public function __construct()
-	{
-		$data['category'] = category::all();
+	// public function __construct()
+	// {
+	// 	$data['category'] = category::all();
 
-		View::Share($data);
-	}
+	// 	View::Share($data);
+	// }
 	public function getListCategory()
     {
-        $viewData['category'] = category::all();
-        // dd($viewData);
-    	return view('admins.category.list', $viewData);
+        $data['category'] = category::orderBy('id','desc')->get();
+    	return view('admins.category.list', $data);
     }
     public function getAddCategory()
     {
-    	return view('admins.Category.add');
+    	return view('admins.category.add');
     }
     public function postAddCategory(Request $request)
     {
         $this->validate($request,[
-            'name' => 'required|min:3|',
+            'name' => 'required|min:3|unique:category,name',
             
         ],[
             'name.required' => 'Tên loại sản phẩm không được xác định',
             'name.min' => 'Tên loại sản phẩm không được ít hơn 3 kí tự',
+            'name.unique'=>'Tên danh mục đã tồn tại'
             
         ]);
         
@@ -45,20 +45,20 @@ class CategoryController extends Controller
             'name' =>$request->name,
             'slug' => str_slug($request->name),
             'active' =>1,
-            'created_at' => now(),
+            
         ]);
         return redirect()->back()->with('thongbao', 'Thêm thành công');
     }
     public function getEditCategory($id_category)
     {
-        $dataView['category'] = DB::table('category')->find($id_category);
-        // dd($dataView);
-    	return view('admins.category.edit', $dataView);
+        $data['category'] = DB::table('category')->find($id_category);
+      
+    	return view('admins.category.edit', $data);
     }
     public function postEditCategory(Request $request, $id_category)
     {
         $this->validate($request,[
-            'name' => 'required|min:3',
+            'name' => 'required|min:3|unique:category,name,'.$id_category,
         ],[
             'name.required' => 'Tên loại sản phẩm không được xác định',
             'name.min' => 'Tên loại sản phẩm không được ít hơn 3 kí tự',
@@ -68,23 +68,15 @@ class CategoryController extends Controller
         DB::table('category')->where('id', '=', $id_category)->update([
             'name' =>$request->name,
             'slug' => str_slug($request->name),
-            'active' =>$request->active,
-            'updated_at' => now(),
+          
+            
         ]);
         return redirect()->back()->with('thongbao', 'Sửa thành công');
     }
     public function getDeleteCategory($id_category)
     {
-    	//Kiểm tra id_category được yêu cầu xóa có xuất hiện trong bảng sản phẩm không, nếu có thì hiện thông báo lỗi và không cho xóa
-    	$count_product = DB::table('product')->where('id_category', $id_category)->count();
-    	if($count_product <= 0)
-    	{
-    		DB::table('category')->where('id','=',$id_category)->delete();
-        	return redirect()->route('category.list')->with('thongbao','Xóa thành công!');
-    	}else
-    	{
-    		return redirect()->route('category.list')->with('thongbaoloi','Bạn không thể xóa loại sản phẩm này vì có nhiều sản phẩm đang thuộc loại sản phẩm này!');
-    	}
+        category::destroy($id_category);
+        return redirect('admin/category')->with('thongbao','Xóa thành công danh mục !');
     	
     }
 

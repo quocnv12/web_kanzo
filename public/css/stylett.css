@@ -1,5 +1,5 @@
 .banner_contract img{
-	width: 100%;
+  width: 100%;
 }
 .hihih a{
  color: #c18d28;
@@ -47,6 +47,7 @@
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
     color: #000000a6;
+    font-weight: bold;
 }
 
 .single-blog-area .blog-content a:hover {
@@ -109,19 +110,19 @@
   }
 
   .new_row {
-  	padding-bottom: 5%;
+    padding-bottom: 5%;
   }
 
   .ccc p{
-  	text-align: justify;
-  	font-size: 15px;
-  	color: #505050;
+    text-align: justify;
+    font-size: 15px;
+    color: #505050;
   }
 .img_new img{
   width: 100%;
 }
 .naa {
-	padding: 5px;
+  padding: 5px;
 }
 
 @media only screen and (max-width: 767px){
@@ -390,15 +391,6 @@ a{
 .mapppp iframe{
   text-align: center;
 }
-@media only screen and (max-width:991px) {
-      .search input{
-        width: 100%;
-        margin-bottom: 5px;
-      }
-      .search button{
-         width: 100%;
-      }
-  }
   .product {
     position: relative;
     border-radius: 3px;
@@ -418,10 +410,11 @@ a {
     text-decoration: line-through;
 }
 .name-product {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
     margin-bottom: 1rem;
     text-align: center;
+    margin-top: 10px;
 }
 .product a:hover{
 
@@ -434,7 +427,119 @@ a {
  }
  .hh{
       text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     color: red;
  }
+
+ /*update*/
+.k5-tag{
+  margin-left: 0;
+  margin-top: 20px;
+}
+.k5-tag .tag-1{
+  padding-top: 18px;
+}
+.k5-tag .tag-1 a{
+  color: #ffffff ;
+  background-color: #c18d28; 
+  padding: 5px;
+   border-style: 1px solid  #c18d28;
+    border-radius: 8px; 
+    font-size: 13px; 
+    text-decoration: none !important;
+}
+.k5-tag .k5-sale{
+  text-align: right;
+}
+.k5-tag .k5-sale .sale-p{
+  text-align: right;
+  display: inline-block;
+}
+.k5-tag .k5-sale .sale-icon{
+  text-align: right;
+  display: initial;
+}
+.k5-tag .k5-sale .sale-p p{
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.k5-tag .k5-sale .sale-icon{
+  margin-top: -12px;
+}
+.k5-tag .k5-sale .sale-icon a{
+  font-size: 35px;
+  margin-top: 4px;
+  padding-left: 10px;
+}
+.k5-tag .k5-sale .sale-icon a img{
+  height: 39px; margin-top: -8px;
+}
+@media only screen and (max-width:320px) {
+  .k5-tag{
+    margin-top: 20px;
+  }
+  .k5-tag .tag-1 {
+    padding-top: 0px;
+  }
+  .k5-tag .k5-sale{
+    margin-top: 10px;
+    text-align: left;
+  }
+  .k5-tag .k5-sale .sale-icon a {
+    font-size: 25px;
+  }
+  .k5-tag .k5-sale .sale-icon a img {
+    height: 27px;
+    margin-top: -7px;
+  }
+}
+@media only screen and (max-width:991px) {
+  .search input{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .search button{
+     width: 100%;
+  }
+}
+@media (max-width: 767px) and (min-width: 320px){
+  .k5-tag{
+    margin-top: 20px;
+  }
+  .k5-tag .tag-1 {
+    padding-top: 0px;
+  }
+  .k5-tag .k5-sale{
+    margin-top: 10px;
+    text-align: left;
+  }
+  .k5-tag .k5-sale .sale-icon a {
+    font-size: 25px;
+  }
+  .k5-tag .k5-sale .sale-icon a img {
+    height: 27px;
+    margin-top: -7px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px){
+  .k5-tag{
+    margin-top: 0;
+  }
+  .k5-tag .k5-sale {
+    margin-top: 0px;
+    text-align: left;
+    display: grid;
+  }
+  .k5-tag .k5-sale .sale-p {
+    display: inline-block;
+  }
+  .k5-tag .k5-sale .sale-p p{
+    text-align: left;
+  }
+  .k5-tag .k5-sale .sale-icon {
+    text-align: left;
+    margin-top: 0px;
+  }
+}

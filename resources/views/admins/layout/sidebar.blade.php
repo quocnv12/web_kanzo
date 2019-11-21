@@ -121,12 +121,12 @@
             {{-- Cate_product --}}
 
             <li class="start  open  @yield('category') "> <a href="admin/category/list"><i
-                class="material-icons">contacts</i> <span class="title">Loại sản phẩm</span> <span
+                class="material-icons">contacts</i> <span class="title">Danh mục sản phẩm</span> <span
                 class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
-                        <li> <a href="{{route('category.add')}}"> Thêm loại sản phẩm </a> </li>
-                        <li> <a href="{{route('category.list')}}"> Danh sách loại sản phẩm </a> </li>
+                        <li> <a href="{{route('category.add')}}"> Thêm danh mục sản phẩm </a> </li>
+                        <li> <a href="{{route('category.list')}}"> Danh sách danh mục </a> </li>
                 </ul>
             </li>
 

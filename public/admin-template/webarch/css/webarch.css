@@ -2258,7 +2258,7 @@ blockquote.pull-right small:after {
   content: "";
 }
 .logo {
-  margin: 18px 14px;
+  margin: 10px;
 }
 .normal {
   font-weight: normal;
