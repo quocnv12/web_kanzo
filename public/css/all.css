@@ -142,7 +142,7 @@ nav{
     margin-top: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(to bottom,#0000008a,#3c2e16), url(../images/g_hob_a_gas_heaters.jpg) !important;
+        background-image: linear-gradient(to bottom,#0000008a,#865a0e), url(../images/g_hob_a_gas_heaters.jpg) !important;
     padding: 15px 0 20px 0;
     background-size: 100%;
     background-position: center;
@@ -182,6 +182,7 @@ nav{
 	-o-transition: 0.3s all;
 	transition: 0.3s all;
 	border-radius: 10px;
+ background:#fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
