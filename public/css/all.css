@@ -295,7 +295,6 @@ nav{
     position: fixed;
     bottom: 150px;
     right: 160px;
-    left: initial;
     z-index: 999;
 }
 .bot-1 img{
