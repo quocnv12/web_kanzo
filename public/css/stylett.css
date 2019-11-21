@@ -48,6 +48,7 @@
     transition-duration: 500ms;
     color: #000000a6;
     font-weight: bold;
+    font-size: 22px;
 }
 
 .single-blog-area .blog-content a:hover {
@@ -275,8 +276,7 @@ font-size: 30px;
 font-weight: 600;
 }
 .tab-pane p{
-  font-size: 19px;
-  font-weight: 400;
+  font-size: 16px;
   color: #414141;
 }
 .attribute ul li{
@@ -292,7 +292,7 @@ font-weight: 600;
 }
 .list-group{
     margin-bottom: 10px;
-    overflow:scroll;
+    overflow-y:scroll;
     -webkit-overflow-scrolling: touch;
 }
 .list-group i{

@@ -366,6 +366,7 @@ Trang chủ
         margin:10,
         nav:false,
         autoplay:true,
+        autoplayHoverPause:true,
         responsiveClass:true,
         smartSpeed:450,
         dots:false,
