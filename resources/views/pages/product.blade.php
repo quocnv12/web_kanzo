@@ -145,7 +145,8 @@ Danh mục Sản phẩm
 			<div class="col-lg-9">
 				<div class="link">
 					<a href="{{route('home')}}">Trang chủ</a>
-					<span>></span>
+
+					<span>/</span>
 					<a href="{{route('product', $cats->slug)}}">{{$cats->name}}</a>
 				</div>
 				<hr>
@@ -172,22 +173,12 @@ Danh mục Sản phẩm
 					</div>
 					@endforeach
 				</div>
-				
+		
                 <div style="text-align: center">
                     {{$products->links()}}
 
                 </div>
-				<!-- 
-					<ul class="tab">
-						<li><a href="#" class="active">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#" class="vvsv">...</a></li>
-						<li><a href="#">10</a></li>
-						<li><a href="#">>></a></li>
-					</ul>
-				 -->
+
 			</div>
 		</div>
 	</div>
