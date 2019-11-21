@@ -176,18 +176,35 @@ nav{
 	color: #fff;
 	text-transform: uppercase;
 }
-.slide_bottom_banner_product .img_slick img{
+.slide_bottom_banner_product .img_slick {
+	height: 210px;
+	-webkit-transition: 0.3s all;
+	-o-transition: 0.3s all;
+	transition: 0.3s all;
 	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 5px #fff;
+	margin-top: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	padding:0;
+	overflow: hidden;
+}
+.slide_bottom_banner_product .img_slick img{
 	-webkit-transition: 0.3s all;
 	-o-transition: 0.3s all;
 	transition: 0.3s all;
 	cursor: pointer;
-	height: 200px;
-}
-.slide_bottom_banner_product .img_slick{
-	padding: 10px;
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
 }
 .slide_bottom_banner_product .img_slick img:hover{
+	transform: scale(1.05);
+}
+.slide_bottom_banner_product .img_slick:hover{
 	box-shadow: 0px 0px 10px #fff;
 }
 #bepgas .item_product{
