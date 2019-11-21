@@ -22,7 +22,8 @@
                         <tr>
                             <th style="width:1%">STT</th>
                             <th style="width:12%">Tiêu Đề</th>
-                            <th style="width:38%" data-hide="phone,tablet">Nội dung</th>
+                            <th style="width:32%" data-hide="phone,tablet">Nội dung</th>
+                            <th style="width:10%" data-hide="phone,tablet">Ảnh</th>
                             <th style="width:2%">T.Thái</th>
                             <th style="width:6%" data-hide="phone,tablet"></th>
                         </tr>
@@ -32,7 +33,8 @@
                         <tr class="odd gradeX">
                             <td class="center">{{$loop->index+1}}</td>
                             <td>{{$row->title}}</td>
-                            <td>{{ $row->content }}</td>
+                            <td>{!! $row->content !!}</td>
+                            <td><img style="height: 80px;width: 130px" src="images/{{ $row->image }}"></td>
                             <td class="center">
                                 @if($row->active == 1)
                                     Hiện @else Ẩn

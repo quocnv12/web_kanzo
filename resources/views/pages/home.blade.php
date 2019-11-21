@@ -15,9 +15,9 @@ Trang chủ
                 <i class="fa fa-times"></i><span> Đóng</span>
             </div>
             <div class="txt2">
-                <h4> Chương trình khuyến mãi của Bếp từ ABC của Kanzo</h4>
+                <h4> {{$popup->title}}</h4>
             </div>
-            <img src="images/slide2.jpg" class="img-fluid" alt="">
+            <img src="images/{{$popup->image}}" class="img-fluid" alt="">
         </div>
     </div>
 </div>
@@ -63,46 +63,16 @@ Trang chủ
         <div class="img_hover ">
             <div class="titleHead container">
                 <div class="slide_bottom_banner_product owl-carousel owl-theme">
+                    @foreach($product as $row)
                     <div class="item">
                         <div class="img_slick">
-                            <img src="images/image4.jpg" alt="">
+                            <img src="images/{{$row->image}}" alt="">
                         </div>
                         <div class="title_slick">
-                            <a href="">Bếp gas âm</a>
+                            <a href="">{{$row->name}}</a>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="img_slick">
-                            <img src="images/image4.jpg" alt="">
-                        </div>
-                        <div class="title_slick">
-                            <a href="">Bếp từ</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="img_slick">
-                            <img src="images/image4.jpg" alt="">
-                        </div>
-                        <div class="title_slick">
-                            <a href="">Máy hút mùi</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="img_slick">
-                            <img src="images/image4.jpg" alt="">
-                        </div>
-                        <div class="title_slick">
-                            <a href="">Máy hút mùi</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="img_slick">
-                            <img src="images/image4.jpg" alt="">
-                        </div>
-                        <div class="title_slick">
-                            <a href="">Máy hút mùi</a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -233,20 +203,15 @@ Trang chủ
                             <h3 class="group__services-text">câu hỏi thường gặp</h3>
                         </div>
                         <div class="cau_hoi_thuong_gap_home_box">
+                            @foreach($question as $row)
                             <div class="cau_hoi_thuong_gap_home_box_item">
                                 <a href="{{route('new_detail')}}">
-                                    <img src="images/2.jpg" class="img-fluid" alt="">
-                                    <span>Những câu hỏi thường gặp về máy xay sinh tố Kanzo.</span>
-                                    <b><i class="fas fa-history"></i>20/11/2019</b>
+                                    <img src="images/{{$row->image}}" class="img-fluid" alt="">
+                                    <span>{!!$row->title!!}</span>
+                                    <b><i class="fas fa-history"></i>{{date('d-m-Y',strtotime($row->created_at))}}</b>
                                 </a>
                             </div>
-                            <div class="cau_hoi_thuong_gap_home_box_item">
-                                <a href="{{route('new_detail')}}">
-                                    <img src="images/2.jpg" class="img-fluid" alt="">
-                                    <span>Những câu hỏi thường gặp về máy xay sinh tố Kanzo.</span>
-                                    <b><i class="fas fa-history"></i>20/11/2019</b>
-                                </a>
-                            </div>
+                            @endforeach
                         </div>
                         <!-- //tin tức và sự kiên -->
                         <div class="cap-main" style="clear: both;">
@@ -283,14 +248,14 @@ Trang chủ
 
                             <div class="h-about-title mb-4 wow slideInLeft">
 
-                                <h2 class="font-bold text-center color-blue">Giới Thiệu Về Công Ty</h2>
+                                <h2 class="font-bold text-center color-blue">{{$intro_general->title}}</h2>
 
                             </div>
 
                             <div class="h-about-content mb-2  text-justify wow slideInLeft">
 
                                 <p style="">
-                                    Công ty cổ phần điện tử KANZO Việt Nam hoạt động theo phương châm “Tin cậy, chất lương và hiệu quả”, luôn đặt chữ tín lên hàng đầu, vì vậy chúng tôi luôn ý thức được rằng chất lượng và tiến độ của dự án là một phần quan trọng, chính vì lẽ đó ngoài năng lực về quản lý, nhân sự, nhân lực, kỹ thuật, trang thiết bị, vấn đề tài chính luôn được công ty chú trọng hàng đầu. Chúng tôi luôn có kế hoạch tài chính hàng năm, hàng quý, hàng tháng và từng dự án, từng công việc cụ thể. Vì vậy, Công ty luôn chủ động trong việc thanh quyết toán mua nguyên vật liệu, các khoảng chi phí cũng như lương nhân công,... nhằm đảm bảo chất lượng dự án luôn thông suốt, đúng tiến độ.
+                                    {!!$intro_general->content!!}
                                 </p>
 
                                 <a href="" class="btn-detail" style="border-radius: none;">Xem
