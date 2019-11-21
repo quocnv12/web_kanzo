@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
-class news extends Seeder
+class news1 extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +13,7 @@ class news extends Seeder
      */
     public function run()
     {
+
         DB::table('news')->delete();
         DB::table('news')->insert([
             [

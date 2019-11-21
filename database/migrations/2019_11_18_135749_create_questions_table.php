@@ -18,6 +18,7 @@ class CreateQuestionsTable extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('content');
+            $table->string('image')->nullable();
             $table->tinyInteger('active')->default(1);
             $table->timestamps();
         });

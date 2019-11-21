@@ -127,6 +127,7 @@
 											@foreach($polyciesgl as $row)
 											<li><a href="{{route('polycies',['slug'=>$row->slug])}}">{{$row->title}}</a></li>
 											@endforeach
+											<li><a href="">Câu hỏi thường gặp</a></li>
 										</ul>
 									</li>
 									<li><a href="{{route('new')}}">Tin tức</a></li>

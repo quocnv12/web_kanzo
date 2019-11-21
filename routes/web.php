@@ -13,17 +13,14 @@
 
 // --------------------route fontend viết vào đấy-----------------------
 Route::group(['prefix' => '','namespace' => 'frontend'],function(){
-
-
-    Route::get('/', function () {
-        return view('pages.home');
-    })->name('home');
-
+    //-----------------Trang chu
+    Route::get('','HomeController@index')->name('home');
     //-----------------gioi thieu
     Route::get('gioi-thieu/{slug}','IntroduceController@index')->name('intro');
     //-----------------chinh sach
     Route::get('chinh-sach/{slug}','PolyciesController@index')->name('polycies');
-
+    //-----------------Cau hoi thuong gap
+    Route::get('cau-hoi/{slug}','QuestionController@index')->name('polycies');
     //product
     Route::get('danh-muc/{slug}','ProductController@index')->name('product');
     // Route::get('/product', function () {
@@ -37,6 +34,7 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
     Route::get('/new', function () {
         return view('pages.new');
     })->name('new');
+
     Route::get('/new_detail', function () {
         return view('pages.new_detail');
     })->name('new_detail');
