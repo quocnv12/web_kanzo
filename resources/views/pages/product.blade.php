@@ -145,12 +145,12 @@ Danh mục Sản phẩm
 			<div class="col-lg-9">
 				<div class="link">
 					<a href="{{route('home')}}">Trang chủ</a>
-					<span>></span>
-					<a href="">Sản phẩm</a>
+					<span>/</span>
+					<a>{{$category->name}}</a>
 				</div>
 				<hr>
 				<div class="collect-product">
-				Bếp ga âm
+				{{$category->name}}
 				</div>
 				<hr>
 
@@ -174,7 +174,7 @@ Danh mục Sản phẩm
 				</div>
 				
 				
-					<ul class="tab">
+					<!-- <ul class="tab">
 						<li><a href="#" class="active">1</a></li>
 						<li><a href="#">2</a></li>
 						<li><a href="#">3</a></li>
@@ -182,7 +182,7 @@ Danh mục Sản phẩm
 						<li><a href="#" class="vvsv">...</a></li>
 						<li><a href="#">10</a></li>
 						<li><a href="#">>></a></li>
-					</ul>
+					</ul> -->
 				
 			</div>
 		</div>
