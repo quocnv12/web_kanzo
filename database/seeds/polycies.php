@@ -28,7 +28,7 @@ class polycies extends Seeder
 	        ],
 	        [
 	        	'id'=>2,
-	        	'title'=>'Chính sách bảo hành',
+	        	'title'=>'chính sách bảo hành',
 	        	'slug'=>'chinh-sach-bao-hanh',
 	        	'content'=>'Với phương châm “Chất lượng tiên phong - Hợp tác phát triển”, CÔNG TY TNHH Bếp ga KANZO luôn mong muốn đem đến cho đối tác những sản phẩm có chất lượng cao nhất. Qua đó, chúng tôi hy vọng sẽ cùng song hành với các đối tác trên con đường phát triển doanh nghiệp ngày một lớn mạnh, bền vững.',
 	        	'active'=>'1',

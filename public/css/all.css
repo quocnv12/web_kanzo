@@ -73,8 +73,12 @@ nav{
 }
 .menu-right > ul > li a{
 	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 16px;
 }
+.menu-right .submenu li a{
+	font-size: 15px;
+}
+
 .logo img{
 	max-width: 270px;
 }
@@ -142,10 +146,11 @@ nav{
     margin-top: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(to bottom,#0000008a,#3c2e16), url(../images/g_hob_a_gas_heaters.jpg) !important;
-    padding: 30px 0 40px 0;
+        background-image: linear-gradient(to bottom,#0000008a,#865a0e), url(../images/g_hob_a_gas_heaters.jpg) !important;
+    padding: 15px 0 20px 0;
     background-size: 100%;
     background-position: center;
+    height: 380px;
     border-top: 5px solid #a66906;
 }
 .img_hover .titleHead{
@@ -167,7 +172,7 @@ nav{
 }
 .slide_bottom_banner_product .title_slick a{
 	text-align: center;
-	font-size: 18px;
+	font-size: 14px;
 	font-family: Roboto-Bold;
 	line-height: 35px;
 	display: block;
@@ -175,17 +180,36 @@ nav{
 	color: #fff;
 	text-transform: uppercase;
 }
-.slide_bottom_banner_product .img_slick img{
+.slide_bottom_banner_product .img_slick {
+	height: 210px;
+	-webkit-transition: 0.3s all;
+	-o-transition: 0.3s all;
+	transition: 0.3s all;
 	border-radius: 10px;
+ background:#fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 5px #fff;
+	margin-top: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	padding:0;
+	overflow: hidden;
+}
+.slide_bottom_banner_product .img_slick img{
 	-webkit-transition: 0.3s all;
 	-o-transition: 0.3s all;
 	transition: 0.3s all;
 	cursor: pointer;
-}
-.slide_bottom_banner_product .img_slick{
-	padding: 10px;
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
 }
 .slide_bottom_banner_product .img_slick img:hover{
+	transform: scale(1.05);
+}
+.slide_bottom_banner_product .img_slick:hover{
 	box-shadow: 0px 0px 10px #fff;
 }
 #bepgas .item_product{
@@ -196,8 +220,9 @@ nav{
 }
 #bepgas .item_product img{
 	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	height: 200px;
+	object-fit: contain;
+	padding: 10% 10% 0 10%;
 }
 #bepgas .hot_product2{
 	margin-top: 30px;
@@ -209,6 +234,7 @@ nav{
 #tintuc .cap-main .group__services-text,
 #tintuc .cap-main .group__services-text1{
 	font-family: OpenSans-ExtraBold;
+	font-size: 20px;
 }
 .menu-right > ul > li a,
 .cau_hoi_thuong_gap_home h4,
@@ -293,7 +319,6 @@ nav{
     position: fixed;
     bottom: 150px;
     right: 160px;
-    left: initial;
     z-index: 999;
 }
 .bot-1 img{
@@ -332,6 +357,9 @@ nav{
 	font-size: 16px;
 	font-family: Roboto-Medium;
 	color: #666;
+}
+.menu-right ul li ul li a{
+	text-transform: initial;
 }
 @media only screen and (min-width: 3001px) {}
 @media only screen and (max-width: 1200px) {

@@ -25,8 +25,8 @@ Chính sách
   <div class="row mt-5 gioithieu-content">
       <div class="col-md-3 windows">
       <div class="nav nav-content pr-0 codong-tt codongs-tt mb-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        @foreach($polycies as $row)
-        <a class="nav-link {{Request::is('chinh-sach/'.$row->slug) ? 'active' : ''}} " id="v-pills-settings-tab-1"  href="{{route('polycies',['slug'=>$row->slug])}}" role="tab"  aria-selected="true" >{{$row->title}}</a>
+        @foreach($question as $row)
+        <a class="nav-link {{Request::is('cau-hoi/'.$row->slug) ? 'active' : ''}} " id="v-pills-settings-tab-1"  href="{{route('question',['slug'=>$row->slug])}}" role="tab"  aria-selected="true" >{{$row->title}}</a>
         @endforeach
         <!-- <a class="nav-link   " id="v-pills-settings-tab-2" data-toggle="pill" href="#v-pills-settings-2" role="tab" aria-controls="v-pills-settings-1" aria-selected="true">Phương Châm</a>
         <a class="nav-link   " id="v-pills-settings-tab-3" data-toggle="pill" href="#v-pills-settings-3" role="tab" aria-controls="v-pills-settings-1" aria-selected="true">Tầm nhìn</a>

@@ -249,9 +249,10 @@ margin-left: 2rem;
   padding: 40px 50px;
   border: 1px solid #ddd;
   border-radius: 8px;
+  font-size: 16px;
 }
 .tabcontent p,li{
-  color: #666;
+  color: #a19e9e;
   list-style: none;
 }
 #paris img{
@@ -275,7 +276,7 @@ margin-left: 2rem;
   margin-top: 1rem;
 }
 .content-fainaly h1{
-  font-size: 3em;
+  font-size: 38px;
   margin-top: 3rem;
   font-weight: bold;
 }

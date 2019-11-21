@@ -32,7 +32,7 @@ Danh mục Sản phẩm
 				</div>
 				<div class="img_intro">
 			      	<img src="images/jj.jpg" class="mb-4 mt-2" style="width: 100%;">
-			       	<img src="images/ff.jpg"  style="height: 300px;    width: 100%;">
+			       	<img src="images/ff.jpg"  style="height:auto;width: 100%;">
 			    </div>
     			<ul class="list-group mt-4">
                     <li class="list-group-item text-center font-weight-bold"
