@@ -358,6 +358,9 @@ nav{
 	font-family: Roboto-Medium;
 	color: #666;
 }
+.menu-right ul li ul li a{
+	text-transform: initial;
+}
 @media only screen and (min-width: 3001px) {}
 @media only screen and (max-width: 1200px) {
 	.header-logo > .row > div >div div p,
