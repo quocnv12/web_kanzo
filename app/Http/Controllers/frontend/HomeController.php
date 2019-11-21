@@ -14,7 +14,7 @@ class HomeController extends Controller
 	public function index(){
 		$data['popup'] = popup::first();
 		$data['question'] = question::orderBy('updated_at','DESC')->limit(2)->get();
-		$data['product'] = product::orderBy('id','DESC')->limit(5)->get();
+		$data['product'] = product::orderBy('id','DESC')->where('active',1)->limit(5)->get();
 		$data['product1'] = product::find(6);
 		$data['product2'] = product::find(4);
 		$data['product3'] = product::find(5);
