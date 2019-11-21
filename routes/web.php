@@ -49,13 +49,17 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
     })->name('policy_detail');
 
     //contact
-    Route::get('/contact', function () {
-        return view('pages.contact');
-    })->name('contact');
-
-    Route::get('/diemban', function () {
-        return view('pages.diemban');
-    })->name('diemban');
+    Route::group(['prefix' => 'contact'], function () {
+        Route::get('','ContactController@GetContact')->name('contact');
+        Route::post('','ContactController@PostContact');
+    });
+   
+    //------đại lý
+    Route::group(['prefix' => 'diemban'], function () {
+        Route::get('','AgencyController@GetAgency')->name('diemban');
+        Route::get('search','AgencyController@GetSearch');
+    });
+   
 });
 
 // ------------End

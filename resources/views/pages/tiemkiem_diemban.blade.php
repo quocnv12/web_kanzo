@@ -63,14 +63,29 @@
                         </form>
                     </div>
                     <div class="container mapppp center">
-                        <img src="images/55.jpg" style="width: 100%">
+
+                        <h4>Tìm thấy {{ count($agencys) }} địa chỉ đại lý :</h4>
+                        <div class="col-md-12 col-sm-12">
+                            @if (count($agencys)>=1)
+                                
+                          
+                            @foreach ($agencys as $item)
+                            <p>Tên cửa hàng :{{ $item->name }}</p>
+                            <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> {{ $item->address }}
+                                {{ $item->district }}
+                                {{ $item->city }}</li><br>
+                            @endforeach
+                            @else
+                                Không tìm thấy địa chỉ nào !
+                            
+                            @endif
+                        </div>
                     </div>
+
+
                 </div>
-
-
             </div>
         </div>
-    </div>
 </section>
 
 @endsection

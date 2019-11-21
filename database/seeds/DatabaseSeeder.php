@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(news::class);
         $this->call(question::class);
         $this->call(banner_introduce::class);
+        $this->call(agency::class);
     }
 }
