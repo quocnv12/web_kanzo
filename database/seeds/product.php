@@ -71,7 +71,7 @@ class product extends Seeder
 							
 							Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
 	        	'id_category'=>1,
-	        	'active'=>1,
+	        	'active'=>0,
 	        	'state'=>1,
 	        	'count_view'=>0,
 	        ],
@@ -101,7 +101,7 @@ class product extends Seeder
 					
 					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
 	        	'id_category'=>1,
-	        	'active'=>1,
+	        	'active'=>0,
 	        	'state'=>1,
 	        	'count_view'=>0,
 	        	
@@ -132,7 +132,7 @@ class product extends Seeder
 					
 					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
 	        	'id_category'=>1,
-	        	'active'=>1,
+	        	'active'=>0,
 	        	'state'=>1,
 	        	'count_view'=>0,
 	        	
@@ -196,7 +196,7 @@ class product extends Seeder
 					
 					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
 	        	'id_category'=>2,
-	        	'active'=>1,
+	        	'active'=>0,
 	        	'state'=>1,
 	        	'count_view'=>0,
 	        	
@@ -292,7 +292,7 @@ class product extends Seeder
 					
 					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
 	        	'id_category'=>3,
-	        	'active'=>1,
+	        	'active'=>0,
 	        	'state'=>1,
 	        	'count_view'=>0,
 	        
@@ -324,7 +324,7 @@ class product extends Seeder
 					
 					Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>',
 	        	'id_category'=>4,
-	        	'active'=>1,
+	        	'active'=>0,
 	        	'state'=>1,
 	        	'count_view'=>0,
 	        
