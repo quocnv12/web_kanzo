@@ -93,20 +93,14 @@ Trang chủ
                 <div class="col-md-4">
                     <div class="item_product ">
                         <div class="item">
-<<<<<<< HEAD
                             <a href="{{route('product_detail', $product1->slug)}}" title="Bếp gas âm cao cấp KANZO ">
-=======
-                            <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO ">
->>>>>>> 35d9731a3e264eff71f4de5f5bdf3763817dcbc5
+
                                 <img src="images/{{$product1->image}}" alt="Bếp gas âm cao cấp KANZO ">
                             </a>
                         </div>
                         <div class="cap-mat capmat1">
-<<<<<<< HEAD
                             <a href="{{route('product_detail', $product1->slug)}}" title="Bếp gas âm cao cấp KANZO SHB6636">
-=======
-                            <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO SHB6636">
->>>>>>> 35d9731a3e264eff71f4de5f5bdf3763817dcbc5
+
                                 <h3>{{$product1->name}}</h3>
                             </a>
                         </div>
@@ -115,20 +109,15 @@ Trang chủ
                 <div class="col-md-4">
                     <div class="item_product" >
                         <div class="item">
-<<<<<<< HEAD
                             <a href="{{route('product_detail', $product2->slug)}}" title="Bếp gas âm cao cấp KANZO ">
-=======
-                            <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO ">
->>>>>>> 35d9731a3e264eff71f4de5f5bdf3763817dcbc5
+
                                 <img src="images/{{$product2->image}}" alt="Bếp gas âm cao cấp KANZO ">
                             </a>
                         </div>
                         <div class="cap-mat capmat1">
-<<<<<<< HEAD
+
                             <a href="{{route('product_detail', $product2->slug)}}" title="Bếp gas âm cao cấp KANZO SHB6636">
-=======
-                            <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO SHB6636">
->>>>>>> 35d9731a3e264eff71f4de5f5bdf3763817dcbc5
+
                                 <h3>{{$product2->name}}</h3>
                             </a>
                         </div>
@@ -137,20 +126,16 @@ Trang chủ
                 <div class="col-md-4">
                     <div class="item_product" >
                         <div class="item">
-<<<<<<< HEAD
+
                             <a href="{{route('product_detail', $product3->slug)}}" title="Bếp gas âm cao cấp KANZO ">
-=======
-                            <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO ">
->>>>>>> 35d9731a3e264eff71f4de5f5bdf3763817dcbc5
+
                                 <img src="images/{{$product3->image}}" alt="Bếp gas âm cao cấp KANZO ">
                             </a>
                         </div>
                         <div class="cap-mat capmat1">
-<<<<<<< HEAD
+
                             <a href="{{route('product_detail', $product3->slug)}}" title="Bếp gas âm cao cấp KANZO SHB6636">
-=======
-                            <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO SHB6636">
->>>>>>> 35d9731a3e264eff71f4de5f5bdf3763817dcbc5
+
                                 <h3>{{$product3->name}}</h3>
                             </a>
                         </div>
