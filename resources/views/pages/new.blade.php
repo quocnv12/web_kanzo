@@ -250,7 +250,8 @@ Tin tức
 
         <div class="mt-4">
             <nav aria-label="Page navigation example text-center">
-                <ul class="pagination">
+                {{ $news->links() }}
+                {{-- <ul class="pagination">
                     <li class="page-item">
                         <a class="page-link" href="#" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
@@ -266,7 +267,7 @@ Tin tức
                             <span class="sr-only">Next</span>
                         </a>
                     </li>
-                </ul>
+                </ul> --}}
             </nav>
         </div>
 

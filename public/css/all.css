@@ -202,8 +202,8 @@ nav{
 	-o-transition: 0.3s all;
 	transition: 0.3s all;
 	cursor: pointer;
-	max-width: 100%;
-	max-height: 100%;
+	max-width: 80%;
+	max-height: 80%;
 	height: auto;
 }
 .slide_bottom_banner_product .img_slick img:hover{

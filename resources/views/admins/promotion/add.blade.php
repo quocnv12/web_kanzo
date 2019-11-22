@@ -1,5 +1,5 @@
 @extends('admins.layout.master')
-@section('news','active')
+@section('promotion','active')
 @section('title','Thêm')
 @section('content')
 <div>
@@ -29,6 +29,15 @@
                                 </div>
                             @endif
                         </div>
+                        <div class="form-group">
+                            <label>Tóm tắt nội dung</label>
+                            <input type="text" name="summary" id="summary" class="form-control" value="{{old('summary')}}">
+                            @if($errors->has('summary'))
+                                <div class="alert alert-danger">
+                                    {{$errors->first('summary')}}
+                                </div>
+                            @endif
+                        </div>
 
                         <div class="form-group">
                             <label>Trạng thái</label>
@@ -47,11 +56,11 @@
                         <div class="form-group">
                             <div class="form-group">
                                 <label class="form-label">Nội dung</label>
-                                <textarea name="content" id="content">{{old('content')}}</textarea>
+                                <textarea name="promotion_content" id="content">{{old('content')}}</textarea>
                             </div>
-                            @if($errors->has('content'))
+                            @if($errors->has('promotion_content'))
                                 <div class="alert alert-danger">
-                                    {{$errors->first('content')}}
+                                    {{$errors->first('promotion_content')}}
                                 </div>
                             @endif
                         </div>
@@ -74,7 +83,7 @@
                     <div class="form-actions">
                             <div class="pull-right">
                                 <button type="submit" class="btn btn-danger btn-cons"><i class="icon-ok"></i> Lưu</button>
-                                <a href="{{route('news.list')}}">
+                                <a href="{{route('promotion.list')}}">
                                     <button type="button" class="btn btn-white btn-cons"> Trở lại</button>
                                 </a>
                                 

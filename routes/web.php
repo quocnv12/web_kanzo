@@ -141,6 +141,15 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::post('edit/{id}', 'NewsController@post_edit')->name('news.edit');
         Route::get('delete/{id}', 'NewsController@del')->name('news.del');
     });
+    //-------------------khuyen mai
+    Route::group(['prefix' => 'promotion'], function(){
+        Route::get('','PromotionController@list')->name('promotion.list');
+        Route::get('add','PromotionController@add')->name('promotion.add');
+        Route::post('add','PromotionController@post_add')->name('promotion.add');
+        Route::get('edit/{id}','PromotionController@edit')->name('promotion.edit');
+        Route::post('edit/{id}','PromotionController@post_edit')->name('promotion.edit');
+        Route::get('delete/{id}','PromotionController@del')->name('promotion.del');
+    });
 
     // -------------tài khoản
     Route::group(['prefix' => 'account'],function(){
@@ -219,6 +228,15 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}','AgencyController@GetEdit');
         Route::post('edit/{id}','AgencyController@PostEdit');
         Route::get('delete/{id}','AgencyController@delete');
+    });
+    //-------------------Video
+    Route::group(['prefix' => 'video'], function(){
+        Route::get('', 'VideoController@list')->name('video.list');
+        Route::get('add', 'VideoController@add')->name('video.add');
+        Route::post('add', 'VideoController@post_add')->name('video.add');
+        Route::get('edit/{id}', 'VideoController@edit')->name('video.edit');
+        Route::post('edit/{id}', 'VideoController@post_edit')->name('video.edit');
+        Route::get('delete/{id}', 'VideoController@del')->name('video.del');
     });
 
 });

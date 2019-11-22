@@ -15,7 +15,7 @@ Chính sách
 
 <div class="container-fruid">
    <div class="h-category-banner">
-  <h2 class="text-center" data-aos="fade-up" data-aos-delay="200" style="color: #fff;">GIỚI THIỆU</h2>
+  <h2 class="text-center" data-aos="fade-up" data-aos-delay="200" style="color: #fff;">CÂU HỎI THƯỜNG GẶP</h2>
   <div class="h-category-banner-black">
 
   </div>
