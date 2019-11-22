@@ -27,14 +27,11 @@
 				<p><span>Email: </span>kanzo.anhtuan@gmail.com</p>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 bot-2">
-				<h3>Liên Kết Nhanh</h3>
+				<h3>Chính Sách</h3>
 				<ul>
-					<li><a href="{{route('home')}}">Trang Chủ</a></li>
-					<li><a href="intro">Giới Thiệu</a></li>
-					<li><a href="">Sản Phẩm</a></li>
-					<li><a href="{{route('new')}}">Tin Tức</a></li>
-					<li><a href="#">Chính sách</a></li>
-					<li><a href="{{route('contact')}}">Liên Hệ</a></li>
+					@foreach($polyciesgl as $row)
+					<li><a href="{{route('polycies',['slug'=>$row->slug])}}">{{$row->title}}</a></li>
+					@endforeach
 				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 bot-2">

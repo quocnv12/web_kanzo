@@ -215,6 +215,15 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::post('edit/{id}','AgencyController@PostEdit');
         Route::get('delete/{id}','AgencyController@delete');
     });
+    //-------------------Video
+    Route::group(['prefix' => 'video'], function(){
+        Route::get('', 'VideoController@list')->name('video.list');
+        Route::get('add', 'VideoController@add')->name('video.add');
+        Route::post('add', 'VideoController@post_add')->name('video.add');
+        Route::get('edit/{id}', 'VideoController@edit')->name('video.edit');
+        Route::post('edit/{id}', 'VideoController@post_edit')->name('video.edit');
+        Route::get('delete/{id}', 'VideoController@del')->name('video.del');
+    });
 
 });
 
