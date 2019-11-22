@@ -28,13 +28,6 @@ class ProductController extends Controller
 		}else{
 			return view('pages.product',$data);
 		}
-		if($cats){
-			$products = product::where('id_category',$cats->id)->paginate(8);
-			return view('pages.product',compact('cats','products','categorygl'));
-		}else{
-			return view('pages.product',compact('cats','product','categorygl'));
-		}
-
 		// return view('pages.product',compact('categorygl','product'));
 	}
 	public function getProductDetail($slug,Request $request)
