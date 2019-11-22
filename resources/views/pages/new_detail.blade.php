@@ -8,13 +8,13 @@ Chi tiết tin tức
 @endsection
 
 @section('share_link')
-<meta property="og:image" content="image/1.jpg" />
+<meta property="og:image" content="image/{{ $news->image }}" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="" />
+<meta property="og:url" content="{{ route('new_detail', $news->slug) }}" />
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
-<meta property="og:title" content="" />
-<meta property="og:description"   content="" />
+<meta property="og:title" content="{{ $news->name }}" />
+<meta property="og:description"   content="{{ $news->summary }}" />
 
 @endsection
 
@@ -112,7 +112,7 @@ Chi tiết tin tức
                             </div>
                         </div>
                     </li>
-                @endforeach
+                    @endforeach
                     {{--  <li class="list-group-item">
                         <div class="row naa">
                             <div class="col-md-4 " style="padding:0">

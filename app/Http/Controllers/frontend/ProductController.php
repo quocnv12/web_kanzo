@@ -5,6 +5,7 @@ namespace App\Http\Controllers\frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\models\product;
+use App\models\news;
 use App\models\category;
 use DB;
 
@@ -16,6 +17,17 @@ class ProductController extends Controller
 		$categorygl = category::orderBy('name','ASC')->get();
 		$cats = category::where('slug',$slug)->first();
 		$product = product::where('slug',$slug)->first();
+
+		$data['categorygl'] = $categorygl;
+		$data['cats'] = $cats;
+		$data['product'] = $product;
+		$data['news']=news::orderBy('id','desc')->paginate(6);
+		if($cats){
+			$data['products'] = product::where('id_category',$cats->id)->paginate(8);
+			return view('pages.product',$data);
+		}else{
+			return view('pages.product',$data);
+		}
 		if($cats){
 			$products = product::where('id_category',$cats->id)->paginate(8);
 			return view('pages.product',compact('cats','products','categorygl'));
