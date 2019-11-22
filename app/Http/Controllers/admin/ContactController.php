@@ -18,6 +18,7 @@ class ContactController extends Controller
     }
     public function post_edit(Request $req,$id){
     	$this->validate($req,[
+			'name' => 'required',
     		'address' => 'required',
     		'phone' => 'required|numeric|digits_between:8,12',
             'phone2' => 'required|numeric|digits_between:8,12',
@@ -25,6 +26,7 @@ class ContactController extends Controller
     		'email' => 'required|email',
     		'fanpage' => 'required',
     	],[
+			'name.required'=>'Tên công ty không được để trống !',
     		'address.required' => 'Địa chỉ là trường không được để trống!',
     		'phone.required' => 'Số điện thoại là trường không được để trống!',
             'phone2.required' => 'Số điện thoại là trường không được để trống!',
@@ -38,7 +40,8 @@ class ContactController extends Controller
     		'email.email' => 'Email không đúng định dạng!',
     		'fanpage.required' => 'Địa chỉ là trường không được để trống!',
     	]);
-    	$update = contact::find($id);
+		$update = contact::find($id);
+		$update->name = $req->name;
     	$update->address = $req->address;
     	$update->phone = $req->phone;
         $update->phone2 = $req->phone2;
@@ -47,6 +50,6 @@ class ContactController extends Controller
     	$update->fanpage = $req->fanpage;
 		$update->save();
 		
-    	return redirect()->route('contact.list');
+    	return redirect('admin/contact')->with('thongbao','Sửa thành công !');
     }
 }

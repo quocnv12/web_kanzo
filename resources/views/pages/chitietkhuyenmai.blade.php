@@ -1,21 +1,10 @@
 @extends('master-layout')
 @section('title')
-Chi tiết tin tức
+Chi tiết khuyến mại
 @endsection
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="css/stylett.css">
-@endsection
-
-@section('share_link')
-<meta property="og:image" content="image/1.jpg" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="" />
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="627">
-<meta property="og:title" content="" />
-<meta property="og:description"   content="" />
-
 @endsection
 
 @section('js')
@@ -28,18 +17,19 @@ Chi tiết tin tức
 @section('content')
 <div class="container-fruid">
     <div class="h-category-banner">
-        <h2 class="text-center" data-aos="fade-up" data-aos-delay="200" style="color: #fff;">CHI TIẾT TIN TỨC</h2>
+        <h2 class="text-center" data-aos="fade-up" data-aos-delay="200" style="color: #fff;">CHI TIẾT KHUYẾN MẠI</h2>
         <div class="h-category-banner-black">
         </div>
     </div>
 </div>
 <section>
+
+
     <div class="container ">
         <div class="row mt-5">
-
             <div class="col-md-9 mb-3" data-aos="fade-up" data-aos-delay="300">
                 <ul class="list-group">
-                    <li class="list-group-item active text-center font-weight-bold">{{ $news->summary }}</li>
+                    <li class="list-group-item active text-center font-weight-bold">{{ $promotion->summary }}</li>
                     <li class="list-group-item">
                         <style type="text/css">
                             .list-group-item img {
@@ -62,9 +52,11 @@ Chi tiết tin tức
                             }
 
                         </style>
-                        {!! $news->content !!}
+                        {!! $promotion->content !!}
+
                     </li>
                 </ul>
+
                 <div class="container row k5-tag">
                     <div class="col-md-6 tag-1">
                         <span class="tag">
@@ -75,15 +67,14 @@ Chi tiết tin tức
                     </div>
                     <div class="col-md-6 k5-sale" style="">
                         <div class="sale-p">
-                            <p>
-                                <i class="fas fa-share-square"></i> <span style="margin: 20px 10px 10px; padding-top: 10px;">Chia sẻ:</span>
-                                <!-- icon shareaholic: chia se bai viet len mang xa hoi -->
-                                <span class="shareaholic-canvas" data-app="share_buttons" data-app-id="28752696" style="float:right;"></span>
-                                <!-- icon shareaholic: chia se bai viet len mang xa hoi -->
-                            </p> 
-
+                            <p><i class="fas fa-share-square"></i> Chia sẻ:</p>
                         </div>
-                        
+                        <div class="sale-icon">
+                            <a href="#"><i class="fab fa-facebook-square" title="facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram" title="instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-square" title="printerest"></i></a>
+                            <a href="#"><img src="images/zalo-icon.png" alt="" title="zalo"></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,24 +86,23 @@ Chi tiết tin tức
                         style="background-color: #c18d28 ; color: white">TIN MỚI
                     </li>
 
-                    @foreach ($newss as $item)
-               
-                    <li class="list-group-item">
-                        <div class="row naa">
-                            <div class="col-md-4 " style="padding:0">
+                    @foreach ($news as $item)
+                        <li class="list-group-item">
+                            <div class="row naa">
+                                <div class="col-md-4 " style="padding:0">
 
-                                <a href="tin-tuc/{{ $item->slug }}">
-                                    <img src="images/{{ $item->image }}" style="width: 100%">
-                                </a>
+                                    <a href="tin-tuc/{{ $item->slug }}">
+                                        <img src="images/{{ $item->image }}" style="width: 100%">
+                                    </a>
 
+                                </div>
+                                <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
+                                    <a style="color: inherit;text-decoration: none;color: #505050;"
+                                        href="tin-tuc/{{ $item->slug }}"><span>{{ $item->name }}</span></a>
+                                </div>
                             </div>
-                            <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
-                                <a style="color: inherit;text-decoration: none;color: #505050;"
-                                    href="tin-tuc/{{ $item->slug }}"><span>{{ $item->name }}</span></a>
-                            </div>
-                        </div>
-                    </li>
-                @endforeach
+                        </li>
+                    @endforeach
                     {{--  <li class="list-group-item">
                         <div class="row naa">
                             <div class="col-md-4 " style="padding:0">

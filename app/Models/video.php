@@ -4,7 +4,7 @@ namespace App\models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class promotion extends Model
+class video extends Model
 {
-    protected $table="promotion";
+    //
 }

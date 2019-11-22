@@ -113,6 +113,8 @@
                 CKEDITOR.replace('content1');
                 CKEDITOR.replace('content2');
                 CKEDITOR.replace('content3');
+                CKEDITOR.replace('content4');
+                CKEDITOR.replace('content5');
                 CKEDITOR.replace('introduce_content');
                 CKEDITOR.replace('intro_content');
                 CKEDITOR.replace('polycies_content');
@@ -124,28 +126,48 @@
             
    
  @yield('script')
-<script>
+    <script>
+        function changeImg(input){
 
-                    function changeImg(input){
+               //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
+               if(input.files && input.files[0]){
+                   var reader = new FileReader();
+                   //Sự kiện file đã được load vào website
+                   reader.onload = function(e){
+                       //Thay đổi đường dẫn ảnh
+                       $('#avatar').attr('src',e.target.result);
+                   }
+                   reader.readAsDataURL(input.files[0]);
+               }
+           }
+           $(document).ready(function() {
+               $('#avatar').click(function(){
+                   $('#img').click();
+            });
+        });
+    </script>
 
-                           //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
-                           if(input.files && input.files[0]){
-                               var reader = new FileReader();
-                               //Sự kiện file đã được load vào website
-                               reader.onload = function(e){
-                                   //Thay đổi đường dẫn ảnh
-                                   $('#avatar').attr('src',e.target.result);
-                               }
-                               reader.readAsDataURL(input.files[0]);
-                           }
-                       }
-                       $(document).ready(function() {
-                           $('#avatar').click(function(){
-                               $('#img').click();
-                        });
-                    });
-               
-        </script>
+    <script>
+        function changeVideo(input){
+
+               //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
+               if(input.files && input.files[0]){
+                   var reader = new FileReader();
+                   //Sự kiện file đã được load vào website
+                   reader.onload = function(e){
+                       //Thay đổi đường dẫn ảnh
+                       $('#avatarVideo').attr('src',e.target.result);
+                   }
+                   reader.readAsDataURL(input.files[0]);
+               }
+           }
+           $(document).ready(function() {
+               $('#avatarVideo').click(function(){
+                   $('#vdeo').click();
+            });
+        });
+    </script>
+
     <script type="text/javascript">
         $(document).ready(function () {
              $('#example').dataTable({
