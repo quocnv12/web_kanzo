@@ -2,7 +2,16 @@
 @section('title')
 Chi tiết sản phẩm
 @endsection
+@section('share_link')
+<meta property="og:image" content="images/{{$product_detail->image}}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{route('product_detail', $product_detail->slug)}}" />
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:title" content="Sản phẩm - {{$product_detail->name}}" />
+<meta property="og:description"   content="{{$product_detail->information}}" />
 
+@endsection
 @section('css')
 
 <link rel="stylesheet" type="text/css" href="css/rema.css">
@@ -78,13 +87,15 @@ Chi tiết sản phẩm
                 <button class="btn add-cart" type="button">Mua ngay</button>               
               </div>
               <div class="k5-sale">
-                <div class="sale-p"><p><i class="fas fa-share-square"></i> Chia sẻ:</p></div>
-                <div class="sale-icon">                 
-                  <a href="#"><i class="fab fa-facebook-square" title="facebook"></i></a>
-                  <a href="#"><i class="fab fa-instagram" title="instagram"></i></a>
-                  <a href="#"><i class="fab fa-pinterest-square" title="printerest"></i></a>
-                  <a href="#"><img src="images/zalo-icon.png" alt="" style="height: 39px; margin-top: -8px;" title="zalo"></a>
+                <div class="sale-p">
+                  <p>
+                      <i class="fas fa-share-square"></i> Chia sẻ:   
+                      <!-- icon shareaholic: chia se bai viet len mang xa hoi -->
+                      <span class="shareaholic-canvas" data-app="share_buttons" data-app-id="28752696" style="float:right;"></span>
+                      <!-- icon shareaholic: chia se bai viet len mang xa hoi -->
+                  </p> 
                 </div>
+
               </div>
             </div>
         </div>

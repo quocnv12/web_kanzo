@@ -7,6 +7,17 @@ Chi tiết tin tức
 <link rel="stylesheet" type="text/css" href="css/stylett.css">
 @endsection
 
+@section('share_link')
+<meta property="og:image" content="image/1.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="" />
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:title" content="" />
+<meta property="og:description"   content="" />
+
+@endsection
+
 @section('js')
 <script>
     new WOW().init();
@@ -88,13 +99,15 @@ Chi tiết tin tức
                       <a href="#">SEO</a>
                     </div>
                     <div class="col-md-6 k5-sale" style="">
-                        <div class="sale-p"><p><i class="fas fa-share-square"></i> Chia sẻ:</p></div>
-                        <div class="sale-icon">                 
-                          <a href="#"><i class="fab fa-facebook-square" title="facebook"></i></a>
-                          <a href="#"><i class="fab fa-instagram" title="instagram"></i></a>
-                          <a href="#"><i class="fab fa-pinterest-square" title="printerest"></i></a>
-                          <a href="#"><img src="images/zalo-icon.png" alt=""title="zalo"></a>
+                        <div class="sale-p">
+                            <p>
+                                <i class="fas fa-share-square"></i> <span style="margin: 20px 10px 10px; padding-top: 10px;">Chia sẻ:</span>
+                                <!-- icon shareaholic: chia se bai viet len mang xa hoi -->
+                                <span class="shareaholic-canvas" data-app="share_buttons" data-app-id="28752696" style="float:right;"></span>
+                                <!-- icon shareaholic: chia se bai viet len mang xa hoi -->
+                            </p> 
                         </div>
+                        
                     </div>
                 </div>
             </div>            
