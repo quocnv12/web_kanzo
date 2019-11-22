@@ -73,11 +73,11 @@ Chi tiết sản phẩm
                   <h4 class="price">{{number_format($product_detail->price)}}</h4>
               </div>
               <p class="row attribute">
-                <h4>* Tính năng sản phẩm</h4>
+                <h5>* Tính năng sản phẩm</h5>
                 <div class="text_description_product" style="font-size: 1em; font-weight: normal; font-family:arial;">
                    {!!$product_detail->information!!}
                 </div>
-                <h4>* Thông số kĩ thuật</h4>
+                <h5>* Thông số kĩ thuật</h5>
                 <div style="font-size: 1em; font-weight: normal; font-family:arial;">
                   {!!$product_detail->thongso!!}
                 </div>
@@ -128,7 +128,9 @@ Chi tiết sản phẩm
 </section>
 <section>
   <center class="container content-fainaly">
-    <h1>SẢN PHẨM LIÊN QUAN</h1>
+    <div class="product_content" style="font-weight: bold; font-size: 1.6em; margin-top: 20px;">
+        SẢN PHẨM LIÊN QUAN
+    </div>
     <p>Có 4 sản phẩm liên quan</p>
     <div class="row">
     @foreach($related_products as $item)
@@ -155,7 +157,9 @@ Chi tiết sản phẩm
 </section>
 <section>
   <center class="container content-fainaly">
-    <h1>SẢN PHẨM XEM NHIỀU NHẤT</h1>
+    <div class="product_content" style="font-weight: bold; font-size: 1.6em; margin-top: 20px;">
+        SẢN PHẨM XEM NHIỀU NHẤT
+    </div>
     <p>Có 4 sản phẩm xem nhiều</p>
     <div class="row">
     @foreach($bestview_products as $item)

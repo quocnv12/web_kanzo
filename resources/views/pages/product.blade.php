@@ -38,108 +38,20 @@ Danh mục Sản phẩm
                     <li class="list-group-item text-center font-weight-bold"
                         style="background-color: #c18d28 ; color: white">Tin tức liên quan
                     </li>
-                        <li class="list-group-item">
-                        <div class="row naa">
-                            <div class="col-md-4 " style="padding:0">
-                                
-                                    <a href="">
-                                        <img src="images/1.jpg" style="width: 100%">
-                                    </a>
-                               
-                                    
-                                
-                            </div>
-                            <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
-                                <a style="color: inherit;text-decoration: none;color: #505050;" href=""><span>Bếp ga Paloma PA-6MEJ siêu thị điện máy hc siêu thị hc</span></a>
-                            </div>
-                        </div>
-
-                    </li>
+                    @foreach($news as $item)
                     <li class="list-group-item">
                         <div class="row naa">
                             <div class="col-md-4 " style="padding:0">
-                                
-                                    <a href="">
-                                        <img src="images/3.jpg" style="width: 100%">
+                                    <a href="{{route('new_detail', $item->slug)}}">
+                                        <img src="images/{{$item->image}}" style="width: 100%">
                                     </a>
-                               
-                                    
-                                
                             </div>
                             <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
-                                <a style="color: inherit;text-decoration: none;color: #505050;" href=""><span>Bếp ga Paloma PA-6MEJ siêu thị điện máy hc siêu thị hc</span></a>
+                                <a style="color: inherit;text-decoration: none;color: #505050;" href="{{route('new_detail', $item->slug)}}"><span>{{$item->name}}</span></a>
                             </div>
                         </div>
-
                     </li>
-                    <li class="list-group-item">
-                        <div class="row naa">
-                            <div class="col-md-4 " style="padding:0">
-                                
-                                    <a href="">
-                                        <img src="images/6.jpg" style="width: 100%">
-                                    </a>
-                               
-                                    
-                                
-                            </div>
-                            <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
-                                <a style="color: inherit;text-decoration: none;color: #505050;" href=""><span>Bếp ga Paloma PA-6MEJ siêu thị điện máy hc siêu thị hc</span></a>
-                            </div>
-                        </div>
-
-                    </li>
-                  <li class="list-group-item">
-                        <div class="row naa">
-                            <div class="col-md-4 " style="padding:0">
-                                
-                                    <a href="">
-                                        <img src="images/5.jpg" style="width: 100%">
-                                    </a>
-                               
-                                    
-                                
-                            </div>
-                            <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
-                                <a style="color: inherit;text-decoration: none;color: #505050;" href=""><span>Bếp ga Paloma PA-6MEJ siêu thị điện máy hc siêu thị hc</span></a>
-                            </div>
-                        </div>
-
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row naa">
-                            <div class="col-md-4 " style="padding:0">
-                                
-                                    <a href="">
-                                        <img src="images/2.jpg" style="width: 100%">
-                                    </a>
-                               
-                                    
-                                
-                            </div>
-                            <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
-                                <a style="color: inherit;text-decoration: none;color: #505050;" href=""><span>Bếp ga Paloma PA-6MEJ siêu thị điện máy hc siêu thị hc</span></a>
-                            </div>
-                        </div>
-
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row naa">
-                            <div class="col-md-4 " style="padding:0">
-                                
-                                    <a href="">
-                                        <img src="images/4.jpg" style="width: 100%">
-                                    </a>
-                               
-                                    
-                                
-                            </div>
-                            <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
-                                <a style="color: inherit;text-decoration: none;color: #505050;" href=""><span>Bếp ga Paloma PA-6MEJ siêu thị điện máy hc siêu thị hc</span></a>
-                            </div>
-                        </div>
-
-                    </li>
+                    @endforeach
                 </ul>
 			</div>
 			<div class="col-lg-9">
