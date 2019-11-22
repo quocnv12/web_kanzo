@@ -1,5 +1,5 @@
 @extends('admins.layout.master')
-@section('category','active')
+@section('product','active')
 @section('title','Danh sách tài khoản')
 @section('content')
 <div>

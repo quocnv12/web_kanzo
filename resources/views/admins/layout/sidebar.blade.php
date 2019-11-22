@@ -95,7 +95,7 @@
             
             {{-- Liên hệ --}}
             <li class="start  open  @yield('contact') "> <a href="{{route('contact.list')}}"><i
-                        class="material-icons">contacts</i> <span class="title">Liên hệ</span> <span
+                        class="material-icons">contact_phone</i> <span class="title">Liên hệ</span> <span
                         class="selected"></span> <span class="arrow  open "></span>
 
                 </a>
@@ -103,7 +103,6 @@
                     <li> <a href="{{route('contact.list')}}"> Thông tin liên hệ </a> </li>
                 </ul>
             </li>
-
 
             {{-- tin tức --}}
             <li class="start  open  @yield('news') "> <a href="admin/news"><i
@@ -116,35 +115,20 @@
                 </ul>
             </li>
 
-           
-
             {{-- product --}}
             <li class="start  open  @yield('product') "> <a href="admin/product/list"><i
-                class="material-icons">contacts</i> <span class="title">Sản phẩm</span> <span
+                class="material-icons">format_list_bulleted</i> <span class="title">Sản phẩm</span> <span
                 class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
-                        <li> <a href="{{route('product.add')}}"> Thêm sản phẩm </a> </li>
-                        <li> <a href="{{route('product.list')}}"> Danh sách sản phẩm </a> </li>
-                </ul>
-            </li>
-
-       
-            {{-- Cate_product --}}
-
-            <li class="start  open  @yield('category') "> <a href="admin/category/list"><i
-                class="material-icons">contacts</i> <span class="title">Danh mục sản phẩm</span> <span
-                class="selected"></span> <span class="arrow  open "></span>
-                </a>
-                <ul class="sub-menu">
-                        <li> <a href="{{route('category.add')}}"> Thêm danh mục sản phẩm </a> </li>
-                        <li> <a href="{{route('category.list')}}"> Danh sách danh mục </a> </li>
+                    <li> <a href="{{route('category.list')}}"> Danh mục </a> </li>
+                    <li> <a href="{{route('product.list')}}"> Danh sách sản phẩm </a> </li>
                 </ul>
             </li>
 
             {{-- Đại lý --}}
             <li class="start  open  @yield('agency') "> <a href="admin/agency"><i
-                class="material-icons">contacts</i> <span class="title">Đại lý</span> <span
+                class="material-icons">business</i> <span class="title">Đại lý</span> <span
                 class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
