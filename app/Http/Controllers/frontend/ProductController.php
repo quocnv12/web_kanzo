@@ -25,8 +25,14 @@ class ProductController extends Controller
 
 		// return view('pages.product',compact('categorygl','product'));
 	}
-	public function getProductDetail($slug)
+	public function getProductDetail($slug,Request $request)
 	{
+		//Đếm lượt xem 
+		if(!$request->session()->has($request->slug))
+        {
+            DB::table('product')->where('slug',$request->slug)->increment('count_view',1);
+        }
+        //END Đếm lượt xem 
 		$data['product_detail'] = product::where('slug', '=', $slug)->first();
 
 		
