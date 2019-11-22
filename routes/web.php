@@ -20,16 +20,14 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
     //-----------------chinh sach
     Route::get('chinh-sach/{slug}','PolyciesController@index')->name('polycies');
     //-----------------Cau hoi thuong gap
-    Route::get('cau-hoi/{slug}','QuestionController@index')->name('polycies');
+    Route::get('cau-hoi/{slug}','QuestionController@index')->name('question');
     //product
     Route::get('danh-muc/{slug}','ProductController@index')->name('product');
     // Route::get('/product', function () {
     //     return view('pages.product');
     // })->name('product');
-    Route::get('/product_detail', function () {
-        return view('pages.product_detail');
-    })->name('product_detail');
-
+    Route::get('/product_detail/{slug}', 'ProductController@getProductDetail'
+    )->name('product_detail');
     //new
     Route::get('/new', function () {
         return view('pages.new');

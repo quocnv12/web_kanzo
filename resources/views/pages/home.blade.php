@@ -69,7 +69,7 @@ Trang chủ
                             <img src="images/{{$row->image}}" alt="">
                         </div>
                         <div class="title_slick">
-                            <a href="">{{$row->name}}</a>
+                            <a href="{{route('product_detail', $row->slug)}}">{{$row->name}}</a>
                         </div>
                     </div>
                     @endforeach
@@ -93,27 +93,15 @@ Trang chủ
                 <div class="col-md-4">
                     <div class="item_product ">
                         <div class="item">
-                            <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO ">
-                                <img src="images/sp4.png" alt="Bếp gas âm cao cấp KANZO ">
+                            <a href="{{route('product_detail', $product1->slug)}}" title="Bếp gas âm cao cấp KANZO ">
+
+                                <img src="images/{{$product1->image}}" alt="Bếp gas âm cao cấp KANZO ">
                             </a>
                         </div>
-                        <div class="cap-mat">
-                            <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO SHB6636">
-                                <h3>Bếp gas âm cao cấp KANZO ABCDEFGH</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item_product" >
-                        <div class="item">
-                            <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO ">
-                                <img src="images/sp4.png" alt="Bếp gas âm cao cấp KANZO ">
-                            </a>
-                        </div>
-                        <div class="cap-mat">
-                            <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO SHB6636">
-                                <h3>Bếp gas âm cao cấp KANZO ABCDEFGH</h3>
+                        <div class="cap-mat capmat1">
+                            <a href="{{route('product_detail', $product1->slug)}}" title="Bếp gas âm cao cấp KANZO SHB6636">
+
+                                <h3>{{$product1->name}}</h3>
                             </a>
                         </div>
                     </div>
@@ -121,13 +109,34 @@ Trang chủ
                 <div class="col-md-4">
                     <div class="item_product" >
                         <div class="item">
-                            <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO ">
-                                <img src="images/sp4.png" alt="Bếp gas âm cao cấp KANZO ">
+                            <a href="{{route('product_detail', $product2->slug)}}" title="Bếp gas âm cao cấp KANZO ">
+
+                                <img src="images/{{$product2->image}}" alt="Bếp gas âm cao cấp KANZO ">
                             </a>
                         </div>
-                        <div class="cap-mat">
-                            <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO SHB6636">
-                                <h3>Bếp gas âm cao cấp KANZO ABCDEFGH</h3>
+                        <div class="cap-mat capmat1">
+
+                            <a href="{{route('product_detail', $product2->slug)}}" title="Bếp gas âm cao cấp KANZO SHB6636">
+
+                                <h3>{{$product2->name}}</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item_product" >
+                        <div class="item">
+
+                            <a href="{{route('product_detail', $product3->slug)}}" title="Bếp gas âm cao cấp KANZO ">
+
+                                <img src="images/{{$product3->image}}" alt="Bếp gas âm cao cấp KANZO ">
+                            </a>
+                        </div>
+                        <div class="cap-mat capmat1">
+
+                            <a href="{{route('product_detail', $product3->slug)}}" title="Bếp gas âm cao cấp KANZO SHB6636">
+
+                                <h3>{{$product3->name}}</h3>
                             </a>
                         </div>
                     </div>
@@ -138,13 +147,16 @@ Trang chủ
                     <div class="item_product">
                         <div class="row">
                             <div class="col-md-7 cap-mat">
-                                <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO SHB6636">
-                                    <h3>Bếp gas âm cao cấp KANZO ABCDEFGH</h3>
+
+                                <a href="{{route('product_detail', $product4->slug)}}" title="Bếp gas âm cao cấp KANZO SHB6636">
+                                    <h3>{{$product4->name}}</h3>
                                 </a>
                             </div>
                             <div class=" col-md-5 item">
-                                <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO ">
-                                    <img src="images/sp4.png" alt="Bếp gas âm cao cấp KANZO ">
+
+                                <a href="{{route('product_detail', $product4->slug)}}" title="Bếp gas âm cao cấp KANZO ">
+
+                                    <img src="images/{{$product4->image}}" alt="Bếp gas âm cao cấp KANZO ">
                                 </a>
                             </div>
                         </div>
@@ -154,13 +166,17 @@ Trang chủ
                     <div class="item_product">
                         <div class="row">
                             <div class="col-md-7 cap-mat">
-                                <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO SHB6636">
-                                    <h3>Bếp gas âm cao cấp KANZO ABCDEFGH</h3>
+
+                                <a href="{{route('product_detail', $product5->slug)}}" title="Bếp gas âm cao cấp KANZO SHB6636">
+
+                                    <h3>{{$product5->name}}</h3>
                                 </a>
                             </div>
                             <div class=" col-md-5 item">
-                                <a href="{{route('product_detail')}}" title="Bếp gas âm cao cấp KANZO ">
-                                    <img src="images/sp4.png" alt="Bếp gas âm cao cấp KANZO ">
+
+                                <a href="{{route('product_detail', $product5->slug)}}" title="Bếp gas âm cao cấp KANZO ">
+
+                                    <img src="images/{{$product5->image}}" alt="Bếp gas âm cao cấp KANZO ">
                                 </a>
                             </div>
                         </div>
@@ -181,18 +197,27 @@ Trang chủ
                         </div>
                         <div class="silde_video_kanzo owl-carousel owl-theme">
                             <div class="silde_video_kanzo_item">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
+                            </div>
+                            <div class="silde_video_kanzo_item">
+                                <video style="width: 100%;height: 450px;object-fit: cover;" controls>
+                                  <source src="video/Xiaomi DCL01CM Precise Control Induction Cooker Review - very advanced.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="silde_video_kanzo_item">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
+                            </div>
+                            <div class="silde_video_kanzo_item">
+                                <video style="width: 100%;height: 450px;object-fit: cover;" controls>
+                                  <source src="video/Xiaomi DCL01CM Precise Control Induction Cooker Review - very advanced.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="silde_video_kanzo_item">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
+                            </div>
+                            <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 450px;object-fit: cover;" controls>
                                   <source src="video/The Siemens Gas Cooktops.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="silde_video_kanzo_item">
-                                <video style="width: 100%;height: 450px;object-fit: cover;" controls>
-                                  <source src="video/Xiaomi DCL01CM Precise Control Induction Cooker Review - very advanced.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="silde_video_kanzo_item">
-                                <video style="width: 100%;height: 450px;object-fit: cover;" controls>
-                                  <source src="video/Xiaomi DCL01CM Precise Control Induction Cooker Review - very advanced.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -269,14 +294,23 @@ Trang chủ
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                         <div class="silde_video_kanzo_gioi_thieu owl-carousel owl-theme">
                             <div class="silde_video_kanzo_item">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 320px;object-fit: cover;">
+                            </div>
+                            <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 320px;object-fit: cover;" controls>
                                   <source src="video/The Siemens Gas Cooktops.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div class="silde_video_kanzo_item">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 320px;object-fit: cover;">
+                            </div>
+                            <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 320px;object-fit: cover;" controls>
                                   <source src="video/Xiaomi DCL01CM Precise Control Induction Cooker Review - very advanced.mp4" type="video/mp4">
                                 </video>
+                            </div>
+                            <div class="silde_video_kanzo_item">
+                                <img src="images/slide1.jpg" alt="" style="width: 100%;height:320px;object-fit: cover;">
                             </div>
                             <div class="silde_video_kanzo_item">
                                 <video style="width: 100%;height: 320px;object-fit: cover;" controls>
@@ -326,8 +360,10 @@ Trang chủ
         loop:true,
         margin:10,
         nav:false,
+        autoplay:true,
         responsiveClass:true,
         smartSpeed:450,
+        autoplayHoverPause:true,
         dots:false,
         responsive:{
             0:{
@@ -345,6 +381,8 @@ Trang chủ
         loop:true,
         margin:10,
         nav:false,
+        autoplay:true,
+        autoplayHoverPause:true,
         responsiveClass:true,
         smartSpeed:450,
         dots:false,

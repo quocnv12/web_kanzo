@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanzo- @yield('title')</title>
     <link rel="shortcut icon" type="image/x-icon" href="" />
+    <link rel="shortcut icon" type="images/logo_kazo.png" href="images/logo_kazo.png"/>
     <base href="{{asset('')}}">
+
     <!-- CSS libs -->
     <link rel="stylesheet" type="text/css" href="css/reset-browser.css">
     <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.0.0/dist/css/bootstrap.min.css">

@@ -4,7 +4,7 @@
 	<a href="tel:+84123456789" class="pps-btn-img" title="Liên hệ">
 	 <div class="phonering-alo-ph-img-circle"></div>
 	 </a>
-	</div>
+</div>
 <footer>
 	<div class="container">
 		<div class="row" style="padding-bottom: 50px;">
@@ -45,6 +45,6 @@
 	</div>
 </footer>
 <div class="copyright">
-	<p>Copyright © 2017 All rights reserved. Công ty cổ phần Điện tử Kanzo Việt Nam | Thiết kế bởi web88.vn</p>
+	<p>Copyright © 2019 All rights reserved. Công ty cổ phần Điện tử Kanzo Việt Nam | Thiết kế bởi web88.vn</p>
 </div>
 

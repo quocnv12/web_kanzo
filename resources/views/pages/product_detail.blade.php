@@ -36,26 +36,13 @@ Chi tiết sản phẩm
             <div class="col-md-6">
                     <div class="contailer">
                             <div class="mySlides"yy>
-                              <img src="images/ok.jpg" style="width:530px;height: 330px">
-                            </div>
-                            <div class="mySlides">
-                              <img src="images/bt1.jpg" style="width:530px;height: 330px">
-                            </div>
-                            <div class="mySlides">
-                              <img src="images/1.jpg" style="width:530px;height: 330px">
-                            </div>
-                              
-                            <div class="mySlides">
-                              <img src="images/ok.jpg" style="width:530px;height: 330px" >
-                            </div>
-                            <div class="mySlides">
-                              <img src="images/bt1.jpg" style="width:530px;height: 330px" >
+                              <img src="images/{{$product_detail->image}}" style="width:530px;height: 330px">
                             </div>
                             <div class="roww">
                               <div class="column">
-                                <img class="demo cursor" src="images/ok.jpg" style="width:100%;width: 90px;height: 90px" onclick="currentSlide(1)" alt="The Woods">
+                                <img class="demo cursor" src="images/{{$product_detail->image}}" style="width:100%;width: 90px;height: 90px" onclick="currentSlide(1)" alt="The Woods">
                               </div>
-                              <div class="column">
+                              <!-- <div class="column">
                                 <img class="demo cursor" src="images/bt1.jpg" style="width:100%;width: 90px;height: 90px" onclick="currentSlide(2)" alt="Cinque Terre">
                               </div>
                               <div class="column">
@@ -66,33 +53,25 @@ Chi tiết sản phẩm
                               </div>
                               <div class="column">
                                 <img class="demo cursor" src="images/bt1.jpg" style="width:100%;width: 90px;height: 90px" onclick="currentSlide(5)" alt="Nature and sunrise">
-                              </div>
+                              </div> -->
                             </div>
                           </div>
             </div>
             <div class="col-md-6">
-              <h5 class="row name-fruid">KZ-ECO-6666-GAS Japan Technology</h6>
+              <h5 class="row name-fruid">{{$product_detail->name}}</h6>
      
               <div class="row sale">
-                  <h4 class="price">3900000</h4>
+                  <h4 class="price">{{number_format($product_detail->price)}}</h4>
               </div>
               <p class="row attribute">
-               <h4>* Tính năng sản phẩm</h4>
-               <ul>
-                   <li>Mâm chia lửa bằng đồng</li>
-                  <li>Chế độ tiết kiệm gas</li>
-                   <li>Mặt kính cường lực, chịu nhiệt, dày 8mm</li>
-                   <li>Cảm biến an toàn tự động khóa gas</li>
-                   <li>Khay Inox 304, bát, pép chia lửa bằng đồng</li>
-                   <li>Hệ thống đánh lửa I/C (pin)</li>
-                   <li>Họng bếp đồng chống kết dính khi sử dụng</li>
-                 </ul>
-              <h4>* Thông số kĩ thuật</h4>
-              <ul>
-                   <li>Kích thước mặt kính : 750x430mm</li>
-                   <li>Kích thước khoét đá: 650x350mm</li>
-                   <li>Công suất : 3.0 KW + 3.0 KW</li>
-                 </ul>
+                <h4>* Tính năng sản phẩm</h4>
+                <div class="text_description_product" style="font-size: 1em; font-weight: normal; font-family:arial;">
+                   {!!$product_detail->information!!}
+                </div>
+                <h4>* Thông số kĩ thuật</h4>
+                <div style="font-size: 1em; font-weight: normal; font-family:arial;">
+                  {!!$product_detail->thongso!!}
+                </div>
               </p>
               <div class="row add-to-cart">
                 <button class="btn add-cart" type="button">Xem điểm bán</button>
@@ -119,35 +98,18 @@ Chi tiết sản phẩm
             <button class="tablinks" onclick="openCity(event, 'Tokyo')" style="border: none;outline: none;">Hướng dẫn sử dụng</button>
           </div>
           
-          <div id="London" class="tabcontent" style="display:block;">
+          <div id="London" class="tabcontent"  style="font-size: 1em; font-weight: normal; font-family:arial;display:block;">
             
-            <ul style="margin: 2rem 0rem 1rem 0rem;">
-              <li><i class="fa fa-check" aria-hidden="true" style="color:#c18d28;margin-right: 5px"></i>Mâm chia lửa bằng đồng</li>
-              <li><i class="fa fa-check" aria-hidden="true" style="color:#c18d28;margin-right: 5px"></i>Chế độ tiết kiệm gas</li>
-              <li><i class="fa fa-check" aria-hidden="true" style="color:#c18d28;margin-right: 5px"></i>Mặt kính cường lực, chịu nhiệt, dày 8mm</li>
-              <li><i class="fa fa-check" aria-hidden="true" style="color:#c18d28;margin-right: 5px"></i>Khay Inox 304, bát, pép chia lửa bằng đồng</li>
-              <li><i class="fa fa-check" aria-hidden="true" style="color:#c18d28;margin-right: 5px"></i>Hệ thống đánh lửa I/C (pin)</li>
-              <li><i class="fa fa-check" aria-hidden="true" style="color:#c18d28;margin-right: 5px"></i>Hệ thống đánh lửa I/C (pin)</li>
-              <li><i class="fa fa-check" aria-hidden="true" style="color:#c18d28;margin-right: 5px"></i>Họng bếp đồng chống kết dính khi sử dụng</li>
-            </ul>
+            {!!$product_detail->information!!}
           </div>
           
-          <div id="Paris" class="tabcontent">
+          <div id="Paris" class="tabcontent" style="font-size: 1em; font-weight: normal; font-family:arial;">
             
-            <ul style="margin: 2rem 0rem 1rem 0rem;">
-              <li><i class="fa fa-check" aria-hidden="true" style="color:#c18d28;margin-right: 5px"></i>Kích thước mặt kính : 750x430mm</li>
-              <li><i class="fa fa-check" aria-hidden="true" style="color:#c18d28;margin-right: 5px"></i>Kích thước khoét đá: 650x350mm</li>
-              <li><i class="fa fa-check" aria-hidden="true" style="color:#c18d28;margin-right: 5px"></i>Công suất : 3.0 KW + 3.0 KW</li>
-              
-            </ul>
+            {!!$product_detail->thongso!!}
           </div>
           
-          <div id="Tokyo" class="tabcontent">
-            <p>Khi lắp đặt bếp gas, cần để bếp cách xa tường tối thiểu 15 cm, nếu phía trên bếp gas có kệ, thì nên đặt kệ cách xa bếp gas ít nhất 1 mét. Nên đặt bếp gas trên một kệ cố định, và kệ này cách mặt đất tối thiểu 1 mét. Việc này giúp cho không gian xung quanh bếp gas thông thoáng hơn, tránh cháy nổ.<br/>
-
-Bên cạnh đó, nên đặt bếp gas ở nơi thoáng mát, nhưng không nên đặt bếp gas ở nơi có gió lùa (cửa sổ, gần quạt máy…) để tránh lửa bị tắt, hao phí gas.<br/>
-
-Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, nên để ý đường dây để tránh dây bị xoắn, làm gas không lên đều.</p>
+          <div id="Tokyo" class="tabcontent" style="font-size: 1em; font-weight: normal; font-family:arial;">
+            {!!$product_detail->huongdan!!}
           </div>
         </div>
     </div>
@@ -158,62 +120,25 @@ Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, 
     <h1>SẢN PHẨM LIÊN QUAN</h1>
     <p>Có 4 sản phẩm liên quan</p>
     <div class="row">
-    <div class="col-md-3">
-      <div class="product">
-            <a href="{{route('product_detail')}}">
-              <img class="image-product" src="images/bt1.jpg" alt="">
+    @foreach($related_products as $item)
+      <div class="col-md-3">
+        <div class="product">
+              <a href="{{route('product_detail', $item->slug)}}" style="">
+                <div style="width:100%; height: auto;display: flex; min-height: 200px; justify-content: center;align-items: center;">
+                  <img class="image-product" src="images/{{$item->image}}" style="width:100%;height: auto; outline: none;max-width: 100%;border: none;max-height: 100%;" alt="">
+                </div>
+                
 
-              <div class="name-product">
-                Bếp từ maboshi 2 mặt
-              </div>
-              <div class="hh">
-                129.000
-              </div>
-            </a>
-            </div>
-    </div> 
-    <div class="col-md-3 ">
-      <div class="product">
-            <a href="{{route('product_detail')}}">
-              <img class="image-product" src="images/bt1.jpg" alt="">
-
-              <div class="name-product">
-                Bếp từ maboshi 2 mặt
-              </div>
-              <div class="hh">
-                129.000
-              </div>
-            </a>
-            </div>
-    </div> 
-    <div class="col-md-3 ">
-      <div class="product">
-            <a href="{{route('product_detail')}}">
-              <img class="image-product" src="images/bt1.jpg" alt="">
-
-              <div class="name-product">
-                Bếp từ maboshi 2 mặt
-              </div>
-              <div class="hh">
-                129.000
-              </div>
-            </a>
-            </div>
-    </div> 
-    <div class="col-md-3 ">
-      <div class="product">
-            <a href="{{route('product_detail')}}">
-              <img class="image-product" src="images/bt1.jpg" alt="">
-
-              <div class="name-product">
-                Bếp từ maboshi 2 mặt
-              </div>
-              <div class="hh">
-                129.000
-              </div>
-            </a>
-            </div>
-    </div> 
+                <div class="name-product" style="width:100%; height: auto;display: flex; min-height: 100px; justify-content: center;align-items: center;">
+                  {{$item->name}}
+                </div>
+                <div class="hh">
+                  {{number_format($item->price)}}
+                </div>
+              </a>
+        </div>
+      </div> 
+    @endforeach
     </div>
   </center>
 </section>
@@ -222,62 +147,23 @@ Dây dẫn gas luôn được nối chắc chắn, khít, để tránh xì gas, 
     <h1>SẢN PHẨM XEM NHIỀU NHẤT</h1>
     <p>Có 4 sản phẩm xem nhiều</p>
     <div class="row">
+    @foreach($bestview_products as $item)
       <div class="col-md-3">
         <div class="product">
-              <a href="{{route('product_detail')}}">
-                <img class="image-product" src="images/bt1.jpg" alt="">
+            <a href="{{route('product_detail', $item->slug)}}" >
+              <div style="width:100%; height: auto;display: flex; min-height: 200px; justify-content: center;align-items: center;"><img class="image-product" src="images/{{$item->image}}" style="width:100%;height: auto; outline: none;max-width: 100%;border: none;max-height: 100%;" alt=""></div>
+                
 
-                <div class="name-product">
-                  Bếp từ maboshi 2 mặt
+                <div class="name-product" style="width:100%; height: auto;display: flex; min-height: 100px; justify-content: center;align-items: center;">
+                  {{$item->name}}
                 </div>
                 <div class="hh">
-                  129.000
+                  {{number_format($item->price)}}
                 </div>
-              </a>
-              </div>
+            </a>
+        </div>
       </div> 
-      <div class="col-md-3 ">
-        <div class="product">
-              <a href="{{route('product_detail')}}">
-                <img class="image-product" src="images/bt1.jpg" alt="">
-
-                <div class="name-product">
-                  Bếp từ maboshi 2 mặt
-                </div>
-                <div class="hh">
-                  129.000
-                </div>
-              </a>
-              </div>
-      </div> 
-      <div class="col-md-3 ">
-        <div class="product">
-              <a href="{{route('product_detail')}}">
-                <img class="image-product" src="images/bt1.jpg" alt="">
-
-                <div class="name-product">
-                  Bếp từ maboshi 2 mặt
-                </div>
-                <div class="hh">
-                  129.000
-                </div>
-              </a>
-              </div>
-      </div> 
-      <div class="col-md-3 ">
-        <div class="product">
-              <a href="{{route('product_detail')}}">
-                <img class="image-product" src="images/bt1.jpg" alt="">
-
-                <div class="name-product">
-                  Bếp từ maboshi 2 mặt
-                </div>
-                <div class="hh">
-                  129.000
-                </div>
-              </a>
-              </div>
-      </div> 
+    @endforeach 
     </div>
   </center>
 </section>
