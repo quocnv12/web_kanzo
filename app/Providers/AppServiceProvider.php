@@ -29,7 +29,6 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('*',function($view){
             $view->with([
-                //gioi thieu
                 'introducegl' => introduce::all(),
                 'polyciesgl' => polycies::all(),
                 'categorygl' => category::all(),

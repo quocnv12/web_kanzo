@@ -1,5 +1,5 @@
 @extends('admins.layout.master')
-@section('news','active')
+@section('promotion','active')
 @section('title','Thêm')
 @section('content')
 <div>
@@ -22,10 +22,19 @@
                     <div class="col-md-8">
                         <div class="form-group">
                             <label>Tiêu đề</label>
-                            <input type="text" name="name" id="name" class="form-control" value="{{old('name')}}">
+                            <input type="text" name="name" id="name" class="form-control" value="{{$promotion->name}}">
                             @if($errors->has('name'))
                                 <div class="alert alert-danger">
                                     {{$errors->first('name')}}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>Tóm tắt nội dung</label>
+                            <input type="text" name="summary" id="summary" class="form-control" value="{{$promotion->summary}}">
+                            @if($errors->has('summary'))
+                                <div class="alert alert-danger">
+                                    {{$errors->first('summary')}}
                                 </div>
                             @endif
                         </div>
@@ -33,9 +42,9 @@
                         <div class="form-group">
                             <label>Trạng thái</label>
                             <div class="">
-                                <input id="checkbox1" type="radio" value="1" name="active" checked>
+                                <input id="checkbox1" type="radio" value="1" name="active" <?php echo $promotion->active == 1 ? 'checked':'';     ?>>
                                 Hiện
-                                <input id="checkbox2" type="radio" value="0" name="active">
+                                <input id="checkbox2" type="radio" value="0" name="active" <?php echo $promotion->active == 0 ? 'checked':''; ?>>
                                 Ẩn
                             </div>
                             @if($errors->has('active'))
@@ -47,11 +56,11 @@
                         <div class="form-group">
                             <div class="form-group">
                                 <label class="form-label">Nội dung</label>
-                                <textarea name="content" id="content">{{old('content')}}</textarea>
+                                <textarea name="promotion_content" id="content">{{$promotion->content}}</textarea>
                             </div>
-                            @if($errors->has('content'))
+                            @if($errors->has('promotion_content'))
                                 <div class="alert alert-danger">
-                                    {{$errors->first('content')}}
+                                    {{$errors->first('promotion_content')}}
                                 </div>
                             @endif
                         </div>
@@ -62,7 +71,7 @@
                             <label>Ảnh sản phẩm</label>
                             <input id="img" type="file" name="image" value="" class="form-control hidden"
                                    onchange="changeImg(this)">
-                            <img id="avatar" class="thumbnail" width="100%" height="400px" style="height: 400px;object-fit: contain" src="images/import-img.png">
+                            <img id="avatar" class="thumbnail" width="100%" height="400px" style="height: 400px;object-fit: contain" src="assets/images_promotion/{{ $promotion->image }}">
                             @if ($errors->has('image'))
                                 <div class="alert alert-danger">
                                     {{ $errors->first('image') }}
@@ -74,7 +83,7 @@
                     <div class="form-actions">
                             <div class="pull-right">
                                 <button type="submit" class="btn btn-danger btn-cons"><i class="icon-ok"></i> Lưu</button>
-                                <a href="{{route('news.list')}}">
+                                <a href="{{route('promotion.list')}}">
                                     <button type="button" class="btn btn-white btn-cons"> Trở lại</button>
                                 </a>
                                 

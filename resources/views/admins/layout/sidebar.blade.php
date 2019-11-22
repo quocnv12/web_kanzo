@@ -38,6 +38,18 @@
                                 class=" label label-info pull-right m-r-30">NEW</span></a></li> -->
                 </ul>
             </li>
+            {{-- khuyen mai --}}
+            <li class="start  open  @yield('promotion') "> <a href="{{route('promotion.list')}}"><i
+                        class="material-icons">book</i> <span class="title"> Khuyến mại</span> <span
+                        class="selected"></span> <span class="arrow  open "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('promotion.add')}}"> Thêm khuyến mại </a> </li>
+                    <li> <a href="{{route('promotion.list')}}"> Danh sách</a> </li>
+                    <!-- <li class=""> <a href="index.html "> Dashboard v2 <span
+                                class=" label label-info pull-right m-r-30">NEW</span></a></li> -->
+                </ul>
+            </li>
             {{-- Chính sách --}}
             <li class="start  open  @yield('polycies') "> <a href="{{route('polycies.list')}}"><i
                         class="material-icons">library_books</i> <span class="title">Chính sách</span> <span
@@ -71,8 +83,8 @@
                 </ul>
             </li>
 
-
-            <li class="start  open  @yield('popup') "> <a href="{{route('popup.list')}}"><i class="material-icons">contacts</i> <span
+            {{-- pop-up --}}
+            <li class="start  open  @yield('popup') "> <a href="{{route('popup.list')}}"><i class="material-icons">add_box</i> <span
                         class="title">Pop-up</span> <span class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
@@ -95,7 +107,7 @@
 
             {{-- tin tức --}}
             <li class="start  open  @yield('news') "> <a href="admin/news"><i
-                class="material-icons">contacts</i> <span class="title">Tin tức</span> <span
+                class="material-icons">library_books</i> <span class="title">Tin tức</span> <span
                 class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
