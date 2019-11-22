@@ -45,8 +45,7 @@ Chính sách
         <div class="tab-pane fade pl-4 show active" id="v-pills-settings-1" role="tabpanel" aria-labelledby="v-pills-home-tab-1">
           <h4 class="mt-3 text-gioithieu"  >{{$detail->title}}</h4>
           <hr>
-          <span>{{$detail->content}}</span>
-           <img src="images/2.png" style="width: 100%;">
+          <span>{!! $detail->content !!}</span>
         </div>
     </div>
 
