@@ -50,7 +50,6 @@ Danh mục Sản phẩm
                                 <a style="color: inherit;text-decoration: none;color: #505050;" href="{{route('new_detail', $item->slug)}}"><span>{{$item->name}}</span></a>
                             </div>
                         </div>
-
                     </li>
                     @endforeach
                 </ul>
