@@ -1,10 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
-class news1 extends Seeder
+class promotion extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,9 +11,8 @@ class news1 extends Seeder
      */
     public function run()
     {
-
-        DB::table('news')->delete();
-        DB::table('news')->insert([
+        DB::table('promotion')->delete();
+        DB::table('promotion')->insert([
             [
                 'summary'=>'Đun nấu xong nhớ bỏ 3s làm việc này, vừa tiết kiệm 50% ga lại an toàn, chống cháy nổ',
                 'name'=>'Bếp ga Paloma PA-6MEJ siêu thị điện máy hc siêu thị hc,bếp ga nổi PALOMA PAJS25B',

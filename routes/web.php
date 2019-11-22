@@ -130,6 +130,15 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::post('edit/{id}', 'NewsController@post_edit')->name('news.edit');
         Route::get('delete/{id}', 'NewsController@del')->name('news.del');
     });
+    //-------------------khuyen mai
+    Route::group(['prefix' => 'promotion'], function(){
+        Route::get('','PromotionController@list')->name('promotion.list');
+        Route::get('add','PromotionController@add')->name('promotion.add');
+        Route::post('add','PromotionController@post_add')->name('promotion.add');
+        Route::get('edit/{id}','PromotionController@edit')->name('promotion.edit');
+        Route::post('edit/{id}','PromotionController@post_edit')->name('promotion.edit');
+        Route::get('delete/{id}','PromotionController@del')->name('promotion.del');
+    });
 
     // -------------tài khoản
     Route::group(['prefix' => 'account'],function(){
