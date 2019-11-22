@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanzo- @yield('title')</title>
+    <base href="{{asset('')}}">
     <link rel="shortcut icon" type="image/x-icon" href="" />
     <link rel="shortcut icon" type="images/logo_kazo.png" href="images/logo_kazo.png"/>
-    <base href="{{asset('')}}">
-
+    <!-- Tags meta share news-detail -->
+    @yield('share_link')
+    <!--ENd Tags meta share news-detail -->
     <!-- CSS libs -->
     <link rel="stylesheet" type="text/css" href="css/reset-browser.css">
     <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.0.0/dist/css/bootstrap.min.css">
@@ -21,6 +23,13 @@
     <link rel="stylesheet" href="csss/home.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/all.css">
+
+    <!-- BEGIN SHAREAHOLIC CODE -->
+    <link rel="preload" href="https://cdn.shareaholic.net/assets/pub/shareaholic.js" as="script" />
+    <meta name="shareaholic:site_id" content="85831b90926d449de5392b3d8047eb5c" />
+    <script data-cfasync="false" async src="https://cdn.shareaholic.net/assets/pub/shareaholic.js"></script>
+    <!-- END SHAREAHOLIC CODE -->
+
     <!-- CSS libs -->
     @yield('css')
     <!-- JS libs -->
