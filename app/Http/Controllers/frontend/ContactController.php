@@ -4,13 +4,14 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Request\ContactRequests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\models\sent_us;
+use App\models\{sent_us,contact};
 use Mail;
 
 class ContactController extends Controller
 {
     function GetContact()
     {
+       // $data['contact']=contact::first();
         return view('pages.contact');
     }
     function PostContact(request $request)

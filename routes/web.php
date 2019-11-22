@@ -19,6 +19,12 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
     Route::get('gioi-thieu/{slug}','IntroduceController@index')->name('intro');
     //-----------------chinh sach
     Route::get('chinh-sach/{slug}','PolyciesController@index')->name('polycies');
+    //--------------Khuyến mại
+    Route::group(['prefix' => 'khuyen-mai'], function () {
+        Route::get('','PromotionController@GetPromotion');
+        Route::get('{slug}','PromotionController@GetDetail');
+    });
+   
     //-----------------Cau hoi thuong gap
     Route::get('cau-hoi/{slug}','QuestionController@index')->name('question');
     //product
@@ -29,13 +35,18 @@ Route::group(['prefix' => '','namespace' => 'frontend'],function(){
     Route::get('/product_detail/{slug}', 'ProductController@getProductDetail'
     )->name('product_detail');
     //new
-    Route::get('/new', function () {
-        return view('pages.new');
-    })->name('new');
 
-    Route::get('/new_detail', function () {
-        return view('pages.new_detail');
-    })->name('new_detail');
+    Route::group(['prefix' => 'tin-tuc'], function () {
+        Route::get('','TintucController@Getnew')->name('new');
+        Route::get('{slug}','TintucController@GetDetail')->name('new_detail');
+    });
+    // Route::get('/new', function () {
+    //     return view('pages.new');
+    // })->name('new');
+
+    // Route::get('/new_detail', function () {
+    //     return view('pages.new_detail');
+    // })->name('new_detail');
 
     
     Route::get('/policy_detail', function () {
@@ -147,6 +158,9 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}','IntrogeneralController@edit')->name('intro.edit');
         Route::post('edit/{id}','IntrogeneralController@post_edit')->name('intro.edit');
     });
+
+
+
 
     //-----------------Chinh sach
     Route::group(['prefix' => 'polycies'],function(){

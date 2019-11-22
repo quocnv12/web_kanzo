@@ -60,6 +60,19 @@
                     <li> <a href="{{route('question.list')}}"> Danh sách </a> </li>
                 </ul>
             </li>
+
+            {{--  khuyến mại  --}}
+            <li class="start  open  @yield('promotion') "> <a href="admin/promotion"><i
+                class="material-icons">question_answer</i> <span class="title">Khuyến mại</span> <span
+                class="selected"></span> <span class="arrow  open "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li> <a href="admin/promotion/add"> Thêm mới</a> </li>
+                    <li> <a href="admin/promotion"> Danh sách </a> </li>
+                </ul>
+            </li>
+
+
             {{-- Đơn hàng --}}
             <li class="start  open  @yield('sentus') "> <a href="{{route('sentus.list')}}"><i
                         class="material-icons">shopping_cart</i> <span class="title">Đơn hàng</span> <span

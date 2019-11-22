@@ -14,7 +14,8 @@ class contact extends Seeder
         DB::table('contact')->delete();
         DB::table('contact')->insert([
 	       
-	        	'id'=>1,
+                'id'=>1,
+                'name'=>'Công ty cổ phần điện tử Kanzo Việt Nam',
 	        	'address'=>'Số 8, Biệt thự 10, Khu đô thị Vân Canh, Huyện Hoài Đức, Tp.Hà Nội',
 	        	'phone'=>'02432333311',
                 'phone2'=>'02432333311',

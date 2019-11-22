@@ -35,26 +35,26 @@ Liên hệ
         <div class="col-sm-3 text-center ">
             <a href=""><i class="fas fa-2x fa-map-marker-alt mb-3 "></i></a>
             <h3>Trụ sở chính</h3>
-            <p>Số 8 biệt thự 10,khu đô thị Vân Canh,Xã Vân Canh,huyện Hoài Đức thành phố Hà Nội</p>
+            <p>{{ $contact->address }}</p>
 
         </div>
         <div class="col-sm-3 text-center">
             <a href=""><i class="fas fa-2x fa-phone mb-3"></i></a>
             <h3>Liên hệ online</h3>
-            <p>0243.233.3311</p>
+            <p>{{ $contact->phone }}</p>
 
 
         </div>
         <div class="col-sm-3 text-center">
             <a href=""><i class="fas fa-2x fa-fax  mb-3"></i></a>
             <h3>Số fax</h3>
-            <p>0243.233.3311</p>
+            <p>{{ $contact->fax }} </p>
 
         </div>
         <div class="col-sm-3 text-center">
             <a href=""><i class="fas fa-2x fa-envelope mb-3"></i></a>
             <h3>Email</h3>
-            <p>Kanzo.anhtuan@gmail.com</p>
+            <p>{{ $contact->email }}</p>
 
         </div>
     </div>

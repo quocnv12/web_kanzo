@@ -24,5 +24,6 @@ class DatabaseSeeder extends Seeder
         $this->call(agency::class);
         $this->call(banner_polycies::class);
         $this->call(popup::class);
+        $this->call(promotion::class);
     }
 }

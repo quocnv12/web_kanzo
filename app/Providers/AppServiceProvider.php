@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 use App\models\introduce;
 use App\models\polycies;
-use App\models\category;
+use App\models\{category,contact};
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -33,6 +33,7 @@ class AppServiceProvider extends ServiceProvider
                 'introducegl' => introduce::all(),
                 'polyciesgl' => polycies::all(),
                 'categorygl' => category::all(),
+                'contact' => contact::first(),
                 
             ]);
         });
