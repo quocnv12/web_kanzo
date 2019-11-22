@@ -113,6 +113,8 @@
                 CKEDITOR.replace('content1');
                 CKEDITOR.replace('content2');
                 CKEDITOR.replace('content3');
+                CKEDITOR.replace('content4');
+                CKEDITOR.replace('content5');
                 CKEDITOR.replace('introduce_content');
                 CKEDITOR.replace('intro_content');
                 CKEDITOR.replace('polycies_content');

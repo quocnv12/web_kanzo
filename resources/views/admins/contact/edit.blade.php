@@ -20,6 +20,13 @@
                 <form action="" method="POST" role="form">
                  @csrf
                     <div class="col-md-6">
+                            <div class="form-group">
+                                    <label>Tên công ty</label>
+                                    <input type="text" name="name" id="" class="form-control" value="{{$contact->name}}">
+                                    @if($errors->has('address'))
+                                        <div class="alert alert-danger">{{$errors->first('name')}}</div>
+                                    @endif
+                                </div>
                         <div class="form-group">
                             <label>Địa chỉ</label>
                             <input type="text" name="address" id="address" class="form-control" value="{{$contact->address}}">
