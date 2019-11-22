@@ -13,7 +13,7 @@ class CreatePromotionTable extends Migration
      */
     public function up()
     {
-        Schema::create('promotion', function (Blueprint $table) {
+        Schema::create('promotion1', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('slug');
