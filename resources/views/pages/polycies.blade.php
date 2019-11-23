@@ -46,7 +46,7 @@ Chính sách
           <h4 class="mt-3 text-gioithieu"  >{{$detail->title}}</h4>
           <hr>
           <span>{{$detail->content}}</span>
-           <img src="images/2.png" style="width: 100%;">
+           
         </div>
     </div>
 

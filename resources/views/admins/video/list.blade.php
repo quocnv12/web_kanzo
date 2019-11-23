@@ -1,6 +1,6 @@
 @extends('admins.layout.master')
 @section('title','Danh sách')
-@section('introduce','active')
+@section('video','active')
 @section('content')
 <div>
     <ul class="breadcrumb">
@@ -18,18 +18,26 @@
                     <thead>
                         <tr>
                             <th>STT</th>
-                            <th>Banner</th>
+                            <th >Ảnh & Video</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($banner as $row)
+                        @foreach($video as $row)
                         <tr class="odd gradeX">
                             <td class="center">{{$loop->index+1}}</td>
                             <td>{{$row->title}}</td>
-                            <td><img src="images/{{ $row->image }}" style="height: 300px"></td>
+                            <td class="col-md-5">
+                                @if(empty($row->image))
+                                    <video style="width: 70%;height: 300px ;object-fit: cover;" controls>
+                                        <source src="video/{{$row->video}}" type="video/mp4">
+                                    </video>
+                                @else
+                                    <img src="images/{{ $row->image }}" style="height: 300px">
+                                @endif
+                            </td>
                             <td>
-                                <a href="{{route('introduce.banner_edit',['id'=>$row->id])}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
+                                <a href="{{route('video.edit',['id'=>$row->id])}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
                         @endforeach

@@ -18,7 +18,8 @@ Tìm kiếm
 <div class="container ">
     <div class="row mt-5">
         <div class="col-md-9 mb-3" data-aos="fade-up" data-aos-delay="300">
-            Có {{ count($product) }} được tìm thấy :
+			Có {{ count($product) }} sản phẩm được tìm thấy :
+			<p></p>
             <div class="row">
 					@foreach($product as $row)
 					<div class="col-md-3">

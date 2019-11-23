@@ -230,7 +230,7 @@ Trang chủ
                         <div class="cau_hoi_thuong_gap_home_box">
                             @foreach($question as $row)
                             <div class="cau_hoi_thuong_gap_home_box_item">
-                                <a href="{{route('new_detail')}}">
+                                <a href="{{route('question',['slug'=>$row->slug])}}">
                                     <img src="images/{{$row->image}}" class="img-fluid" alt="">
                                     <span>{!!$row->title!!}</span>
                                     <b><i class="fas fa-history"></i>{{date('d-m-Y',strtotime($row->created_at))}}</b>
@@ -244,14 +244,14 @@ Trang chủ
                         </div>
                         <div class="cau_hoi_thuong_gap_home_box">
                             <div class="cau_hoi_thuong_gap_home_box_item">
-                                <a href="{{route('new_detail')}}">
+                                <a href="">
                                     <img src="images/2.jpg" class="img-fluid" alt="">
                                     <span>Những câu hỏi thường gặp về máy xay sinh tố Kanzo.</span>
                                     <b><i class="fas fa-history"></i>20/11/2019</b>
                                 </a>
                             </div>
                             <div class="cau_hoi_thuong_gap_home_box_item">
-                                <a href="{{route('new_detail')}}">
+                                <a href="">
                                     <img src="images/2.jpg" class="img-fluid" alt="">
                                     <span>Những câu hỏi thường gặp về máy xay sinh tố Kanzo.</span>
                                     <b><i class="fas fa-history"></i>20/11/2019</b>

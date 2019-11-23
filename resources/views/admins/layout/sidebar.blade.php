@@ -38,18 +38,7 @@
                                 class=" label label-info pull-right m-r-30">NEW</span></a></li> -->
                 </ul>
             </li>
-            {{-- khuyen mai --}}
-            <li class="start  open  @yield('promotion') "> <a href="{{route('promotion.list')}}"><i
-                        class="material-icons">book</i> <span class="title"> Khuyến mại</span> <span
-                        class="selected"></span> <span class="arrow  open "></span>
-                </a>
-                <ul class="sub-menu">
-                    <li> <a href="{{route('promotion.add')}}"> Thêm khuyến mại </a> </li>
-                    <li> <a href="{{route('promotion.list')}}"> Danh sách</a> </li>
-                    <!-- <li class=""> <a href="index.html "> Dashboard v2 <span
-                                class=" label label-info pull-right m-r-30">NEW</span></a></li> -->
-                </ul>
-            </li>
+            
             {{-- Chính sách --}}
             <li class="start  open  @yield('polycies') "> <a href="{{route('polycies.list')}}"><i
                         class="material-icons">library_books</i> <span class="title">Chính sách</span> <span
@@ -73,14 +62,16 @@
                 </ul>
             </li>
 
-            {{--  khuyến mại  --}}
-            <li class="start  open  @yield('promotion') "> <a href="admin/promotion"><i
-                class="material-icons">question_answer</i> <span class="title">Khuyến mại</span> <span
-                class="selected"></span> <span class="arrow  open "></span>
+            {{-- khuyen mai --}}
+            <li class="start  open  @yield('promotion') "> <a href="{{route('promotion.list')}}"><i
+                        class="material-icons">book</i> <span class="title"> Khuyến mại</span> <span
+                        class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
-                    <li> <a href="admin/promotion/add"> Thêm mới</a> </li>
-                    <li> <a href="admin/promotion"> Danh sách </a> </li>
+                    <li> <a href="{{route('promotion.add')}}"> Thêm khuyến mại </a> </li>
+                    <li> <a href="{{route('promotion.list')}}"> Danh sách</a> </li>
+                    <!-- <li class=""> <a href="index.html "> Dashboard v2 <span
+                                class=" label label-info pull-right m-r-30">NEW</span></a></li> -->
                 </ul>
             </li>
 
@@ -136,6 +127,19 @@
                 <ul class="sub-menu">
                     <li> <a href="{{route('category.list')}}"> Danh mục </a> </li>
                     <li> <a href="{{route('product.list')}}"> Danh sách sản phẩm </a> </li>
+                </ul>
+            </li>
+            
+            {{-- anh va video --}}
+            <li class="start  open  @yield('video') "> <a href="{{route('video.list')}}"><i
+                        class="material-icons">book</i> <span class="title"> Ảnh & Video</span> <span
+                        class="selected"></span> <span class="arrow  open "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li> <a href="{{route('video.add')}}"> Thêm ảnh </a> </li>
+                    <li> <a href="{{route('video.list')}}"> Danh sách</a> </li>
+                    <!-- <li class=""> <a href="index.html "> Dashboard v2 <span
+                                class=" label label-info pull-right m-r-30">NEW</span></a></li> -->
                 </ul>
             </li>
 

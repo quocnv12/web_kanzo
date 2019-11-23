@@ -58,7 +58,7 @@ Khuyến mại
                                     <!-- Blog Content -->
                                     <div class="col-md-8 blog-content">
                                         <a href="khuyen-mai/{{ $item->slug }}" class="blog-headline">
-                                            <h5>{{ $item->title }}</h5>
+                                            <h5>{{ $item->name }}</h5>
                                         </a>
                                         <div class="meta d-flex align-items-center">
                                             {{ $item->created_at->format('d-m-Y') }}
