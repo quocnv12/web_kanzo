@@ -7,7 +7,7 @@
             <li>
                 <p>YOU ARE HERE</p>
             </li>
-            <li><a href="#" class="active">Thêm Video</a> </li>
+            <li><a href="#" class="active">Thêm Ảnh</a> </li>
         </ul>
         <hr>
   
@@ -17,7 +17,7 @@
         <div class="panel-body">
            
             <div class="row">
-                <form action="" method="POST" role="form">
+                <form action="" method="POST" role="form" enctype="multipart/form-data">
                  @csrf
                     <div class="col-md-4">
                         <div class="form-group">
@@ -28,14 +28,14 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label>Video</label>
-                            <input id="vdeo" type="file" name="video" value="" class="form-control hidden"
-                                onchange="changeVideo(this)">
-                                <video id="avatarVideo" class="thumbnail" style="width: 100%;height: 300px ;object-fit: cover;" controls>
-                                    <source src="video/{{$video->video}}" type="video/mp4">
-                                </video>
-                            @if($errors->has('video'))
-                                <div class="alert alert-danger">{{$errors->first('video')}}</div>
+                            <label>Ảnh sản phẩm</label>
+                            <input id="img" type="file" name="image" value="" class="form-control hidden"
+                                   onchange="changeImg(this)">
+                            <img id="avatar" class="thumbnail" width="100%" height="400px" style="height: 400px;object-fit: contain" src="images/import-img.png">
+                            @if ($errors->has('image'))
+                                <div class="alert alert-danger">
+                                    {{ $errors->first('image') }}
+                                </div>
                             @endif
                         </div>
                         

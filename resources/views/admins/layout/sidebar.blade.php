@@ -136,7 +136,8 @@
                         class="selected"></span> <span class="arrow  open "></span>
                 </a>
                 <ul class="sub-menu">
-                    <li> <a href="{{route('video.add')}}"> Thêm ảnh </a> </li>
+                    <li> <a href="{{route('video.add_image')}}"> Thêm Ảnh </a> </li>
+                    <li> <a href="{{route('video.add')}}"> Thêm Video </a> </li>
                     <li> <a href="{{route('video.list')}}"> Danh sách</a> </li>
                     <!-- <li class=""> <a href="index.html "> Dashboard v2 <span
                                 class=" label label-info pull-right m-r-30">NEW</span></a></li> -->
