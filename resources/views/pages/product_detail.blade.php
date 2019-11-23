@@ -31,11 +31,9 @@ Chi tiết sản phẩm
 <section>
   <div class="container-fruid">
    <div class="h-category-banner">
-  <h2 class="text-center" data-aos="fade-up" data-aos-delay="200" style="color: #fff;">CHI TIẾT SẢN PHẨM</h2>
-  <div class="h-category-banner-black">
-
-  </div>
-</div>
+    <h2 class="text-center" data-aos="fade-up" data-aos-delay="200" style="color: #fff;">CHI TIẾT SẢN PHẨM</h2>
+  
+    </div>
   </div>
 </section>
 <section>
@@ -43,7 +41,7 @@ Chi tiết sản phẩm
         <div class="row">
             <div class="col-md-6">
               <div class="contailer">
-                <div class="mySlides"yy>
+                <div class="mySlides">
                   <img src="images/{{$product_detail->image}}" style="width:530px;height: 330px">
                 </div>
                 <div class="roww">
@@ -57,7 +55,7 @@ Chi tiết sản phẩm
               <h5 class="row name-fruid">{{$product_detail->name}}</h6>
      
               <div class="row sale">
-                  <h4 class="price">{{number_format($product_detail->price)}}</h4>
+                  <h4 class="price">{{number_format($product_detail->price)}} vnđ</h4>
               </div>
               <p class="row attribute">
                 <h5>* Tính năng sản phẩm</h5>
