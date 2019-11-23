@@ -2,7 +2,7 @@
 namespace App\Http\Controllers\frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\models\product;
+use App\models\{product,news};
 use App\models\popup;
 use App\models\intro_general;
 use App\models\question;
@@ -20,5 +20,14 @@ class HomeController extends Controller
 		$data['intro_general'] = intro_general::first();
 		return view('pages.home',$data);
 	}
-    
+	
+	function Getsearch(request $request)
+	{
+		//$data['news']=news::where('name','like','%'.$request->tk.'%')->paginate(20);
+		$data['product']=product::where('name','like','%'.$request->tk.'%')->paginate(20);
+		//dd($data);
+		return view('pages.timkiem',$data);
+	}
+
+
 }

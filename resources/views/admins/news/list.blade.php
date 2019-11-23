@@ -12,6 +12,11 @@
     <div class="page-title">
         <a href="{{route('news.add')}}"><button class="btn btn-primary">Thêm mới</button></a>
     </div>
+    @if (session('thongbao'))
+    <div class="alert bg-success" role="alert">
+        {{ session('thongbao') }}<a href="admin/account" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+    </div>
+    @endif
 </div>
 <div class="row-fluid">
     <div class="span12">
@@ -20,13 +25,12 @@
                 <table class="table table-hover table-condensed" id="example">
                     <thead>
                         <tr>
-                            <th style="width:1%">STT
-                            </th>
-                            <th style="width:10%">Ảnh</th>
-                            <th style="width:12%">Tiêu Đề</th>
-                            <th style="width:38%" data-hide="phone,tablet">Nội dung</th>
-                            <th style="width:2%">T.Thái</th>
-                            <th style="width:6%" data-hide="phone,tablet"></th>
+                            <th>STT</th>
+                            <th class="col-md-2">Ảnh</th>
+                            <th>Tiêu Đề</th>
+                            <th >Nội dung</th>
+                            <th >T.Thái</th>
+                            <th>Thao tác</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,13 +39,13 @@
                             <td class="center">{{$row->id}}</td>
                             <td>
                                 @if($row->image)
-                                    <img src="assets/images_news/{{$row->image}}" alt="">
+                                    <img style="width:150px;" src="assets/images_news/{{$row->image}}" alt="">
                                 @else
                                     <img src="assets/images_news/default-image.jpg" alt="">
                                 @endif
                             </td>
                             <td>{{$row->name}}</td>
-                            <td>{!! $row->content !!}</td>
+                            <td >{!! $row->content !!}</td>
                             <td class="center">
                                 @if($row->active == 1)
                                     Hiện @else Ẩn

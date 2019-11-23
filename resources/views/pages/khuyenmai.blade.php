@@ -75,7 +75,7 @@ Khuyến mại
                                 @endforeach
                             </div>
                         </div>
-
+                    
 
                     </div>
                 </div>
@@ -90,8 +90,8 @@ Khuyến mại
                         style="background-color: #c18d28 ; color: white">TIN MỚI
                     </li>
                     @foreach ($news as $item)
-                        
-                    
+
+
                     <li class="list-group-item">
                         <div class="row naa">
                             <div class="col-md-4 " style="padding:0">
@@ -111,115 +111,22 @@ Khuyến mại
 
                     </li>
                     @endforeach
-                    {{--  <li class="list-group-item">
-                        <div class="row naa">
-                            <div class="col-md-4 " style="padding:0">
+                   
+        </ul>
+        <ul class="list-group mt-4 ">
+            <li class="list-group-item text-center font-weight-bold" style="background-color: #c18d28 ; color: white">
+                SẢN Phẩm Nổi bật
+            </li>
+            <li class="list-group-item">
+                <div class="row naa">
+                    <div class=" " style="padding:0">
 
-                                <a href="{{route('new_detail')}}">
-                                    <img src="images/3.jpg" style="width: 100%">
-                                </a>
-
-
-
-                            </div>
-                            <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
-                                <a style="color: inherit;text-decoration: none;color: #505050;"
-                                    href="{{route('new_detail')}}"><span>Bếp ga Paloma PA-6MEJ siêu thị điện máy hc siêu
-                                        thị hc</span></a>
-                            </div>
-                        </div>
-
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row naa">
-                            <div class="col-md-4 " style="padding:0">
-
-                                <a href="{{route('new_detail')}}">
-                                    <img src="images/6.jpg" style="width: 100%">
-                                </a>
-
-
-
-                            </div>
-                            <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
-                                <a style="color: inherit;text-decoration: none;color: #505050;" href=""><span>Bếp ga
-                                        Paloma PA-6MEJ siêu thị điện máy hc siêu thị hc</span></a>
-                            </div>
-                        </div>
-
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row naa">
-                            <div class="col-md-4 " style="padding:0">
-
-                                <a href="{{route('new_detail')}}">
-                                    <img src="images/5.jpg" style="width: 100%">
-                                </a>
-
-
-
-                            </div>
-                            <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
-                                <a style="color: inherit;text-decoration: none;color: #505050;"
-                                    href="{{route('new_detail')}}"><span>Bếp ga Paloma PA-6MEJ siêu thị điện máy hc siêu
-                                        thị hc</span></a>
-                            </div>
-                        </div>
-
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row naa">
-                            <div class="col-md-4 " style="padding:0">
-
-                                <a href="{{route('new_detail')}}">
-                                    <img src="images/2.jpg" style="width: 100%">
-                                </a>
-
-
-
-                            </div>
-                            <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
-                                <a style="color: inherit;text-decoration: none;color: #505050;"
-                                    href="{{route('new_detail')}}"><span>Bếp ga Paloma PA-6MEJ siêu thị điện máy hc siêu
-                                        thị hc</span></a>
-                            </div>
-                        </div>
-
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row naa">
-                            <div class="col-md-4 " style="padding:0">
-
-                                <a href="{{route('new_detail')}}">
-                                    <img src="images/4.jpg" style="width: 100%">
-                                </a>
-
-
-
-                            </div>
-                            <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
-                                <a style="color: inherit;text-decoration: none;color: #505050;"
-                                    href="{{route('new_detail')}}"><span>Bếp ga Paloma PA-6MEJ siêu thị điện máy hc siêu
-                                        thị hc</span></a>
-                            </div>
-                        </div>
-
-                    </li>  --}}
-                </ul>
-                <ul class="list-group mt-4 ">
-                    <li class="list-group-item text-center font-weight-bold"
-                        style="background-color: #c18d28 ; color: white">SẢN Phẩm Nổi bật
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row naa">
-                            <div class=" " style="padding:0">
-
-                                    @foreach ($product as $item)
-                                    <a href="product_detail/{{ $item->slug }}">
-                                        <img src="images/{{ $item->image }}" style="width: 100%" class="mb-4">
-                                    </a>
-                                    @endforeach
-                                {{--  <a href="">
+                        @foreach ($product as $item)
+                        <a href="product_detail/{{ $item->slug }}">
+                            <img src="images/{{ $item->image }}" style="width: 100%" class="mb-4">
+                        </a>
+                        @endforeach
+                        {{--  <a href="">
                                     <img src="images/2.jpg" style="width: 100%" class="mb-4">
                                 </a>
                                 <a href="">
@@ -229,20 +136,20 @@ Khuyến mại
 
 
 
-                            </div>
+                    </div>
 
-                        </div>
+                </div>
 
-                    </li>
+            </li>
 
-                </ul>
-            </div>
-        </div>
+        </ul>
+    </div>
+    </div>
 
-        <div class="mt-4">
-            <nav aria-label="Page navigation example text-center">
-                <ul class="pagination">
-                    {{--  <li class="page-item">
+    <div class="mt-4">
+        <nav aria-label="Page navigation example text-center">
+            <ul class="pagination">
+                {{--  <li class="page-item">
                         <a class="page-link" href="#" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                             <span class="sr-only">Previous</span>
@@ -258,9 +165,10 @@ Khuyến mại
                         </a>
                     </li>  --}}
                     {{  $promotion->links() }}
-                </ul>
-            </nav>
-        </div>
+               
+            </ul>
+        </nav>
+    </div>
 
     </div>
 </section>
