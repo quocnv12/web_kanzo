@@ -39,32 +39,19 @@ Chi tiết sản phẩm
   </div>
 </section>
 <section>
-
     <div class="container content-main">
         <div class="row">
             <div class="col-md-6">
-                    <div class="contailer">
-                            <div class="mySlides"yy>
-                              <img src="images/{{$product_detail->image}}" style="width:530px;height: 330px">
-                            </div>
-                            <div class="roww">
-                              <div class="column">
-                                <img class="demo cursor" src="images/{{$product_detail->image}}" style="width:100%;width: 90px;height: 90px" onclick="currentSlide(1)" alt="The Woods">
-                              </div>
-                              <!-- <div class="column">
-                                <img class="demo cursor" src="images/bt1.jpg" style="width:100%;width: 90px;height: 90px" onclick="currentSlide(2)" alt="Cinque Terre">
-                              </div>
-                              <div class="column">
-                                <img class="demo cursor" src="images/1.jpg" style="width:100%;width: 90px;height: 90px" onclick="currentSlide(3)" alt="Mountains and fjords">
-                              </div>
-                              <div class="column">
-                                <img class="demo cursor" src="images/ok.jpg" style="width:100%;width: 90px;height: 90px" onclick="currentSlide(4)" alt="Northern Lights">
-                              </div>
-                              <div class="column">
-                                <img class="demo cursor" src="images/bt1.jpg" style="width:100%;width: 90px;height: 90px" onclick="currentSlide(5)" alt="Nature and sunrise">
-                              </div> -->
-                            </div>
-                          </div>
+              <div class="contailer">
+                <div class="mySlides"yy>
+                  <img src="images/{{$product_detail->image}}" style="width:530px;height: 330px">
+                </div>
+                <div class="roww">
+                  <div class="column">
+                    <img class="demo cursor" src="images/{{$product_detail->image}}" style="width:100%;width: 90px;height: 90px" onclick="currentSlide(1)" alt="The Woods">
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col-md-6">
               <h5 class="row name-fruid">{{$product_detail->name}}</h6>
@@ -95,37 +82,96 @@ Chi tiết sản phẩm
                       <!-- icon shareaholic: chia se bai viet len mang xa hoi -->
                   </p> 
                 </div>
-
               </div>
             </div>
-        </div>
-        
+        </div>       
     </div>
     <div class="container">
-    <div class="row">
+      <div class="row">
+        <div class="col-md-9">
           <div class="tab">
-            <button class="tablinks active" onclick="openCity(event, 'London')" style="border: none;outline: none;">Thông tin sản phẩm</button>
-            <button class="tablinks" onclick="openCity(event, 'Paris')" style="border: none;outline: none;">Thông số kĩ thuật</button>
-            <button class="tablinks" onclick="openCity(event, 'Tokyo')" style="border: none;outline: none;">Hướng dẫn sử dụng</button>
+              <button class="tablinks active" onclick="openCity(event, 'London')" style="border: none;outline: none;">Thông tin sản phẩm</button>
+              <button class="tablinks" onclick="openCity(event, 'Paris')" style="border: none;outline: none;">Thông số kĩ thuật</button>
+              <button class="tablinks" onclick="openCity(event, 'Tokyo')" style="border: none;outline: none;">Hướng dẫn sử dụng</button>   
           </div>
-          
-          <div id="London" class="tabcontent"  style="font-size: 1em; font-weight: normal; font-family:arial;display:block;">
-            
-            {!!$product_detail->information!!}
-          </div>
-          
-          <div id="Paris" class="tabcontent" style="font-size: 1em; font-weight: normal; font-family:arial;">
-            
-            {!!$product_detail->thongso!!}
-          </div>
-          
-          <div id="Tokyo" class="tabcontent" style="font-size: 1em; font-weight: normal; font-family:arial;">
-            {!!$product_detail->huongdan!!}
-          </div>
+          <div id="London" class="tabcontent"  style="font-size: 1em; font-weight: normal; font-family:arial;display:block;">               
+                {!!$product_detail->information!!}
+              </div>           
+              <div id="Paris" class="tabcontent" style="font-size: 1em; font-weight: normal; font-family:arial;">
+                
+                {!!$product_detail->thongso!!}
+              </div>            
+              <div id="Tokyo" class="tabcontent" style="font-size: 1em; font-weight: normal; font-family:arial;">
+                {!!$product_detail->huongdan!!}
+              </div>
         </div>
-    </div>
+        <div class="col-md-3">
+          <ul class="list-group">
+            <li class="list-group-item text-center font-weight-bold" style="background-color: #c18d28 ; color: white">Tin Khuyến Mại
+            </li>
+                                    
+            
+            <li class="list-group-item">
+                <div class="row naa">
+                    <div class="col-md-4 " style="padding:0">
+
+                        <a href="tin-tuc/dun-nau-xong-nho-bo-3s-lam-viec-nay-vua-tiet-kiem-50-ga-lai-an-toan-chong-chay-no">
+                            <img src="images/3.jpg" style="width: 100%">
+                        </a>
+
+
+
+                    </div>
+                    <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
+                        <a style="color: inherit;text-decoration: none;color: #505050;" href="tin-tuc/dun-nau-xong-nho-bo-3s-lam-viec-nay-vua-tiet-kiem-50-ga-lai-an-toan-chong-chay-no"><span>Đun nấu xong nhớ bỏ 3s làm việc này, vừa tiết kiệm 50% ga lại an toàn, chống cháy nổ</span></a>
+                    </div>
+                </div>
+
+            </li>
+                                    
+            
+            <li class="list-group-item">
+                <div class="row naa">
+                    <div class="col-md-4 " style="padding:0">
+
+                        <a href="tin-tuc/nguy-hiem-lon-tu-nhung-sai-lam-nho">
+                            <img src="images/2.jpg" style="width: 100%">
+                        </a>
+
+
+
+                    </div>
+                    <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
+                        <a style="color: inherit;text-decoration: none;color: #505050;" href="tin-tuc/nguy-hiem-lon-tu-nhung-sai-lam-nho"><span>Nguy hiểm lớn từ những sai lầm nhỏ</span></a>
+                    </div>
+                </div>
+
+            </li>
+                                    
+            
+            <li class="list-group-item">
+                <div class="row naa">
+                    <div class="col-md-4 " style="padding:0">
+
+                        <a href="tin-tuc/bep-ga-paloma-pa-6mej-sieu-thi-dien-may-hc-sieu-thi-hcbep-ga-noi-paloma-pajs25b">
+                            <img src="images/1.jpg" style="width: 100%">
+                        </a>
+
+
+
+                    </div>
+                    <div class="col-md-8" style="padding: 0 10px; font-size: 14px">
+                        <a style="color: inherit;text-decoration: none;color: #505050;" href="tin-tuc/bep-ga-paloma-pa-6mej-sieu-thi-dien-may-hc-sieu-thi-hcbep-ga-noi-paloma-pajs25b"><span>Bếp ga Paloma PA-6MEJ siêu thị điện máy hc siêu thị hc,bếp ga nổi PALOMA PAJS25B</span></a>
+                    </div>
+                </div>
+
+            </li>                                 
+          </ul>
+        </div>
+      </div>
     </div>
 </section>
+
 <section>
   <center class="container content-fainaly">
     <div class="product_content" style="font-weight: bold; font-size: 1.6em; margin-top: 20px;">
