@@ -511,6 +511,25 @@ a {
   padding: 22px 12px;
   border: 1px solid #ccc;
   border-top: none;
+  margin-bottom: 10px;
+}
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 500px;
+  height: 200px;
+  margin-top: 13px;
+}
+.mySlide{
+  position: relative;
 }
 
 
