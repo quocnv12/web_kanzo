@@ -103,7 +103,7 @@ Tin tức
                     <li class="list-group-item text-center font-weight-bold"
                         style="background-color: #c18d28 ; color: white">TIN MỚI
                     </li>
-                    @foreach ($news as $item)
+                    @foreach ($newss as $item)
                         <li class="list-group-item">
                             <div class="row naa">
                                 <div class="col-md-4 " style="padding:0">

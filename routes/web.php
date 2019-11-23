@@ -15,6 +15,8 @@
 Route::group(['prefix' => '','namespace' => 'frontend'],function(){
     //-----------------Trang chu
     Route::get('','HomeController@index')->name('home');
+    //---------------tìm kiếm
+    Route::get('seacrh','HomeController@Getsearch');
     //-----------------gioi thieu
     Route::get('gioi-thieu/{slug}','IntroduceController@index')->name('intro');
     //-----------------chinh sach

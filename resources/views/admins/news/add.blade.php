@@ -29,6 +29,15 @@
                                 </div>
                             @endif
                         </div>
+                        <div class="form-group">
+                            <label>Tóm tắt</label>
+                            <input type="text" name="summary" id="name" class="form-control" value="{{old('summary')}}">
+                            @if($errors->has('summary'))
+                                <div class="alert alert-danger">
+                                    {{$errors->first('summary')}}
+                                </div>
+                            @endif
+                        </div>
 
                         <div class="form-group">
                             <label>Trạng thái</label>

@@ -12,7 +12,7 @@ class NewsController extends Controller
 {
     //
     public function list(){
-        $news = news::all();
+        $news = news::orderBy('id','desc')->get();
 
         return view('admins.news.list',compact('news'));
     }
@@ -26,11 +26,13 @@ class NewsController extends Controller
 
         $this ->validate($req,[
             'name' => 'required|unique:news,name',
+            'summary'=>'required',
             'active' => 'required',
             'content' => 'required',
             'image' =>  'image'
         ],[
             'name.required' => 'Tiêu đề là trường bắt buộc!',
+            'name.summary' => 'Tóm tắt là trường bắt buộc!',
             'name.unique' => 'Tiêu đề đã tồn tại!',
             'content.required' => 'Nội dung là trường bắt buộc!',
             'active.required' => 'Trạng thái là trường bắt buộc!',
@@ -40,6 +42,7 @@ class NewsController extends Controller
         $new = new news;
         $new->name = $req->name;
         $new->slug = Str::slug($req->name);
+        $new->summary = $req->summary;
         $new->content = $req->content;
 
         if ($req->image)
@@ -50,7 +53,7 @@ class NewsController extends Controller
             {
                 $image = rand().'.'.request()->image->getClientOriginalExtension();
             }
-            request()->image->move(public_path('assets/images_news'), $image);
+            request()->image->move(public_path('images'), $image);
             $new->image = $image;
             $new->save();
         }
@@ -58,7 +61,7 @@ class NewsController extends Controller
         $new->active = $req->active;
         $new->save();
 
-        return redirect()->route('news.list');
+       return redirect('admin/news')->with('thongbao','Thêm thành công !');
     }
 
     public function edit($id){
@@ -72,10 +75,12 @@ class NewsController extends Controller
         $this ->validate($req,[
             'name' => 'required|unique:news,name, '.$id.' ',
             'active' => 'required',
+            'summary'=>'required',
             'content' => 'required',
             'image' =>  'image|nullable'
         ],[
             'name.required' => 'Tiêu đề là trường bắt buộc!',
+            'name.summary' => 'Tóm tắt là trường bắt buộc!',
             'name.unique' => 'Tiêu đề đã tồn tại!',
             'content.required' => 'Nội dung là trường bắt buộc!',
             'active.required' => 'Trạng thái là trường bắt buộc!',
@@ -85,7 +90,7 @@ class NewsController extends Controller
         $new = news::find($id);
         $new->name = $req->name;
         $new->slug = Str::slug($req->name);
-
+        $new->summary = $req->summary;  
         //if change image
         $old_image_path = 'assets/images_news/'.$new->image;
         if ($req->image)

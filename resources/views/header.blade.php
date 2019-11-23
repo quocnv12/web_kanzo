@@ -2,7 +2,7 @@
 	<div class="select-language">
 		<div class="container">
 			<a href="#"><img src="images/5-1503128133747.png"></a>
-			<a href="#"><img src="images/1200px-Flag_of_Vietnam.svg.png"></a>
+			<a href=""><img src="images/1200px-Flag_of_Vietnam.svg.png"></a>
 		</div>
 	</div>
 	<div class="container">
@@ -75,8 +75,8 @@
 									<li><a href="{{route('diemban')}}">Điểm bán</a></li>
 									<li><a href="{{route('contact')}}">Liên hệ</a></li>
 									<li>
-										<form action="" method="get" name="form_tim_kiem">
-											<input type="text" placeholder="Nội dung tìm kiếm ...">
+										<form action="seacrh" method="get" name="form_tim_kiem">
+											<input type="text" name="tk" placeholder="Tìm kiếm sản phẩm ...">
 											<button type="submit"><i class="fa fa-search"></i></button>
 										</form>
 									</li>
