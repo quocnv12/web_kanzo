@@ -85,7 +85,6 @@ Tin tức
                                         </a>
                                     </div>
                                 </div>
-
                                 @endforeach
 
                             </div>

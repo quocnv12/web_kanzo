@@ -193,18 +193,23 @@ Trang chủ
                     <!-- video về kanzo -->
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
                         <div class="cap-main">
-                            <h3 class="group__services-text">video về Kanzo</h3>
+                            <h3 class="group__services-text">ảnh & video về Kanzo</h3>
                         </div>
                         <div class="silde_video_kanzo owl-carousel owl-theme">
-                            <div class="silde_video_kanzo_item">
-                                <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
-                            </div>
-                            <div class="silde_video_kanzo_item">
-                                <video style="width: 100%;height: 450px;object-fit: cover;" controls>
-                                  <source src="video/Xiaomi DCL01CM Precise Control Induction Cooker Review - very advanced.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="silde_video_kanzo_item">
+                            @foreach($video as $row)
+                                @if(empty($row->video))
+                                    <div class="silde_video_kanzo_item">
+                                        <img src="images/{{$row->image}}" alt="" style="width: 100%;height: 450px;object-fit: cover;">
+                                    </div>
+                                @else
+                                    <div class="silde_video_kanzo_item">
+                                        <video style="width: 100%;height: 450px;object-fit: cover;" controls>
+                                          <source src="video/{{$row->video}}" type="video/mp4">
+                                        </video>
+                                    </div>
+                                @endif
+                            @endforeach
+                            <!-- <div class="silde_video_kanzo_item">
                                 <img src="images/slide1.jpg" alt="" style="width: 100%;height: 450px;object-fit: cover;">
                             </div>
                             <div class="silde_video_kanzo_item">
@@ -219,7 +224,7 @@ Trang chủ
                                 <video style="width: 100%;height: 450px;object-fit: cover;" controls>
                                   <source src="video/The Siemens Gas Cooktops.mp4" type="video/mp4">
                                 </video>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- tin tưc câu hỏi thg gặp -->
@@ -243,20 +248,15 @@ Trang chủ
                             <h3 class="group__services-text1">tin tức và sự kiện</h3>
                         </div>
                         <div class="cau_hoi_thuong_gap_home_box">
+                            @foreach($news as $row)
                             <div class="cau_hoi_thuong_gap_home_box_item">
-                                <a href="">
-                                    <img src="images/2.jpg" class="img-fluid" alt="">
-                                    <span>Những câu hỏi thường gặp về máy xay sinh tố Kanzo.</span>
-                                    <b><i class="fas fa-history"></i>20/11/2019</b>
+                                <a href="{{route('new_detail',['slug'=>$row->slug])}}">
+                                    <img src="images/{{$row->image}}" class="img-fluid" alt="">
+                                    <span>{{$row->name}}</span>
+                                    <b><i class="fas fa-history"></i>{{date('d-m-Y',strtotime($row->created_at))}}</b>
                                 </a>
                             </div>
-                            <div class="cau_hoi_thuong_gap_home_box_item">
-                                <a href="">
-                                    <img src="images/2.jpg" class="img-fluid" alt="">
-                                    <span>Những câu hỏi thường gặp về máy xay sinh tố Kanzo.</span>
-                                    <b><i class="fas fa-history"></i>20/11/2019</b>
-                                </a>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

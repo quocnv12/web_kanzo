@@ -15,21 +15,25 @@ class video extends Seeder
         DB::table('video')->insert([
 	        [
 	        	'id'=>1,
-	        	'image'=>'banner-introduce.jpg',
+	        	'title'=>'Ảnh của Kanzo',
+	        	'image'=>'KALEA_27_Fuochi_resized-1-1400x655.jpg',
 	        	'video'=>'',
 	        ],
 	        [
 	        	'id'=>2,
+	        	'title'=>'Video Kanzo',
 	        	'image'=>'',
 	        	'video'=>'The Siemens Gas Cooktops.mp4',
 	        ],
 	        [
 	        	'id'=>3,
-	        	'image'=>'banner-introduce.jpg',
+	        	'title'=>'Ảnh Kanzo',
+	        	'image'=>'slide3.jpg',
 	        	'video'=>'',
 	        ],
 	        [
 	        	'id'=>4,
+	        	'title'=>'Ảnh của Kanzo',
 	        	'image'=>'',
 	        	'video'=>'Xiaomi DCL01CM Precise Control Induction Cooker Review - very advanced.mp4',
 	        ],

@@ -239,6 +239,11 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'CheckLogin
         Route::get('edit/{id}', 'VideoController@edit')->name('video.edit');
         Route::post('edit/{id}', 'VideoController@post_edit')->name('video.edit');
         Route::get('delete/{id}', 'VideoController@del')->name('video.del');
+
+        Route::get('add_image', 'VideoController@add_image')->name('video.add_image');
+        Route::post('add_image', 'VideoController@post_add_image')->name('video.add_image');
+        Route::get('edit_image/{id}', 'VideoController@edit_image')->name('video.edit_image');
+        Route::post('edit_image/{id}', 'VideoController@post_edit_image')->name('video.edit_image');
     });
 
 });

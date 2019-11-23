@@ -7,14 +7,18 @@
         <li>
             <p>YOU ARE HERE</p>
         </li>
-        <li><a href="#" class="active">Giới thiệu</a> </li>
+        <li><a href="#" class="active">Ảnh & Video</a> </li>
     </ul>
+    <div class="page-title">
+        <a href="{{route('video.add_image')}}"><button class="btn btn-primary">Thêm Ảnh</button></a>
+        <a href="{{route('video.add')}}"><button class="btn btn-primary">Thêm Video</button></a>
+    </div>
 </div>
 <div class="row-fluid">
     <div class="span12">
         <div class="grid simple ">
             <div class="grid-body ">
-                <table class="table table-hover table-condensed" id="example">
+                <table class="table table-striped" id="example">
                     <thead>
                         <tr>
                             <th>STT</th>
@@ -37,7 +41,12 @@
                                 @endif
                             </td>
                             <td>
-                                <a href="{{route('video.edit',['id'=>$row->id])}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
+                                @if(empty($row->image))
+                                    <a href="{{route('video.edit',['id'=>$row->id])}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
+                                @else
+                                    <a href="{{route('video.edit_image',['id'=>$row->id])}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
+                                @endif
+                                <a href="{{route('video.del',['id'=>$row->id])}}" class="btn btn-xs btn-danger" onclick="return confirm('Xóa! bạn có muốn tiếp tục?')"><i class="fa fa-trash-o"></i></a>
                             </td>
                         </tr>
                         @endforeach
